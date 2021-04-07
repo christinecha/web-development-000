@@ -1,0 +1,14 @@
+{
+  "name": "web-dev-000",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "node ./build/generate-html.js -s ./src -o ./dist"
+  },
+  "dependencies": {
+    "argv": "^0.0.2",
+    "glob": "^7.1.6",
+    "showdown": "^1.9.1"
+  }
+}
