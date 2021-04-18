@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  font-family: "Work Sans";
+}
+
+main {
+  max-width: 600px;
+  margin-left: 300px;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 20px;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  border: 1px solid #eaeaea;
+}
+
+code {
+  background: #eaeaea;
+  padding: 2px 5px;
+}
+
+pre > code {
+  display: block;
+  padding: 10px 13px;
+  overflow-x: scroll;
+}
+
+blockquote {
+  opacity: 0.5;
+  border-left: 2px solid #eaeaea;
+  padding-left: 10px;
+}
+
+#content {
+}
+
+#outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+}

@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "node ./build/generate-html.js -s ./src -o ./dist"
+    "build": "node ./build/generate-content.js"
   },
   "dependencies": {
     "argv": "^0.0.2",

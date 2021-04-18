@@ -1,19 +1,23 @@
-# Project 001: Introducing HTML Elements
+## Creating an HTML file
 
-Let's add some more structure to your shiny new website, shall we?
+So far, we've only used a plain text file (`.txt`). Now, let's make our first HTML file.
 
-## HTML syntax
+You can either create a new file or just rename the existing file from `cat.txt` to `cat.html` to get started. Open it up in your text editor, and let's write some HTML!
 
-Code "syntax" is just like grammatical syntax. The predefined set of rules and structure is what makes any language actually usable. Grammar, spelling, sentence structure, part of speech, punctuation, on and on. Code has similar rules!
+## How to write HTML
+
+The rules of a specific language, a.k.a. "syntax" is just like grammatical syntax in English. The predefined set of rules and structure is what makes any language actually usable. Grammar, spelling, sentence structure, part of speech, punctuation, on and on. Code has similar rules!
 
 The best part is, code doesn't have those nasty exceptions like in English ("though through tough thorough trough??") that you just have to memorize. There is a set of rules, and we have to stick to them exactly because the machines won't understand them otherwise.
 
-Any chunk of HTML basically looks like this:
+In HTML, things are broken down into elements. (You might also hear them called "blocks" or "tags".) Each HTML element looks like this:
 
 ```
 [STARTING TAG] [INSIDE CONTENT] [CLOSING TAG]
-<element>   blah blah text content   </element>
+<element>  some text might go in between  </element>
 ```
+
+> ILLUSTRATION: HTML structure as written above
 
 Each element is indicated by a pair of two tags. Each is surrounded by brackets `<whatever>` but only the second has the slash `</whatever>` so you know where it ends. In some cases, you can use a single tag, called a self closing tag, when it doesn't have any inside content, like this:
 
