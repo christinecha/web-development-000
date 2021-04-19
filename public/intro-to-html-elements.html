@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <title>Foundational Web Development</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <section id="outline"><ul>
+      <li>
+        <a href="./web-dev-0.html">0: Introduction to Web Development</a>
+      </li>
+    <ul>
+      <li>
+        <a href="./intro-to-html.html">00: Introduction to HTML</a>
+      </li>
+    <ul>
+      <li>
+        <a href="./first-website.html">000: Your First Website</a>
+      </li>
+    
+      <li>
+        <a href="./intro-to-html-elements.html">001: Introduction to HTML</a>
+      </li>
+    </ul></ul></ul></section>
+      <div id="content">
+      <h1 id="001">Introduction to HTML</h1>
+      <p></p>
+      <h2 id="creatinganhtmlfile">Creating an HTML file</h2>
+<p>So far, we've only used a plain text file (<code>.txt</code>). Now, let's make our first HTML file.</p>
+<p>You can either create a new file or just rename the existing file from <code>cat.txt</code> to <code>cat.html</code> to get started. Open it up in your text editor, and let's write some HTML!</p>
+<h2 id="howtowritehtml">How to write HTML</h2>
+<p>The rules of a specific language, a.k.a. "syntax" is just like grammatical syntax in English. The predefined set of rules and structure is what makes any language actually usable. Grammar, spelling, sentence structure, part of speech, punctuation, on and on. Code has similar rules!</p>
+<p>The best part is, code doesn't have those nasty exceptions like in English ("though through tough thorough trough??") that you just have to memorize. There is a set of rules, and we have to stick to them exactly because the machines won't understand them otherwise.</p>
+<p>In HTML, things are broken down into elements. (You might also hear them called "blocks" or "tags".) Each HTML element looks like this:</p>
+<pre><code>[STARTING TAG] [INSIDE CONTENT] [CLOSING TAG]
+&lt;element&gt;  some text might go in between  &lt;/element&gt;
+</code></pre>
+<blockquote>
+  <p>ILLUSTRATION: HTML structure as written above</p>
+</blockquote>
+<p>Each element is indicated by a pair of two tags. Each is surrounded by brackets <code>&lt;whatever&gt;</code> but only the second has the slash <code>&lt;/whatever&gt;</code> so you know where it ends. In some cases, you can use a single tag, called a self closing tag, when it doesn't have any inside content, like this:</p>
+<pre><code>&lt;/whatever&gt;
+
+^ is just shorthand for
+&lt;whatever&gt;&lt;/whatever&gt;
+</code></pre>
+<p>The spacing doesn't usually* matter, like these would all be the same thing as the first example:</p>
+<pre><code>&lt;element&gt;
+blah blah text content&lt;/element&gt;
+
+&lt;element&gt;
+  blah blah text content
+&lt;/element&gt;
+
+              &lt;element&gt;
+      blah blah text content
+          &lt;/element&gt;
+</code></pre>
+<p>*Spaces inside of an element can be a little confusing sometimes, but that's not important right now.</p>
+<p>You'll see folks on the internet muttering a lot about "indentation". They're talking about how when you write the insides of an element, you indicate this by indenting in a bit. This makes reading code a bit easier sometimes because you can put elements inside of elements, infinitely:</p>
+<pre><code>&lt;first&gt;
+  some text
+
+  &lt;second&gt;
+    some text
+    &lt;third&gt;
+      &lt;fourth&gt;
+        ... infinity ...
+      &lt;/fourth&gt;
+      some text
+    &lt;/third&gt;
+  &lt;/second&gt;
+&lt;/first&gt;
+</code></pre>
+<p>The idea is that without indentation, that looks like this, which makes it harder to tell where the starting/closing tags are.</p>
+<pre><code>&lt;first&gt;
+some text
+&lt;second&gt;
+some text
+&lt;third&gt;
+&lt;fourth&gt;
+... infinity ...
+&lt;/fourth&gt;
+some text
+&lt;/third&gt;
+&lt;/second&gt;
+&lt;/first&gt;
+</code></pre>
+<p>But it's important to remember - the choice to indent HTML is an opinion. It's a commonly held opinion (and a lot of people will enforce this opinion when you collaborate with them) but it's purely stylistic, and doesn't actually affect the meaning of the code.</p>
+<h2 id="htmlelements">HTML Elements</h2>
+<p>So what goes inside the tags? The technical answer is, anything you want - as long as it doesn't have spaces, and it's identical between the opening and closing tags. You could do something like this, and it's totally valid HTML:</p>
+<pre><code>&lt;my-beautiful-title&gt;My Title&lt;/my-beautiful-title&gt;
+&lt;HappyText&gt;Happy happy&lt;/HappyText&gt;
+</code></pre>
+<p>You'd essentially be defining your own custom elements, here called <code>my-beautiful-title</code> and <code>HappyText</code>.</p>
+<p>However, to help you out, there's a huge existing selection of element types that all the browsers have agreed on. Here's just a few examples:</p>
+<pre><code>&lt;h1&gt; - H1, meaning Heading 1. For your very important, very large text.
+&lt;p&gt;  - P, meaning Paragraph. For your less important and usually smaller size, lengthier text.
+&lt;div&gt; - Apparently comes from "Document Divisions." Most commonly used for organization and visual layout purposes
+</code></pre>
+<p>These preset elements are useful because browsers use this information to understand what your website is about. If you put somet text inside of an <code>&lt;h1&gt;</code> tag, like <code>&lt;h1&gt;Purple Pandas&lt;/h1&gt;</code>, the browser and other programs are gonna think your whole website is about Purple Pandas! That means:</p>
+<ul>
+<li>A search on Google for "purple pandas" might turn up your website</li>
+<li>A blind person accessing your website will hear "Purple Pandas" as the first thing the browser reads aloud</li>
+</ul>
+<p>Using the most appropriate, preset tag for a specific part of your website is called using "semantic HTML" - makes sense, because semantics is all about the specifics of using some words over other ones.</p>
+<p>Again, this is not necessary to produce valid, functioning HTML. But you'll often see people talking about it as if it is, because the benefits are extremely important.</p>
+<p>Here's a list of every single preset element tag in HTML: https://developer.mozilla.org/en-US/docs/Web/HTML/Element. Warning - there is probably a lot of vocabulary on that site that will look foreign and complicated! Don't worry. Some of those details are very obscure, even to experienced developers. 99% of the time, you'll only be using a handful of the most common ones.</p>
+<h2 id="exercise">Exercise:</h2>
+<ol>
+<li>Open your HTML file in your text editor again.</li>
+<li>Instead of just writing plain text, try using some HTML elements. Play around with a bunch of different tags! Move them around! Nest and un-nest them! Example below.</li>
+</ol>
+<pre><code>   &lt;h1&gt;Funny Cats&lt;/h1&gt;
+   &lt;p&gt;
+     This is a website about cats that sit in boxes.
+     &lt;strong&gt;Meow&lt;/strong&gt;
+   &lt;/p&gt;
+   &lt;button&gt;View The Cats&lt;/button&gt;
+   &lt;div&gt;cat 1&lt;/div&gt;
+   &lt;div&gt;cat 2&lt;/div&gt;
+</code></pre>
+<ol>
+<li>Save the file and refresh your browser again. You should see your text now in all different styles and sizes, just because you've used some HTML elements!</li>
+</ol>
+    </div>
+    </main>
+  </body>
+</html>

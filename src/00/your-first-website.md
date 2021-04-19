@@ -12,16 +12,16 @@ You could go further to say that seeing the website is like hearing a voicemail.
 
 > ILLUSTRATION: process of requesting & receiving website? maybe in parallel with the phone call process?
 
-Try downloading this file - [cat.txt](./00/cat.txt) - and opening in your browser! You can do this by just manually entering the file's address into your browser, i.e. `file:///Users/cha/Desktop/cat.txt` instead of where you'd normally write `http://www.google.com`.
+Try downloading this file - [cat.txt](./assets/00/cat.txt) - and opening in your browser! You can do this by just manually entering the file's address into your browser, i.e. `file:///Users/cha/Desktop/cat.txt` instead of where you'd normally write `http://www.google.com`.
 
-![Using a local filepath in your browser](./00/local-url.png)
+![Using a local filepath in your browser](./assets/00/local-url.png)
 
 If you're not sure what this address would be, don't worry! You can either:
 
 - find the file in your computer's file viewer (ex. Windows Explorer or Mac Finder), right click, and "Open With" the browser of your choice.
 - or open your browser first, and select the file from there. Ex. in Chrome, you'd need to go to File > Open File.
 
-![Viewing a local file in your browser](./00/local-url-open.png)
+![Viewing a local file in your browser](./assets/00/local-url-open.png)
 
 Oh hey, look at you! In essence, this is all a website is - files opened in a browser. In this case, it's just a plain text file. You can edit this file now on your computer, ex. in TextEdit or Notepad. Write whatever you want in there, hit Save, and refresh your browser - you should see it update to your recent changes.
 
