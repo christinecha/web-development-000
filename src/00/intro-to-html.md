@@ -1,129 +1,168 @@
+## What is HTML, and why are we starting with it?
+
+Imagine that your website is a dancer. One day, we want them to perform beautiful choreography! In magnificent costume! Well, HTML is the dancer's bones. It's hard to design a skirt or direct steps if you don't know about legs.
+
+> ILLUSTRATION: I mean, I think you get the point here >.<
+
 ## Creating an HTML file
 
 So far, we've only used a plain text file (`.txt`). Now, let's make our first HTML file.
 
-You can either create a new file or just rename the existing file from `cat.txt` to `cat.html` to get started. Open it up in your text editor, and let's write some HTML!
+You can either create a new file or just rename the existing file from `cat.txt` to `cat.html` to get started. Either way, the important bit is the `.html` at the end to indicate what programming language it's in. Open it up in your text editor. Let's write some HTML!
 
 ## How to write HTML
-
-The rules of a specific language, a.k.a. "syntax" is just like grammatical syntax in English. The predefined set of rules and structure is what makes any language actually usable. Grammar, spelling, sentence structure, part of speech, punctuation, on and on. Code has similar rules!
-
-The best part is, code doesn't have those nasty exceptions like in English ("though through tough thorough trough??") that you just have to memorize. There is a set of rules, and we have to stick to them exactly because the machines won't understand them otherwise.
 
 In HTML, things are broken down into elements. (You might also hear them called "blocks" or "tags".) Each HTML element looks like this:
 
 ```
-[STARTING TAG] [INSIDE CONTENT] [CLOSING TAG]
-<element>  some text might go in between  </element>
+[1]       [2]       [3]
+<element> some text </element>
 ```
 
-> ILLUSTRATION: HTML structure as written above
+> ILLUSTRATION: Some illustration of the HTML structure as written above? With little arrows pointing to the pieces maybe?
 
-Each element is indicated by a pair of two tags. Each is surrounded by brackets `<whatever>` but only the second has the slash `</whatever>` so you know where it ends. In some cases, you can use a single tag, called a self closing tag, when it doesn't have any inside content, like this:
+Each element is indicated by two "tags" (1 & 3), and you can put text between them (2). Eachtag is surrounded by brackets `<blerp>` but only the second one has the slash `</blerp>` so you know where it ends.
 
-```
-</whatever>
-
-^ is just shorthand for
-<whatever></whatever>
-```
-
-The spacing doesn't usually\* matter, like these would all be the same thing as the first example:
+The element type is specified inside of the angle brackets.
 
 ```
-<element>
-blah blah text content</element>
-
-<element>
-  blah blah text content
-</element>
-
-              <element>
-      blah blah text content
-          </element>
+<blerp></blerp>
+<noodle></noodle>
 ```
 
-\*Spaces inside of an element can be a little confusing sometimes, but that's not important right now.
+Ah yes, the popular Blerp and Noodle elements!
 
-You'll see folks on the internet muttering a lot about "indentation". They're talking about how when you write the insides of an element, you indicate this by indenting in a bit. This makes reading code a bit easier sometimes because you can put elements inside of elements, infinitely:
+You can also "nest" elements inside one another, with or without text, to produce more complex structures. These relationships (and others in code) are often described as "parent" and "child" - in this case, the elements inside are "children", wrapped by their "parent" element.
 
-```
-<first>
-  some text
-
-  <second>
-    some text
-    <third>
-      <fourth>
-        ... infinity ...
-      </fourth>
-      some text
-    </third>
-  </second>
-</first>
+```html
+<blerp>
+  Random text!
+  <noodle></noodle>
+  Random other text!
+  <noodle>
+    <blerp>
+      <noodle>More text!</noodle>
+    </blerp>
+  </noodle>
+</blerp>
 ```
 
-The idea is that without indentation, that looks like this, which makes it harder to tell where the starting/closing tags are.
+Try typing these elements in your `.html` file. Make your own! Move them around! Type funny quotes inside them! Save your changes, and view the file in your browser again.
 
-```
-<first>
-some text
-<second>
-some text
-<third>
-<fourth>
-... infinity ...
-</fourth>
-some text
-</third>
-</second>
-</first>
-```
-
-But it's important to remember - the choice to indent HTML is an opinion. It's a commonly held opinion (and a lot of people will enforce this opinion when you collaborate with them) but it's purely stylistic, and doesn't actually affect the meaning of the code.
+Notice that you won't see the element tags, like `<blerp>`, in your browser - you only see the text you put inside them. This is exactly how all HTML elements work; they simply provide the underlying structure for your content.
 
 ## HTML Elements
 
-So what goes inside the tags? The technical answer is, anything you want - as long as it doesn't have spaces, and it's identical between the opening and closing tags. You could do something like this, and it's totally valid HTML:
+Okay, now that we've learned about the general syntax, I'll come clean. Blerp and Noodle aren't actually HTML elements. (Technically you could call them anything you want and there wouldn't be any visible errors, but then, more technically, that's no longer HTML... that's for another day.[^1])
+
+There's a huge selection of HTML element types that all browsers have agreed to accept. Here are just a few examples:
+
+- `<h1>` is Heading 1, for important, very large text.
+- `<p>` is Paragraph, for your less important and usually smaller size but lengthier text.
+- `<div>` apparently comes from "Document Divisions." This is commonly used for organization and visual layout purposes
+
+These element types are useful because browsers use this information to understand your website's structure and content. For instance, if you put some text inside of an `<h1>` tag, like `<h1>Purple Pandas</h1>`, the browser will decide this "Purple Pandas" bit must be _really_ important to your website.
+
+Using the most appropriate element for a specific part of your website is commonly called using "semantic HTML".
+
+This is a _very important_ skill to learn if you want your websites to be found by search engines, accessible to non-sighted and/or keyboard users, and more.
+
+That being said, your website could technically be built only using `<blerp>` elements and still look the same on the outside...
+
+> ILLUSTRATION: Some callback to the dancer's bones. Like maybe you have arm bones in your legs but it looks the same on the outside, you know?
+
+Here's a list of every single element tag in HTML: https://developer.mozilla.org/en-US/docs/Web/HTML/Element. Warning - there is probably a lot of vocabulary on that site that will look foreign and complicated! Don't worry. Some of these are very obscure, even to experienced developers. 99% of the time, you'll only be using a handful of the most common ones.
+
+## Self-closing tags
+
+There are some HTML elements that can't contain children (no text, no elements, no nothin' inside!). In these special cases, you have to merge the two tags into just one.
+
+Correct:
 
 ```
-<my-beautiful-title>My Title</my-beautiful-title>
-<HappyText>Happy happy</HappyText>
+<br />
+<hr />
+<input />
 ```
 
-You'd essentially be defining your own custom elements, here called `my-beautiful-title` and `HappyText`.
-
-However, to help you out, there's a huge existing selection of element types that all the browsers have agreed on. Here's just a few examples:
+Incorrect:
 
 ```
-<h1> - H1, meaning Heading 1. For your very important, very large text.
-<p>  - P, meaning Paragraph. For your less important and usually smaller size, lengthier text.
-<div> - Apparently comes from "Document Divisions." Most commonly used for organization and visual layout purposes
+<br></br>
+<hr></hr>
+<input></input>
 ```
 
-These preset elements are useful because browsers use this information to understand what your website is about. If you put somet text inside of an `<h1>` tag, like `<h1>Purple Pandas</h1>`, the browser and other programs are gonna think your whole website is about Purple Pandas! That means:
+These elements are called "void elements", and this specific syntax is called a self-closing tag.[^2]
 
-- A search on Google for "purple pandas" might turn up your website
-- A blind person accessing your website will hear "Purple Pandas" as the first thing the browser reads aloud
+## Your first real HTML website
 
-Using the most appropriate, preset tag for a specific part of your website is called using "semantic HTML" - makes sense, because semantics is all about the specifics of using some words over other ones.
+Try replacing the code in your `.html` file now with real elements. Here's a quick cheatsheet of some of the most common elements:
 
-Again, this is not necessary to produce valid, functioning HTML. But you'll often see people talking about it as if it is, because the benefits are extremely important.
+- `<h1>`, `<h2>`, ... all the way to `<h6>` are for heading text (1 is the most important, 6 is the least)
+- `<p>` is paragraph text
+- `<strong>` adds emphasis
+- `<br>` is a line break (must be self-closing)
+- `<hr>` is a horizontal rule (must be self-closing)
+- `<div>` is usually for nesting other elements inside
+- `<button>` is, well, a button
+- `<a>` is for links (stands for "anchor")
+- `<ul>` is for an "unordered list", like a bulleted one
+- `<li>` is a "list item" and should go specifically inside a `ul`
 
-Here's a list of every single preset element tag in HTML: https://developer.mozilla.org/en-US/docs/Web/HTML/Element. Warning - there is probably a lot of vocabulary on that site that will look foreign and complicated! Don't worry. Some of those details are very obscure, even to experienced developers. 99% of the time, you'll only be using a handful of the most common ones.
+Try combining all of the concepts so far into your file. You could write something like this:
 
-## Exercise:
+```html
+<h1>Funny Cats</h1>
+<h2>Very funny. Ha ha!</h2>
+<p>
+  This is a <a>website</a> about cats that sit in boxes.
+  <br />
+  <strong>Meow</strong>
+</p>
+<hr />
+<button>View The Cats</button>
+<ul>
+  <li>
+    <div>
+      <h3>cat 1</h3>
+    </div>
+    <p>meow</p>
+  </li>
+  <li>cat 2</li>
+  <li>cat 3</li>
+</ul>
+```
 
-1. Open your HTML file in your text editor again.
-1. Instead of just writing plain text, try using some HTML elements. Play around with a bunch of different tags! Move them around! Nest and un-nest them! Example below.
-   ```
-   <h1>Funny Cats</h1>
-   <p>
-     This is a website about cats that sit in boxes.
-     <strong>Meow</strong>
-   </p>
-   <button>View The Cats</button>
-   <div>cat 1</div>
-   <div>cat 2</div>
-   ```
-1. Save the file and refresh your browser again. You should see your text now in all different styles and sizes, just because you've used some HTML elements!
+Now that we're using real HTML elements, you should see something different in your browser now. Your `h1` text should look very large and your `p` quite small in comparison. The `button` should look like, well, a button! And so on.
+
+Look at you go! This is starting to look like the real thing.
+
+## NB: About spacing & indentation
+
+The spacing doesn't matter very much. These three examples should all look the same in your browser:
+
+```
+<h1>
+blah blah text content</h1>
+
+<h1>
+  blah blah text content
+
+</h1>
+
+              <h1>
+      blah blah text content
+          </h1>
+```
+
+Programmers like to enforce strict indentation rules (always indent when you move into a child element, etc.) so their code is more legible. Your text editor can even automatically do that for you whenever you save your file\*.
+
+That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a _better_ programmer. So ignore the haters & format however makes you happy. ☀️
+
+\*_Search "format on save [your-text-editor's-name]" and you'll likely find steps to turn that on._
+
+\*\*_Well... or however makes your boss happy._
+
+[^1]: https://dev.w3.org/html5/html-author/#self-closing-tag
+[^2]: https://www.w3.org/Style/customdtd.en.html

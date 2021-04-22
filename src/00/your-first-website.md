@@ -23,9 +23,7 @@ If you're not sure what this address would be, don't worry! You can either:
 
 ![Viewing a local file in your browser](./assets/00/local-url-open.png)
 
-Oh hey, look at you! In essence, this is all a website is - files opened in a browser. In this case, it's just a plain text file. You can edit this file now on your computer, ex. in TextEdit or Notepad. Write whatever you want in there, hit Save, and refresh your browser - you should see it update to your recent changes.
-
-Congratulations, that's your first website!
+Oh hey, look at you! In essence, this is all a website is - files opened in a browser. In this case, it's just a plain text file.
 
 ## What is code?
 
@@ -57,7 +55,7 @@ So a programming language, then, is just one of these "translation layers". In t
 
 So when you learn JavaScript, one of the higher level languages, you can write something as simple and human-legible as `var x = 9` (setting a variable X to the value 9). It feels almost like magic that the computer can "understand" you, but it's just layers and layers of work from engineers past that you can now build on top of.
 
-## Where and how do I write code?
+## How do I create these code files?
 
 As mentioned previously, you can technically use any program as long as it can output plain text, like TextEdit or Notepad.
 
@@ -68,3 +66,11 @@ Here are some free options:
 - [VS Code](https://code.visualstudio.com/download)
 - [Atom](https://atom.io/)
 - [Sublime Text](https://www.sublimetext.com/)
+
+Download one of these (or another text editor of your choosing) and you'll be ready to write!
+
+Try opening up your `txt` file in this text editor. There a lot of different ways to do this (drag the file onto the program icon, use "Open with" again, open it from the text editor via File > Open, etc.) - play around with them and see what's most convenient for you.
+
+Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh your browser - you should see it update to your recent changes.
+
+Congratulations, that's your first website! ✨
