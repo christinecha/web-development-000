@@ -1,5 +1,5 @@
 const SECTION_00 = require("./00");
-const SECTION_10 = require("./10");
+const SECTION_01 = require("./01");
 
 module.exports = [
   {
@@ -14,14 +14,19 @@ module.exports = [
         permaId: "intro-to-html",
         title: "Introduction to HTML",
         description: "",
-        contents: [SECTION_00.FIRST_WEBSITE, SECTION_00.HTML_ELEMENTS],
+        contents: [
+          SECTION_00.FIRST_WEBSITE,
+          SECTION_00.HTML_ELEMENTS,
+          SECTION_00.HTML_ATTRIBUTES,
+        ],
       },
-      // {
-      //   id: 1,
-      //   title: "Introduction to CSS",
-      //   description: "",
-      //   sections: [SECTION_10.INTRO_STYLES],
-      // },
+      {
+        id: 1,
+        permaId: "intro-to-css",
+        title: "Introduction to CSS",
+        description: "",
+        contents: [SECTION_01.INTRO_STYLES],
+      },
       // {
       //   id: 2,
       //   title: "Introduction to Dev Tools",

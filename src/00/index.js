@@ -9,14 +9,23 @@ const FIRST_WEBSITE = {
 };
 
 const HTML_ELEMENTS = {
-  permaId: "intro-to-html-elements",
-  title: "Introduction to HTML",
+  permaId: "html-elements-intro",
+  title: "HTML Elements",
   description: "",
-  markdown: path.resolve(__dirname, "intro-to-html.md"),
+  markdown: path.resolve(__dirname, "html-elements.md"),
   dependencies: [FIRST_WEBSITE],
+};
+
+const HTML_ATTRIBUTES = {
+  permaId: "html-attributes-intro",
+  title: "HTML Attributes",
+  description: "",
+  markdown: path.resolve(__dirname, "html-attributes.md"),
+  dependencies: [HTML_ELEMENTS],
 };
 
 module.exports = {
   FIRST_WEBSITE,
   HTML_ELEMENTS,
+  HTML_ATTRIBUTES,
 };

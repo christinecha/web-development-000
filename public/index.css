@@ -8,12 +8,6 @@ main {
   display: flex;
 }
 
-ul {
-  list-style: none;
-  padding-inline-start: 20px;
-  margin-bottom: 20px;
-}
-
 img {
   max-width: 100%;
   border: 1px solid #eaeaea;
@@ -50,4 +44,10 @@ blockquote {
   width: 300px;
   padding: 20px;
   box-sizing: border-box;
+}
+
+#outline ul {
+  list-style: none;
+  padding-inline-start: 20px;
+  margin-bottom: 20px;
 }

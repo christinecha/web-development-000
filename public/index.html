@@ -24,7 +24,19 @@
       </li>
     
       <li>
-        <a href="./intro-to-html-elements.html">001: Introduction to HTML</a>
+        <a href="./html-elements-intro.html">001: HTML Elements</a>
+      </li>
+    
+      <li>
+        <a href="./html-attributes-intro.html">002: HTML Attributes</a>
+      </li>
+    </ul>
+      <li>
+        <a href="./intro-to-css.html">01: Introduction to CSS</a>
+      </li>
+    <ul>
+      <li>
+        <a href="./intro-to-styles.html">010: Introducing styles</a>
       </li>
     </ul></ul></ul></section>
       <div id="content">
@@ -83,7 +95,7 @@
 <p>Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh your browser - you should see it update to your recent changes.</p>
 <p>Congratulations, that's your first website! ✨</p>
     
-      <h1 id="001">Introduction to HTML</h1>
+      <h1 id="001">HTML Elements</h1>
       <p></p>
       <h2 id="whatishtmlandwhyarewestartingwithit">What is HTML, and why are we starting with it?</h2>
 <p>Imagine that your website is a dancer. One day, we want them to perform beautiful choreography! In magnificent costume! Well, HTML is the dancer's bones. It's hard to design a skirt or direct steps if you don't know about legs.</p>
@@ -205,6 +217,72 @@ blah blah text content&lt;/h1&gt;
 <p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer. So ignore the haters &amp; format however makes you happy. ☀️</p>
 <p>*<em>Search "format on save [your-text-editor's-name]" and you'll likely find steps to turn that on.</em></p>
 <p>**<em>Well… or however makes your boss happy.</em></p>
+    
+      <h1 id="002">HTML Attributes</h1>
+      <p></p>
+      <h2 id="whatarehtmlattributes">What are HTML Attributes?</h2>
+<p>So now you've learned a couple ways to write HTML elements.</p>
+<ol>
+<li>Without text inside:</li>
+</ol>
+<pre><code class="html language-html">&lt;div&gt;&lt;/div&gt;
+</code></pre>
+<ol start="2">
+<li>With text inside:</li>
+</ol>
+<pre><code class="html language-html">&lt;div&gt;Oh fancy meetin' you here&lt;/div&gt;
+</code></pre>
+<ol start="3">
+<li>With other elements! and text! inside:</li>
+</ol>
+<pre><code class="html language-html">&lt;div&gt;
+  &lt;h1&gt;Onions&lt;/h1&gt;
+  &lt;p&gt;They have layers.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>So in simple terms, you know how to either make an empty element, or make one with stuff inside.</p>
+<p>Using "attributes" is another way to customize how an element shows up on your website. An "attribute", just as its English meaning implies, is a trait that describes your element, just like you might describe yourself!</p>
+<blockquote>
+  <p>ILLUSTRATION: On the left, it's me? Maybe curled up in a ball on my couch with a laptop. On the right it's a plain circle. Then caption each like: Me, "shape": "round", "is-moving": "false" (+ maybe one thats differen)</p>
+</blockquote>
+<h2 id="howtoapplyattributestoanhtmlelement">How to apply attributes to an HTML element</h2>
+<p>There are two parts to each element attribute: the name and the value.</p>
+<pre><code class="html language-html">&lt;div size="large" mood="happy" x="y"&gt;Text&lt;/div&gt;
+</code></pre>
+<p>The attribute name goes after the element name, with some space in between. Then, add an equals sign, followed by the attribute value, which needs to be in quotations. Finally, you have the angle bracket (<code>&gt;</code>) to close your opening tag, and the closing tag stays the same as before.</p>
+<p>Optionally, you can omit the equals sign and quote text. (But you must omit BOTH the equals sign &amp; value; including just one will cause an error). This will save your attribute with its custom name but with no defined value.</p>
+<p>Here's a <code>div</code> element with the following information attached: it has an attribute called "size" with a value "large", one called "beautiful" with a value "yes", and two called "easy" and "breezy" with both have no value.</p>
+<pre><code class="html language-html">&lt;div size="large" easy breezy beautiful="yes"&gt;Text&lt;/div&gt;
+</code></pre>
+<p>Just like <code>div</code> and <code>h1</code> came from a long list of all of the existing HTML element types, there's an even longer list of existing attribute types!</p>
+<p>All of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">these attributes</a> are available on every single HTML element type (although they might be useful on some types).</p>
+<p>Each element type has its own unique set of existing attributes as well. For instance, if you look up the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes">attributes for <code>img</code></a> - the aptly named "image" element - has a whole bunch of attributes: <code>alt</code>, <code>src</code>, <code>width</code>, etc.</p>
+<p>Each of these, when added to an HTML element, gives a specific instruction to the browser on how to interpret that element. There might specific rules to what format each value has to be in, too.</p>
+<p>For instance, here I'm setting the <code>src</code> attribute to <a href="https://www.scarymommy.com/wp-content/uploads/2019/09/GettyImages-146582583-min-1.jpg">this image address</a>. This tells the browser: for this <code>img</code> element, display what's at that link.</p>
+<pre><code class="html language-html">&lt;img
+  src="https://www.scarymommy.com/wp-content/uploads/2019/09/GettyImages-146582583-min-1.jpg"
+/&gt;
+</code></pre>
+<p>(Did you notice <code>img</code> is one of those self-closing tags? 😛)</p>
+<p>Here are a few more realistic examples so you can get used to the syntax.</p>
+<p>Setting an <code>&lt;a&gt;</code> ("anchor" or link) element specific URL using the <code>href</code> attribute.</p>
+<pre><code class="html language-html">&lt;a href="https://butt.com"&gt;What smells?&lt;/a&gt;
+</code></pre>
+<p>Maing an <code>&lt;input&gt;</code> (yes, "input") element of <code>type</code> "email".</p>
+<pre><code class="html language-html">&lt;input type="email" /&gt;
+</code></pre>
+<p>Making that image element show up 500 pixels wide and 300 pixels tall.</p>
+<pre><code class="html language-html">&lt;img
+  width="500"
+  height="300"
+  src="https://www.scarymommy.com/wp-content/uploads/2019/09/GettyImages-146582583-min-1.jpg"
+/&gt;
+</code></pre>
+<p>Try these out in your <code>.html</code> file! Here are some practice ideas:</p>
+<ul>
+<li>Add two different images but make them show up as same exact size. (Tip: To get the web address of an image, try ctrl+clicking an image on a website and hiting "Copy Image Address")</li>
+<li>Set up a classic prank by creating an innocent-looking link that <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">goes here</a></li>
+</ul>
     
       <h1 id="00">Introduction to HTML</h1>
       <p></p>
@@ -265,7 +343,7 @@ blah blah text content&lt;/h1&gt;
 <p>Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh your browser - you should see it update to your recent changes.</p>
 <p>Congratulations, that's your first website! ✨</p>
     
-      <h1 id="001">Introduction to HTML</h1>
+      <h1 id="001">HTML Elements</h1>
       <p></p>
       <h2 id="whatishtmlandwhyarewestartingwithit">What is HTML, and why are we starting with it?</h2>
 <p>Imagine that your website is a dancer. One day, we want them to perform beautiful choreography! In magnificent costume! Well, HTML is the dancer's bones. It's hard to design a skirt or direct steps if you don't know about legs.</p>
@@ -387,6 +465,220 @@ blah blah text content&lt;/h1&gt;
 <p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer. So ignore the haters &amp; format however makes you happy. ☀️</p>
 <p>*<em>Search "format on save [your-text-editor's-name]" and you'll likely find steps to turn that on.</em></p>
 <p>**<em>Well… or however makes your boss happy.</em></p>
+    
+      <h1 id="002">HTML Attributes</h1>
+      <p></p>
+      <h2 id="whatarehtmlattributes">What are HTML Attributes?</h2>
+<p>So now you've learned a couple ways to write HTML elements.</p>
+<ol>
+<li>Without text inside:</li>
+</ol>
+<pre><code class="html language-html">&lt;div&gt;&lt;/div&gt;
+</code></pre>
+<ol start="2">
+<li>With text inside:</li>
+</ol>
+<pre><code class="html language-html">&lt;div&gt;Oh fancy meetin' you here&lt;/div&gt;
+</code></pre>
+<ol start="3">
+<li>With other elements! and text! inside:</li>
+</ol>
+<pre><code class="html language-html">&lt;div&gt;
+  &lt;h1&gt;Onions&lt;/h1&gt;
+  &lt;p&gt;They have layers.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>So in simple terms, you know how to either make an empty element, or make one with stuff inside.</p>
+<p>Using "attributes" is another way to customize how an element shows up on your website. An "attribute", just as its English meaning implies, is a trait that describes your element, just like you might describe yourself!</p>
+<blockquote>
+  <p>ILLUSTRATION: On the left, it's me? Maybe curled up in a ball on my couch with a laptop. On the right it's a plain circle. Then caption each like: Me, "shape": "round", "is-moving": "false" (+ maybe one thats differen)</p>
+</blockquote>
+<h2 id="howtoapplyattributestoanhtmlelement">How to apply attributes to an HTML element</h2>
+<p>There are two parts to each element attribute: the name and the value.</p>
+<pre><code class="html language-html">&lt;div size="large" mood="happy" x="y"&gt;Text&lt;/div&gt;
+</code></pre>
+<p>The attribute name goes after the element name, with some space in between. Then, add an equals sign, followed by the attribute value, which needs to be in quotations. Finally, you have the angle bracket (<code>&gt;</code>) to close your opening tag, and the closing tag stays the same as before.</p>
+<p>Optionally, you can omit the equals sign and quote text. (But you must omit BOTH the equals sign &amp; value; including just one will cause an error). This will save your attribute with its custom name but with no defined value.</p>
+<p>Here's a <code>div</code> element with the following information attached: it has an attribute called "size" with a value "large", one called "beautiful" with a value "yes", and two called "easy" and "breezy" with both have no value.</p>
+<pre><code class="html language-html">&lt;div size="large" easy breezy beautiful="yes"&gt;Text&lt;/div&gt;
+</code></pre>
+<p>Just like <code>div</code> and <code>h1</code> came from a long list of all of the existing HTML element types, there's an even longer list of existing attribute types!</p>
+<p>All of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">these attributes</a> are available on every single HTML element type (although they might be useful on some types).</p>
+<p>Each element type has its own unique set of existing attributes as well. For instance, if you look up the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes">attributes for <code>img</code></a> - the aptly named "image" element - has a whole bunch of attributes: <code>alt</code>, <code>src</code>, <code>width</code>, etc.</p>
+<p>Each of these, when added to an HTML element, gives a specific instruction to the browser on how to interpret that element. There might specific rules to what format each value has to be in, too.</p>
+<p>For instance, here I'm setting the <code>src</code> attribute to <a href="https://www.scarymommy.com/wp-content/uploads/2019/09/GettyImages-146582583-min-1.jpg">this image address</a>. This tells the browser: for this <code>img</code> element, display what's at that link.</p>
+<pre><code class="html language-html">&lt;img
+  src="https://www.scarymommy.com/wp-content/uploads/2019/09/GettyImages-146582583-min-1.jpg"
+/&gt;
+</code></pre>
+<p>(Did you notice <code>img</code> is one of those self-closing tags? 😛)</p>
+<p>Here are a few more realistic examples so you can get used to the syntax.</p>
+<p>Setting an <code>&lt;a&gt;</code> ("anchor" or link) element specific URL using the <code>href</code> attribute.</p>
+<pre><code class="html language-html">&lt;a href="https://butt.com"&gt;What smells?&lt;/a&gt;
+</code></pre>
+<p>Maing an <code>&lt;input&gt;</code> (yes, "input") element of <code>type</code> "email".</p>
+<pre><code class="html language-html">&lt;input type="email" /&gt;
+</code></pre>
+<p>Making that image element show up 500 pixels wide and 300 pixels tall.</p>
+<pre><code class="html language-html">&lt;img
+  width="500"
+  height="300"
+  src="https://www.scarymommy.com/wp-content/uploads/2019/09/GettyImages-146582583-min-1.jpg"
+/&gt;
+</code></pre>
+<p>Try these out in your <code>.html</code> file! Here are some practice ideas:</p>
+<ul>
+<li>Add two different images but make them show up as same exact size. (Tip: To get the web address of an image, try ctrl+clicking an image on a website and hiting "Copy Image Address")</li>
+<li>Set up a classic prank by creating an innocent-looking link that <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">goes here</a></li>
+</ul>
+    
+      <h1 id="010">Introducing styles</h1>
+      <p></p>
+      <h2 id="whatisstyling">What is styling?</h2>
+<p>You could certainly build a perfectly functional and useful website just using plain HTML. But if you want to customize the look of it, you'll need to learn about styling.</p>
+<blockquote>
+  <p>ILLUSTRATION: functional but drab/default vs functional &amp; looks good? doesn't have to be literal, something fun?</p>
+</blockquote>
+<p>Each HTML element in your <code>.html</code> file can have its own unique style.</p>
+<pre><code class="html language-html">&lt;div&gt;Block 1&lt;/div&gt;
+&lt;div&gt;Block 2&lt;/div&gt;
+&lt;div&gt;Block 3&lt;/div&gt;
+</code></pre>
+<p>If that's all you write in your <code>.html</code> file, your browser will just show three plain lines of text.</p>
+<p>But with custom styling, you could put "Block 1" into a blue rectangle with rounded corners and pink text inside. "Block 2" could be jumping up and down, flashing yellow and purple! "Block 3" could always be stuck at the top of the page no matter how much you scroll.</p>
+<p>You can style an element's color, positioning, animation, shape, size, and so much more. There are <em>hundreds</em> of traits, called "properties", that you can customize! Just like how <code>&lt;div&gt;</code> is a specific element name in HTML, these properties belong to another language, called <code>CSS</code>.</p>
+<p>Here are some very commonly used CSS properties:</p>
+<ul>
+<li><code>color</code> - the color of the text inside the element</li>
+<li><code>background-color</code> - the background color of the element</li>
+<li><code>font-size</code> - the size of the text inside the element</li>
+<li><code>width</code> &amp; <code>height</code> - the width &amp; height of the element</li>
+<li>… and so on!</li>
+</ul>
+<p>Each of these CSS properties has particular rules on what you can set them to. For instance, <code>font-size</code> can take a value like <code>10px</code>, which would make your text 10 pixels tall. You'll encounter an error if you just set it to <code>10</code> though, because as a rule, <code>font-size</code> requires units.</p>
+<p>Hundreds of properties - each with their own particular set of rules. Yeah, this is often the most intimidating part of styling.</p>
+<p>But don't worry! Learning to code isn't about memorizing everything. In fact, one of the most important skills a programmer can have is being able to search for answers online effectively.</p>
+<p>If you forgot how <code>font-size</code> works, for instance, you could search "font-size CSS" and get endless explanations. With common issues, you can likely even search your specific problem, ex. "font-size 10 not working css" and someone on the other side of the globe will have a blog post about it. The beauty of the web!</p>
+<blockquote>
+  <p>ILLUSTRATION: Some ridiculously specific question (not web related even) and someone on the other side of the world answering it?</p>
+</blockquote>
+<h2 id="okaybuthowdoyouaddthesepropertiestoanhtmlelement">Okay, but how do you add these properties to an HTML element?</h2>
+<p>We previously learned about HTML attributes and how to use them to save information about a specific element. Like setting an image element's source:</p>
+<pre><code class="html language-html">&lt;img
+  src="https://funnyfoto.org/wp-content/uploads/2018/07/cat-saturday-30-photos-91_07_02_2018.jpg"
+/&gt;
+</code></pre>
+<p>One of most useful attributes is called <code>style</code>. This is one of those "global" attributes - one that is available on every type of HTML element from.</p>
+<p>Just like CSS properties, each HTML attribute has specific rules about what kind of values it will accept. The rule with the <code>style</code> attribute is that its value always has to be formatted as CSS code.</p>
+<h2 id="letswritesomecss">Let's write some CSS!</h2>
+<p>Now that we've gotten comfortable with how to write in the HTML language, it's time to learn another. In CSS, correct syntax looks like this:</p>
+<pre><code class="css language-css">color: red;
+background-color: blue;
+</code></pre>
+<p>For each property:</p>
+<ul>
+<li>Property name comes first (always lowercase, never with spaces, dashed between words)</li>
+<li>Then a colon (<code>:</code>)</li>
+<li>Then the property value</li>
+<li>Finally, a semicolon (<code>;</code>) to mark the end of the value</li>
+</ul>
+<h3 id="nbsmallspacingformattingnotes">NB: Small spacing &amp; formatting notes</h3>
+<ul>
+<li>The spaces are not required. Writing the same CSS as <code>color:red;background-color:blue;</code> is completely valid.</li>
+<li>Semicolons are required between different properties. Since there's no property following <code>background-color</code>, you technically don't need one there.</li>
+</ul>
+<p>Now, we just need to take that little chunk of CSS code and set that as the value to a <code>style</code> attribute on one of our HTML elements:</p>
+<pre><code class="html language-html">&lt;div style="color: red;"&gt;Test&lt;/div&gt;
+&lt;div style="background-color: yellow;"&gt;Test&lt;/div&gt;
+&lt;div style="font-size: 30px;"&gt;Test&lt;/div&gt;
+</code></pre>
+<p>Try writing similarly styled HTML elements in your <code>.html</code> file. When you view your website (remember, save the file and then refresh your browser!), you should see different colors and font sizes! Hooray!</p>
+<h2 id="nbdefaultstyles">NB: Default styles</h2>
+<p>HTML elements come with some default styles. Remember how big the <code>h1</code> was in comparison to the <code>p</code> text, even before you added any <code>style</code> attributes? That's because your browser gives <code>h1</code> a default <code>font-size</code> style that is larger than the default of <code>p</code>. And <code>button</code> has a border by default. And so on.</p>
+<p>You'll notice that depending on which browser you open up your .<code>html</code> file in, the default styling might also look slightly different. This is because, although the leading browsers have agreed on a lot of things, there are still areas where they diverge.</p>
+<p>This is important to know for when your cousin, who still uses Internet Explorer, asks you why your website looks so different on their screen!</p>
+<h2 id="miniprojectideas">Mini Project Ideas:</h2>
+<ul>
+<li>Create a webpage that's just colorful horizontal stripes</li>
+<li>Make gigantic text! And teeny-tiny text!</li>
+<li>Dark Mode: Can you put white text on a black background?</li>
+</ul>
+    
+      <h1 id="01">Introduction to CSS</h1>
+      <p></p>
+      
+    
+      <h1 id="010">Introducing styles</h1>
+      <p></p>
+      <h2 id="whatisstyling">What is styling?</h2>
+<p>You could certainly build a perfectly functional and useful website just using plain HTML. But if you want to customize the look of it, you'll need to learn about styling.</p>
+<blockquote>
+  <p>ILLUSTRATION: functional but drab/default vs functional &amp; looks good? doesn't have to be literal, something fun?</p>
+</blockquote>
+<p>Each HTML element in your <code>.html</code> file can have its own unique style.</p>
+<pre><code class="html language-html">&lt;div&gt;Block 1&lt;/div&gt;
+&lt;div&gt;Block 2&lt;/div&gt;
+&lt;div&gt;Block 3&lt;/div&gt;
+</code></pre>
+<p>If that's all you write in your <code>.html</code> file, your browser will just show three plain lines of text.</p>
+<p>But with custom styling, you could put "Block 1" into a blue rectangle with rounded corners and pink text inside. "Block 2" could be jumping up and down, flashing yellow and purple! "Block 3" could always be stuck at the top of the page no matter how much you scroll.</p>
+<p>You can style an element's color, positioning, animation, shape, size, and so much more. There are <em>hundreds</em> of traits, called "properties", that you can customize! Just like how <code>&lt;div&gt;</code> is a specific element name in HTML, these properties belong to another language, called <code>CSS</code>.</p>
+<p>Here are some very commonly used CSS properties:</p>
+<ul>
+<li><code>color</code> - the color of the text inside the element</li>
+<li><code>background-color</code> - the background color of the element</li>
+<li><code>font-size</code> - the size of the text inside the element</li>
+<li><code>width</code> &amp; <code>height</code> - the width &amp; height of the element</li>
+<li>… and so on!</li>
+</ul>
+<p>Each of these CSS properties has particular rules on what you can set them to. For instance, <code>font-size</code> can take a value like <code>10px</code>, which would make your text 10 pixels tall. You'll encounter an error if you just set it to <code>10</code> though, because as a rule, <code>font-size</code> requires units.</p>
+<p>Hundreds of properties - each with their own particular set of rules. Yeah, this is often the most intimidating part of styling.</p>
+<p>But don't worry! Learning to code isn't about memorizing everything. In fact, one of the most important skills a programmer can have is being able to search for answers online effectively.</p>
+<p>If you forgot how <code>font-size</code> works, for instance, you could search "font-size CSS" and get endless explanations. With common issues, you can likely even search your specific problem, ex. "font-size 10 not working css" and someone on the other side of the globe will have a blog post about it. The beauty of the web!</p>
+<blockquote>
+  <p>ILLUSTRATION: Some ridiculously specific question (not web related even) and someone on the other side of the world answering it?</p>
+</blockquote>
+<h2 id="okaybuthowdoyouaddthesepropertiestoanhtmlelement">Okay, but how do you add these properties to an HTML element?</h2>
+<p>We previously learned about HTML attributes and how to use them to save information about a specific element. Like setting an image element's source:</p>
+<pre><code class="html language-html">&lt;img
+  src="https://funnyfoto.org/wp-content/uploads/2018/07/cat-saturday-30-photos-91_07_02_2018.jpg"
+/&gt;
+</code></pre>
+<p>One of most useful attributes is called <code>style</code>. This is one of those "global" attributes - one that is available on every type of HTML element from.</p>
+<p>Just like CSS properties, each HTML attribute has specific rules about what kind of values it will accept. The rule with the <code>style</code> attribute is that its value always has to be formatted as CSS code.</p>
+<h2 id="letswritesomecss">Let's write some CSS!</h2>
+<p>Now that we've gotten comfortable with how to write in the HTML language, it's time to learn another. In CSS, correct syntax looks like this:</p>
+<pre><code class="css language-css">color: red;
+background-color: blue;
+</code></pre>
+<p>For each property:</p>
+<ul>
+<li>Property name comes first (always lowercase, never with spaces, dashed between words)</li>
+<li>Then a colon (<code>:</code>)</li>
+<li>Then the property value</li>
+<li>Finally, a semicolon (<code>;</code>) to mark the end of the value</li>
+</ul>
+<h3 id="nbsmallspacingformattingnotes">NB: Small spacing &amp; formatting notes</h3>
+<ul>
+<li>The spaces are not required. Writing the same CSS as <code>color:red;background-color:blue;</code> is completely valid.</li>
+<li>Semicolons are required between different properties. Since there's no property following <code>background-color</code>, you technically don't need one there.</li>
+</ul>
+<p>Now, we just need to take that little chunk of CSS code and set that as the value to a <code>style</code> attribute on one of our HTML elements:</p>
+<pre><code class="html language-html">&lt;div style="color: red;"&gt;Test&lt;/div&gt;
+&lt;div style="background-color: yellow;"&gt;Test&lt;/div&gt;
+&lt;div style="font-size: 30px;"&gt;Test&lt;/div&gt;
+</code></pre>
+<p>Try writing similarly styled HTML elements in your <code>.html</code> file. When you view your website (remember, save the file and then refresh your browser!), you should see different colors and font sizes! Hooray!</p>
+<h2 id="nbdefaultstyles">NB: Default styles</h2>
+<p>HTML elements come with some default styles. Remember how big the <code>h1</code> was in comparison to the <code>p</code> text, even before you added any <code>style</code> attributes? That's because your browser gives <code>h1</code> a default <code>font-size</code> style that is larger than the default of <code>p</code>. And <code>button</code> has a border by default. And so on.</p>
+<p>You'll notice that depending on which browser you open up your .<code>html</code> file in, the default styling might also look slightly different. This is because, although the leading browsers have agreed on a lot of things, there are still areas where they diverge.</p>
+<p>This is important to know for when your cousin, who still uses Internet Explorer, asks you why your website looks so different on their screen!</p>
+<h2 id="miniprojectideas">Mini Project Ideas:</h2>
+<ul>
+<li>Create a webpage that's just colorful horizontal stripes</li>
+<li>Make gigantic text! And teeny-tiny text!</li>
+<li>Dark Mode: Can you put white text on a black background?</li>
+</ul>
     
       <h1 id="0">Introduction to Web Development</h1>
       <p>This guide is intended to help you get started in your web development journey.</p>
@@ -447,7 +739,7 @@ blah blah text content&lt;/h1&gt;
 <p>Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh your browser - you should see it update to your recent changes.</p>
 <p>Congratulations, that's your first website! ✨</p>
     
-      <h1 id="001">Introduction to HTML</h1>
+      <h1 id="001">HTML Elements</h1>
       <p></p>
       <h2 id="whatishtmlandwhyarewestartingwithit">What is HTML, and why are we starting with it?</h2>
 <p>Imagine that your website is a dancer. One day, we want them to perform beautiful choreography! In magnificent costume! Well, HTML is the dancer's bones. It's hard to design a skirt or direct steps if you don't know about legs.</p>
@@ -569,6 +861,72 @@ blah blah text content&lt;/h1&gt;
 <p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer. So ignore the haters &amp; format however makes you happy. ☀️</p>
 <p>*<em>Search "format on save [your-text-editor's-name]" and you'll likely find steps to turn that on.</em></p>
 <p>**<em>Well… or however makes your boss happy.</em></p>
+    
+      <h1 id="002">HTML Attributes</h1>
+      <p></p>
+      <h2 id="whatarehtmlattributes">What are HTML Attributes?</h2>
+<p>So now you've learned a couple ways to write HTML elements.</p>
+<ol>
+<li>Without text inside:</li>
+</ol>
+<pre><code class="html language-html">&lt;div&gt;&lt;/div&gt;
+</code></pre>
+<ol start="2">
+<li>With text inside:</li>
+</ol>
+<pre><code class="html language-html">&lt;div&gt;Oh fancy meetin' you here&lt;/div&gt;
+</code></pre>
+<ol start="3">
+<li>With other elements! and text! inside:</li>
+</ol>
+<pre><code class="html language-html">&lt;div&gt;
+  &lt;h1&gt;Onions&lt;/h1&gt;
+  &lt;p&gt;They have layers.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>So in simple terms, you know how to either make an empty element, or make one with stuff inside.</p>
+<p>Using "attributes" is another way to customize how an element shows up on your website. An "attribute", just as its English meaning implies, is a trait that describes your element, just like you might describe yourself!</p>
+<blockquote>
+  <p>ILLUSTRATION: On the left, it's me? Maybe curled up in a ball on my couch with a laptop. On the right it's a plain circle. Then caption each like: Me, "shape": "round", "is-moving": "false" (+ maybe one thats differen)</p>
+</blockquote>
+<h2 id="howtoapplyattributestoanhtmlelement">How to apply attributes to an HTML element</h2>
+<p>There are two parts to each element attribute: the name and the value.</p>
+<pre><code class="html language-html">&lt;div size="large" mood="happy" x="y"&gt;Text&lt;/div&gt;
+</code></pre>
+<p>The attribute name goes after the element name, with some space in between. Then, add an equals sign, followed by the attribute value, which needs to be in quotations. Finally, you have the angle bracket (<code>&gt;</code>) to close your opening tag, and the closing tag stays the same as before.</p>
+<p>Optionally, you can omit the equals sign and quote text. (But you must omit BOTH the equals sign &amp; value; including just one will cause an error). This will save your attribute with its custom name but with no defined value.</p>
+<p>Here's a <code>div</code> element with the following information attached: it has an attribute called "size" with a value "large", one called "beautiful" with a value "yes", and two called "easy" and "breezy" with both have no value.</p>
+<pre><code class="html language-html">&lt;div size="large" easy breezy beautiful="yes"&gt;Text&lt;/div&gt;
+</code></pre>
+<p>Just like <code>div</code> and <code>h1</code> came from a long list of all of the existing HTML element types, there's an even longer list of existing attribute types!</p>
+<p>All of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">these attributes</a> are available on every single HTML element type (although they might be useful on some types).</p>
+<p>Each element type has its own unique set of existing attributes as well. For instance, if you look up the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes">attributes for <code>img</code></a> - the aptly named "image" element - has a whole bunch of attributes: <code>alt</code>, <code>src</code>, <code>width</code>, etc.</p>
+<p>Each of these, when added to an HTML element, gives a specific instruction to the browser on how to interpret that element. There might specific rules to what format each value has to be in, too.</p>
+<p>For instance, here I'm setting the <code>src</code> attribute to <a href="https://www.scarymommy.com/wp-content/uploads/2019/09/GettyImages-146582583-min-1.jpg">this image address</a>. This tells the browser: for this <code>img</code> element, display what's at that link.</p>
+<pre><code class="html language-html">&lt;img
+  src="https://www.scarymommy.com/wp-content/uploads/2019/09/GettyImages-146582583-min-1.jpg"
+/&gt;
+</code></pre>
+<p>(Did you notice <code>img</code> is one of those self-closing tags? 😛)</p>
+<p>Here are a few more realistic examples so you can get used to the syntax.</p>
+<p>Setting an <code>&lt;a&gt;</code> ("anchor" or link) element specific URL using the <code>href</code> attribute.</p>
+<pre><code class="html language-html">&lt;a href="https://butt.com"&gt;What smells?&lt;/a&gt;
+</code></pre>
+<p>Maing an <code>&lt;input&gt;</code> (yes, "input") element of <code>type</code> "email".</p>
+<pre><code class="html language-html">&lt;input type="email" /&gt;
+</code></pre>
+<p>Making that image element show up 500 pixels wide and 300 pixels tall.</p>
+<pre><code class="html language-html">&lt;img
+  width="500"
+  height="300"
+  src="https://www.scarymommy.com/wp-content/uploads/2019/09/GettyImages-146582583-min-1.jpg"
+/&gt;
+</code></pre>
+<p>Try these out in your <code>.html</code> file! Here are some practice ideas:</p>
+<ul>
+<li>Add two different images but make them show up as same exact size. (Tip: To get the web address of an image, try ctrl+clicking an image on a website and hiting "Copy Image Address")</li>
+<li>Set up a classic prank by creating an innocent-looking link that <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">goes here</a></li>
+</ul>
     
       <h1 id="00">Introduction to HTML</h1>
       <p></p>
@@ -629,7 +987,7 @@ blah blah text content&lt;/h1&gt;
 <p>Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh your browser - you should see it update to your recent changes.</p>
 <p>Congratulations, that's your first website! ✨</p>
     
-      <h1 id="001">Introduction to HTML</h1>
+      <h1 id="001">HTML Elements</h1>
       <p></p>
       <h2 id="whatishtmlandwhyarewestartingwithit">What is HTML, and why are we starting with it?</h2>
 <p>Imagine that your website is a dancer. One day, we want them to perform beautiful choreography! In magnificent costume! Well, HTML is the dancer's bones. It's hard to design a skirt or direct steps if you don't know about legs.</p>
@@ -751,6 +1109,220 @@ blah blah text content&lt;/h1&gt;
 <p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer. So ignore the haters &amp; format however makes you happy. ☀️</p>
 <p>*<em>Search "format on save [your-text-editor's-name]" and you'll likely find steps to turn that on.</em></p>
 <p>**<em>Well… or however makes your boss happy.</em></p>
+    
+      <h1 id="002">HTML Attributes</h1>
+      <p></p>
+      <h2 id="whatarehtmlattributes">What are HTML Attributes?</h2>
+<p>So now you've learned a couple ways to write HTML elements.</p>
+<ol>
+<li>Without text inside:</li>
+</ol>
+<pre><code class="html language-html">&lt;div&gt;&lt;/div&gt;
+</code></pre>
+<ol start="2">
+<li>With text inside:</li>
+</ol>
+<pre><code class="html language-html">&lt;div&gt;Oh fancy meetin' you here&lt;/div&gt;
+</code></pre>
+<ol start="3">
+<li>With other elements! and text! inside:</li>
+</ol>
+<pre><code class="html language-html">&lt;div&gt;
+  &lt;h1&gt;Onions&lt;/h1&gt;
+  &lt;p&gt;They have layers.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>So in simple terms, you know how to either make an empty element, or make one with stuff inside.</p>
+<p>Using "attributes" is another way to customize how an element shows up on your website. An "attribute", just as its English meaning implies, is a trait that describes your element, just like you might describe yourself!</p>
+<blockquote>
+  <p>ILLUSTRATION: On the left, it's me? Maybe curled up in a ball on my couch with a laptop. On the right it's a plain circle. Then caption each like: Me, "shape": "round", "is-moving": "false" (+ maybe one thats differen)</p>
+</blockquote>
+<h2 id="howtoapplyattributestoanhtmlelement">How to apply attributes to an HTML element</h2>
+<p>There are two parts to each element attribute: the name and the value.</p>
+<pre><code class="html language-html">&lt;div size="large" mood="happy" x="y"&gt;Text&lt;/div&gt;
+</code></pre>
+<p>The attribute name goes after the element name, with some space in between. Then, add an equals sign, followed by the attribute value, which needs to be in quotations. Finally, you have the angle bracket (<code>&gt;</code>) to close your opening tag, and the closing tag stays the same as before.</p>
+<p>Optionally, you can omit the equals sign and quote text. (But you must omit BOTH the equals sign &amp; value; including just one will cause an error). This will save your attribute with its custom name but with no defined value.</p>
+<p>Here's a <code>div</code> element with the following information attached: it has an attribute called "size" with a value "large", one called "beautiful" with a value "yes", and two called "easy" and "breezy" with both have no value.</p>
+<pre><code class="html language-html">&lt;div size="large" easy breezy beautiful="yes"&gt;Text&lt;/div&gt;
+</code></pre>
+<p>Just like <code>div</code> and <code>h1</code> came from a long list of all of the existing HTML element types, there's an even longer list of existing attribute types!</p>
+<p>All of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">these attributes</a> are available on every single HTML element type (although they might be useful on some types).</p>
+<p>Each element type has its own unique set of existing attributes as well. For instance, if you look up the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attributes">attributes for <code>img</code></a> - the aptly named "image" element - has a whole bunch of attributes: <code>alt</code>, <code>src</code>, <code>width</code>, etc.</p>
+<p>Each of these, when added to an HTML element, gives a specific instruction to the browser on how to interpret that element. There might specific rules to what format each value has to be in, too.</p>
+<p>For instance, here I'm setting the <code>src</code> attribute to <a href="https://www.scarymommy.com/wp-content/uploads/2019/09/GettyImages-146582583-min-1.jpg">this image address</a>. This tells the browser: for this <code>img</code> element, display what's at that link.</p>
+<pre><code class="html language-html">&lt;img
+  src="https://www.scarymommy.com/wp-content/uploads/2019/09/GettyImages-146582583-min-1.jpg"
+/&gt;
+</code></pre>
+<p>(Did you notice <code>img</code> is one of those self-closing tags? 😛)</p>
+<p>Here are a few more realistic examples so you can get used to the syntax.</p>
+<p>Setting an <code>&lt;a&gt;</code> ("anchor" or link) element specific URL using the <code>href</code> attribute.</p>
+<pre><code class="html language-html">&lt;a href="https://butt.com"&gt;What smells?&lt;/a&gt;
+</code></pre>
+<p>Maing an <code>&lt;input&gt;</code> (yes, "input") element of <code>type</code> "email".</p>
+<pre><code class="html language-html">&lt;input type="email" /&gt;
+</code></pre>
+<p>Making that image element show up 500 pixels wide and 300 pixels tall.</p>
+<pre><code class="html language-html">&lt;img
+  width="500"
+  height="300"
+  src="https://www.scarymommy.com/wp-content/uploads/2019/09/GettyImages-146582583-min-1.jpg"
+/&gt;
+</code></pre>
+<p>Try these out in your <code>.html</code> file! Here are some practice ideas:</p>
+<ul>
+<li>Add two different images but make them show up as same exact size. (Tip: To get the web address of an image, try ctrl+clicking an image on a website and hiting "Copy Image Address")</li>
+<li>Set up a classic prank by creating an innocent-looking link that <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">goes here</a></li>
+</ul>
+    
+      <h1 id="010">Introducing styles</h1>
+      <p></p>
+      <h2 id="whatisstyling">What is styling?</h2>
+<p>You could certainly build a perfectly functional and useful website just using plain HTML. But if you want to customize the look of it, you'll need to learn about styling.</p>
+<blockquote>
+  <p>ILLUSTRATION: functional but drab/default vs functional &amp; looks good? doesn't have to be literal, something fun?</p>
+</blockquote>
+<p>Each HTML element in your <code>.html</code> file can have its own unique style.</p>
+<pre><code class="html language-html">&lt;div&gt;Block 1&lt;/div&gt;
+&lt;div&gt;Block 2&lt;/div&gt;
+&lt;div&gt;Block 3&lt;/div&gt;
+</code></pre>
+<p>If that's all you write in your <code>.html</code> file, your browser will just show three plain lines of text.</p>
+<p>But with custom styling, you could put "Block 1" into a blue rectangle with rounded corners and pink text inside. "Block 2" could be jumping up and down, flashing yellow and purple! "Block 3" could always be stuck at the top of the page no matter how much you scroll.</p>
+<p>You can style an element's color, positioning, animation, shape, size, and so much more. There are <em>hundreds</em> of traits, called "properties", that you can customize! Just like how <code>&lt;div&gt;</code> is a specific element name in HTML, these properties belong to another language, called <code>CSS</code>.</p>
+<p>Here are some very commonly used CSS properties:</p>
+<ul>
+<li><code>color</code> - the color of the text inside the element</li>
+<li><code>background-color</code> - the background color of the element</li>
+<li><code>font-size</code> - the size of the text inside the element</li>
+<li><code>width</code> &amp; <code>height</code> - the width &amp; height of the element</li>
+<li>… and so on!</li>
+</ul>
+<p>Each of these CSS properties has particular rules on what you can set them to. For instance, <code>font-size</code> can take a value like <code>10px</code>, which would make your text 10 pixels tall. You'll encounter an error if you just set it to <code>10</code> though, because as a rule, <code>font-size</code> requires units.</p>
+<p>Hundreds of properties - each with their own particular set of rules. Yeah, this is often the most intimidating part of styling.</p>
+<p>But don't worry! Learning to code isn't about memorizing everything. In fact, one of the most important skills a programmer can have is being able to search for answers online effectively.</p>
+<p>If you forgot how <code>font-size</code> works, for instance, you could search "font-size CSS" and get endless explanations. With common issues, you can likely even search your specific problem, ex. "font-size 10 not working css" and someone on the other side of the globe will have a blog post about it. The beauty of the web!</p>
+<blockquote>
+  <p>ILLUSTRATION: Some ridiculously specific question (not web related even) and someone on the other side of the world answering it?</p>
+</blockquote>
+<h2 id="okaybuthowdoyouaddthesepropertiestoanhtmlelement">Okay, but how do you add these properties to an HTML element?</h2>
+<p>We previously learned about HTML attributes and how to use them to save information about a specific element. Like setting an image element's source:</p>
+<pre><code class="html language-html">&lt;img
+  src="https://funnyfoto.org/wp-content/uploads/2018/07/cat-saturday-30-photos-91_07_02_2018.jpg"
+/&gt;
+</code></pre>
+<p>One of most useful attributes is called <code>style</code>. This is one of those "global" attributes - one that is available on every type of HTML element from.</p>
+<p>Just like CSS properties, each HTML attribute has specific rules about what kind of values it will accept. The rule with the <code>style</code> attribute is that its value always has to be formatted as CSS code.</p>
+<h2 id="letswritesomecss">Let's write some CSS!</h2>
+<p>Now that we've gotten comfortable with how to write in the HTML language, it's time to learn another. In CSS, correct syntax looks like this:</p>
+<pre><code class="css language-css">color: red;
+background-color: blue;
+</code></pre>
+<p>For each property:</p>
+<ul>
+<li>Property name comes first (always lowercase, never with spaces, dashed between words)</li>
+<li>Then a colon (<code>:</code>)</li>
+<li>Then the property value</li>
+<li>Finally, a semicolon (<code>;</code>) to mark the end of the value</li>
+</ul>
+<h3 id="nbsmallspacingformattingnotes">NB: Small spacing &amp; formatting notes</h3>
+<ul>
+<li>The spaces are not required. Writing the same CSS as <code>color:red;background-color:blue;</code> is completely valid.</li>
+<li>Semicolons are required between different properties. Since there's no property following <code>background-color</code>, you technically don't need one there.</li>
+</ul>
+<p>Now, we just need to take that little chunk of CSS code and set that as the value to a <code>style</code> attribute on one of our HTML elements:</p>
+<pre><code class="html language-html">&lt;div style="color: red;"&gt;Test&lt;/div&gt;
+&lt;div style="background-color: yellow;"&gt;Test&lt;/div&gt;
+&lt;div style="font-size: 30px;"&gt;Test&lt;/div&gt;
+</code></pre>
+<p>Try writing similarly styled HTML elements in your <code>.html</code> file. When you view your website (remember, save the file and then refresh your browser!), you should see different colors and font sizes! Hooray!</p>
+<h2 id="nbdefaultstyles">NB: Default styles</h2>
+<p>HTML elements come with some default styles. Remember how big the <code>h1</code> was in comparison to the <code>p</code> text, even before you added any <code>style</code> attributes? That's because your browser gives <code>h1</code> a default <code>font-size</code> style that is larger than the default of <code>p</code>. And <code>button</code> has a border by default. And so on.</p>
+<p>You'll notice that depending on which browser you open up your .<code>html</code> file in, the default styling might also look slightly different. This is because, although the leading browsers have agreed on a lot of things, there are still areas where they diverge.</p>
+<p>This is important to know for when your cousin, who still uses Internet Explorer, asks you why your website looks so different on their screen!</p>
+<h2 id="miniprojectideas">Mini Project Ideas:</h2>
+<ul>
+<li>Create a webpage that's just colorful horizontal stripes</li>
+<li>Make gigantic text! And teeny-tiny text!</li>
+<li>Dark Mode: Can you put white text on a black background?</li>
+</ul>
+    
+      <h1 id="01">Introduction to CSS</h1>
+      <p></p>
+      
+    
+      <h1 id="010">Introducing styles</h1>
+      <p></p>
+      <h2 id="whatisstyling">What is styling?</h2>
+<p>You could certainly build a perfectly functional and useful website just using plain HTML. But if you want to customize the look of it, you'll need to learn about styling.</p>
+<blockquote>
+  <p>ILLUSTRATION: functional but drab/default vs functional &amp; looks good? doesn't have to be literal, something fun?</p>
+</blockquote>
+<p>Each HTML element in your <code>.html</code> file can have its own unique style.</p>
+<pre><code class="html language-html">&lt;div&gt;Block 1&lt;/div&gt;
+&lt;div&gt;Block 2&lt;/div&gt;
+&lt;div&gt;Block 3&lt;/div&gt;
+</code></pre>
+<p>If that's all you write in your <code>.html</code> file, your browser will just show three plain lines of text.</p>
+<p>But with custom styling, you could put "Block 1" into a blue rectangle with rounded corners and pink text inside. "Block 2" could be jumping up and down, flashing yellow and purple! "Block 3" could always be stuck at the top of the page no matter how much you scroll.</p>
+<p>You can style an element's color, positioning, animation, shape, size, and so much more. There are <em>hundreds</em> of traits, called "properties", that you can customize! Just like how <code>&lt;div&gt;</code> is a specific element name in HTML, these properties belong to another language, called <code>CSS</code>.</p>
+<p>Here are some very commonly used CSS properties:</p>
+<ul>
+<li><code>color</code> - the color of the text inside the element</li>
+<li><code>background-color</code> - the background color of the element</li>
+<li><code>font-size</code> - the size of the text inside the element</li>
+<li><code>width</code> &amp; <code>height</code> - the width &amp; height of the element</li>
+<li>… and so on!</li>
+</ul>
+<p>Each of these CSS properties has particular rules on what you can set them to. For instance, <code>font-size</code> can take a value like <code>10px</code>, which would make your text 10 pixels tall. You'll encounter an error if you just set it to <code>10</code> though, because as a rule, <code>font-size</code> requires units.</p>
+<p>Hundreds of properties - each with their own particular set of rules. Yeah, this is often the most intimidating part of styling.</p>
+<p>But don't worry! Learning to code isn't about memorizing everything. In fact, one of the most important skills a programmer can have is being able to search for answers online effectively.</p>
+<p>If you forgot how <code>font-size</code> works, for instance, you could search "font-size CSS" and get endless explanations. With common issues, you can likely even search your specific problem, ex. "font-size 10 not working css" and someone on the other side of the globe will have a blog post about it. The beauty of the web!</p>
+<blockquote>
+  <p>ILLUSTRATION: Some ridiculously specific question (not web related even) and someone on the other side of the world answering it?</p>
+</blockquote>
+<h2 id="okaybuthowdoyouaddthesepropertiestoanhtmlelement">Okay, but how do you add these properties to an HTML element?</h2>
+<p>We previously learned about HTML attributes and how to use them to save information about a specific element. Like setting an image element's source:</p>
+<pre><code class="html language-html">&lt;img
+  src="https://funnyfoto.org/wp-content/uploads/2018/07/cat-saturday-30-photos-91_07_02_2018.jpg"
+/&gt;
+</code></pre>
+<p>One of most useful attributes is called <code>style</code>. This is one of those "global" attributes - one that is available on every type of HTML element from.</p>
+<p>Just like CSS properties, each HTML attribute has specific rules about what kind of values it will accept. The rule with the <code>style</code> attribute is that its value always has to be formatted as CSS code.</p>
+<h2 id="letswritesomecss">Let's write some CSS!</h2>
+<p>Now that we've gotten comfortable with how to write in the HTML language, it's time to learn another. In CSS, correct syntax looks like this:</p>
+<pre><code class="css language-css">color: red;
+background-color: blue;
+</code></pre>
+<p>For each property:</p>
+<ul>
+<li>Property name comes first (always lowercase, never with spaces, dashed between words)</li>
+<li>Then a colon (<code>:</code>)</li>
+<li>Then the property value</li>
+<li>Finally, a semicolon (<code>;</code>) to mark the end of the value</li>
+</ul>
+<h3 id="nbsmallspacingformattingnotes">NB: Small spacing &amp; formatting notes</h3>
+<ul>
+<li>The spaces are not required. Writing the same CSS as <code>color:red;background-color:blue;</code> is completely valid.</li>
+<li>Semicolons are required between different properties. Since there's no property following <code>background-color</code>, you technically don't need one there.</li>
+</ul>
+<p>Now, we just need to take that little chunk of CSS code and set that as the value to a <code>style</code> attribute on one of our HTML elements:</p>
+<pre><code class="html language-html">&lt;div style="color: red;"&gt;Test&lt;/div&gt;
+&lt;div style="background-color: yellow;"&gt;Test&lt;/div&gt;
+&lt;div style="font-size: 30px;"&gt;Test&lt;/div&gt;
+</code></pre>
+<p>Try writing similarly styled HTML elements in your <code>.html</code> file. When you view your website (remember, save the file and then refresh your browser!), you should see different colors and font sizes! Hooray!</p>
+<h2 id="nbdefaultstyles">NB: Default styles</h2>
+<p>HTML elements come with some default styles. Remember how big the <code>h1</code> was in comparison to the <code>p</code> text, even before you added any <code>style</code> attributes? That's because your browser gives <code>h1</code> a default <code>font-size</code> style that is larger than the default of <code>p</code>. And <code>button</code> has a border by default. And so on.</p>
+<p>You'll notice that depending on which browser you open up your .<code>html</code> file in, the default styling might also look slightly different. This is because, although the leading browsers have agreed on a lot of things, there are still areas where they diverge.</p>
+<p>This is important to know for when your cousin, who still uses Internet Explorer, asks you why your website looks so different on their screen!</p>
+<h2 id="miniprojectideas">Mini Project Ideas:</h2>
+<ul>
+<li>Create a webpage that's just colorful horizontal stripes</li>
+<li>Make gigantic text! And teeny-tiny text!</li>
+<li>Dark Mode: Can you put white text on a black background?</li>
+</ul>
     </div>
     </main>
   </body>
