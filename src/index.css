@@ -51,3 +51,9 @@ blockquote {
   padding-inline-start: 20px;
   margin-bottom: 20px;
 }
+
+#prerequisites {
+  list-style: none;
+  padding-inline-start: 20px;
+  margin-top: -15px;
+}

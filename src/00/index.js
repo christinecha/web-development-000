@@ -13,7 +13,7 @@ const HTML_ELEMENTS = {
   title: "HTML Elements",
   description: "",
   markdown: path.resolve(__dirname, "html-elements.md"),
-  dependencies: [FIRST_WEBSITE],
+  dependencies: [],
 };
 
 const HTML_ATTRIBUTES = {
@@ -21,7 +21,7 @@ const HTML_ATTRIBUTES = {
   title: "HTML Attributes",
   description: "",
   markdown: path.resolve(__dirname, "html-attributes.md"),
-  dependencies: [HTML_ELEMENTS],
+  dependencies: [],
 };
 
 module.exports = {

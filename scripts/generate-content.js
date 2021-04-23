@@ -44,6 +44,16 @@ const generateOutline = ({ parentId = "", contents = [] }) => {
   return html;
 };
 
+const getDependencyHtml = (dependencies) => {
+  let html = '<h4>Prerequisites:</h4><ul id="prerequisites">';
+  dependencies.forEach((dep) => {
+    html += `<li><a href="./${dep.permaId}.html">${dep.title}</a></li>`;
+  });
+
+  html += "</ul>";
+  return html;
+};
+
 const generatePages = ({ parentId = "", contents = [] }) => {
   const allPages = [];
 
@@ -52,6 +62,12 @@ const generatePages = ({ parentId = "", contents = [] }) => {
   }
 
   contents.forEach((c, index) => {
+    const dependencies = c.dependencies || [];
+    const previous = contents[index - 1];
+    if (previous) {
+      dependencies.push(previous);
+    }
+
     const id = parentId + (c.id || index);
     const markdown = c.markdown
       ? readFileSync(c.markdown, { encoding: "utf-8" })
@@ -61,6 +77,7 @@ const generatePages = ({ parentId = "", contents = [] }) => {
     let html = `
       <h1 id="${id}">${c.title}</h1>
       <p>${c.description}</p>
+      ${dependencies.length ? getDependencyHtml(dependencies) : ""}
       ${markdownHtml}
     `;
 
