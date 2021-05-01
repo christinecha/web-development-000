@@ -74,7 +74,7 @@ For each property:
 Now, we just need to take that little chunk of CSS code and set that as the value to a `style` attribute on one of our HTML elements:
 
 ```html
-<div style="color: red;">Test</div>
+<div style="color: red; background-color: pink;">Test</div>
 <div style="background-color: yellow;">Test</div>
 <div style="font-size: 30px;">Test</div>
 ```

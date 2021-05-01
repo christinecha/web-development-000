@@ -25,35 +25,43 @@ Each element is indicated by two "tags" (1 & 3), and you can put text between th
 
 The element type is specified inside of the angle brackets.
 
-```
-<blerp></blerp>
-<noodle></noodle>
-```
-
-Ah yes, the popular Blerp and Noodle elements!
-
-You can also "nest" elements inside one another, with or without text, to produce more complex structures. These relationships (and others in code) are often described as "parent" and "child" - in this case, the elements inside are "children", wrapped by their "parent" element.
-
 ```html
-<blerp>
-  Random text!
-  <noodle></noodle>
-  Random other text!
-  <noodle>
-    <blerp>
-      <noodle>More text!</noodle>
-    </blerp>
-  </noodle>
-</blerp>
+<blerp>Text</blerp><noodle>More Text</noodle>
 ```
+
+In this example, you'd refer to these as "blerp" and "noodle" elements.
 
 Try typing these elements in your `.html` file. Make your own! Move them around! Type funny quotes inside them! Save your changes, and view the file in your browser again.
 
 Notice that you won't see the element tags, like `<blerp>`, in your browser - you only see the text you put inside them. This is exactly how all HTML elements work; they simply provide the underlying structure for your content.
 
+## Nesting
+
+You can also "nest" elements inside one another, with or without text, to produce more complex structures. "Nesting" is a very common concept across programming, not just in HTML. These relationships are often described as "parent" and "child" - in this case, the elements inside are "children", wrapped by their "parent" element.
+
+```html
+<grandma>
+  Grandma text #1
+  <mom>
+    <daughter>Shelly</daughter>
+    <daughter>Welly</daughter>
+  </mom>
+  Grandma text #2
+  <aunt>
+    <cousin>
+      <babycousin>Baby text</babycousin>
+    </cousin>
+  </aunt>
+</grandma>
+```
+
+In our family tree example here, `grandma` is the "parent" element of `mom` and `aunt`, which respectively are "parents" of `daughter` and `cousin`. The text inside the elements can also be referred to as their "children". We would even use the term "siblings" to describe the two `daughter` elements!
+
+(Note: The terms "parent", "child", and "sibling" are actual technical terms that developers use all the time. If you use other, albeit similar, language like "mother" and "daughter" elements, folks might not understand you! 😅)
+
 ## HTML Elements
 
-Okay, now that we've learned about the general syntax, I'll come clean. Blerp and Noodle aren't actually HTML elements. (Technically you could call them anything you want and there wouldn't be any visible errors, but then, more technically, that's no longer HTML... that's for another day.[^1])
+Okay, now that we've learned about the general syntax, I'll come clean - `blerp`, `noodle`, `aunt`, and `grandma` aren't actual HTML elements. (Technically you could call them anything you want and there wouldn't be any visible errors, but then, more technically, that's no longer HTML... that's for another day.[^1])
 
 There's a huge selection of HTML element types that all browsers have agreed to accept. Here are just a few examples:
 
@@ -75,7 +83,7 @@ Here's a list of every single element tag in HTML: https://developer.mozilla.org
 
 ## Self-closing tags
 
-There are some HTML elements that can't contain children (no text, no elements, no nothin' inside!). In these special cases, you have to merge the two tags into just one.
+There are some HTML elements that can't contain children (no text, no elements, no nothin' inside!). In these special cases, you use a slightly different format - almost as if you've merged the opening and closing tags into one.
 
 Correct:
 
@@ -140,17 +148,21 @@ Look at you go! This is starting to look like the real thing.
 
 ## NB: About spacing & indentation
 
-The spacing doesn't matter very much. These three examples should all look the same in your browser:
+In some cases, specific spacing is required for things to work. But in a lot of cases, it's just personal preference. For example, these three snippets should all work and look the same in your browser:
 
 ```
 <h1>
 blah blah text content</h1>
+```
 
+```
 <h1>
   blah blah text content
 
 </h1>
+```
 
+```
               <h1>
       blah blah text content
           </h1>
@@ -158,11 +170,11 @@ blah blah text content</h1>
 
 Programmers like to enforce strict indentation rules (always indent when you move into a child element, etc.) so their code is more legible. Your text editor can even automatically do that for you whenever you save your file\*.
 
-That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a _better_ programmer. So ignore the haters & format however makes you happy. ☀️
+That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a _better_ programmer.
 
 \*_Search "format on save [your-text-editor's-name]" and you'll likely find steps to turn that on._
 
-\*\*_Well... or however makes your boss happy._
+### Footnotes
 
 [^1]: https://dev.w3.org/html5/html-author/#self-closing-tag
 [^2]: https://www.w3.org/Style/customdtd.en.html

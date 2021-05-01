@@ -25,7 +25,7 @@ module.exports = [
         permaId: "intro-to-css",
         title: "Introduction to CSS",
         description: "",
-        contents: [SECTION_01.INTRO_STYLES],
+        contents: [SECTION_01.INTRO_STYLES, SECTION_01.COLOR_BASICS],
       },
       // {
       //   id: 2,

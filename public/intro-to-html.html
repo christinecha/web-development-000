@@ -38,6 +38,10 @@
       <li>
         <a href="./intro-to-styles.html">010: Introducing styles</a>
       </li>
+    
+      <li>
+        <a href="./color-basics.html">011: Color: The Basics</a>
+      </li>
     </ul></ul></ul></section>
       <div id="content">
       <h1 id="00">Introduction to HTML</h1>
@@ -122,26 +126,31 @@
 </blockquote>
 <p>Each element is indicated by two "tags" (1 &amp; 3), and you can put text between them (2). Eachtag is surrounded by brackets <code>&lt;blerp&gt;</code> but only the second one has the slash <code>&lt;/blerp&gt;</code> so you know where it ends.</p>
 <p>The element type is specified inside of the angle brackets.</p>
-<pre><code>&lt;blerp&gt;&lt;/blerp&gt;
-&lt;noodle&gt;&lt;/noodle&gt;
+<pre><code class="html language-html">&lt;blerp&gt;Text&lt;/blerp&gt;&lt;noodle&gt;More Text&lt;/noodle&gt;
 </code></pre>
-<p>Ah yes, the popular Blerp and Noodle elements!</p>
-<p>You can also "nest" elements inside one another, with or without text, to produce more complex structures. These relationships (and others in code) are often described as "parent" and "child" - in this case, the elements inside are "children", wrapped by their "parent" element.</p>
-<pre><code class="html language-html">&lt;blerp&gt;
-  Random text!
-  &lt;noodle&gt;&lt;/noodle&gt;
-  Random other text!
-  &lt;noodle&gt;
-    &lt;blerp&gt;
-      &lt;noodle&gt;More text!&lt;/noodle&gt;
-    &lt;/blerp&gt;
-  &lt;/noodle&gt;
-&lt;/blerp&gt;
-</code></pre>
+<p>In this example, you'd refer to these as "blerp" and "noodle" elements.</p>
 <p>Try typing these elements in your <code>.html</code> file. Make your own! Move them around! Type funny quotes inside them! Save your changes, and view the file in your browser again.</p>
 <p>Notice that you won't see the element tags, like <code>&lt;blerp&gt;</code>, in your browser - you only see the text you put inside them. This is exactly how all HTML elements work; they simply provide the underlying structure for your content.</p>
+<h2 id="nesting">Nesting</h2>
+<p>You can also "nest" elements inside one another, with or without text, to produce more complex structures. "Nesting" is a very common concept across programming, not just in HTML. These relationships are often described as "parent" and "child" - in this case, the elements inside are "children", wrapped by their "parent" element.</p>
+<pre><code class="html language-html">&lt;grandma&gt;
+  Grandma text #1
+  &lt;mom&gt;
+    &lt;daughter&gt;Shelly&lt;/daughter&gt;
+    &lt;daughter&gt;Welly&lt;/daughter&gt;
+  &lt;/mom&gt;
+  Grandma text #2
+  &lt;aunt&gt;
+    &lt;cousin&gt;
+      &lt;babycousin&gt;Baby text&lt;/babycousin&gt;
+    &lt;/cousin&gt;
+  &lt;/aunt&gt;
+&lt;/grandma&gt;
+</code></pre>
+<p>In our family tree example here, <code>grandma</code> is the "parent" element of <code>mom</code> and <code>aunt</code>, which respectively are "parents" of <code>daughter</code> and <code>cousin</code>. The text inside the elements can also be referred to as their "children". We would even use the term "siblings" to describe the two <code>daughter</code> elements!</p>
+<p>(Note: The terms "parent", "child", and "sibling" are actual technical terms that developers use all the time. If you use other, albeit similar, language like "mother" and "daughter" elements, folks might not understand you! 😅)</p>
 <h2 id="htmlelements">HTML Elements</h2>
-<p>Okay, now that we've learned about the general syntax, I'll come clean. Blerp and Noodle aren't actually HTML elements. (Technically you could call them anything you want and there wouldn't be any visible errors, but then, more technically, that's no longer HTML… that's for another day.<a href="https://dev.w3.org/html5/html-author/#self-closing-tag">^1</a>)</p>
+<p>Okay, now that we've learned about the general syntax, I'll come clean - <code>blerp</code>, <code>noodle</code>, <code>aunt</code>, and <code>grandma</code> aren't actual HTML elements. (Technically you could call them anything you want and there wouldn't be any visible errors, but then, more technically, that's no longer HTML… that's for another day.<a href="https://dev.w3.org/html5/html-author/#self-closing-tag">^1</a>)</p>
 <p>There's a huge selection of HTML element types that all browsers have agreed to accept. Here are just a few examples:</p>
 <ul>
 <li><code>&lt;h1&gt;</code> is Heading 1, for important, very large text.</li>
@@ -157,7 +166,7 @@
 </blockquote>
 <p>Here's a list of every single element tag in HTML: https://developer.mozilla.org/en-US/docs/Web/HTML/Element. Warning - there is probably a lot of vocabulary on that site that will look foreign and complicated! Don't worry. Some of these are very obscure, even to experienced developers. 99% of the time, you'll only be using a handful of the most common ones.</p>
 <h2 id="selfclosingtags">Self-closing tags</h2>
-<p>There are some HTML elements that can't contain children (no text, no elements, no nothin' inside!). In these special cases, you have to merge the two tags into just one.</p>
+<p>There are some HTML elements that can't contain children (no text, no elements, no nothin' inside!). In these special cases, you use a slightly different format - almost as if you've merged the opening and closing tags into one.</p>
 <p>Correct:</p>
 <pre><code>&lt;br /&gt;
 &lt;hr /&gt;
@@ -207,23 +216,23 @@
 <p>Now that we're using real HTML elements, you should see something different in your browser now. Your <code>h1</code> text should look very large and your <code>p</code> quite small in comparison. The <code>button</code> should look like, well, a button! And so on.</p>
 <p>Look at you go! This is starting to look like the real thing.</p>
 <h2 id="nbaboutspacingindentation">NB: About spacing &amp; indentation</h2>
-<p>The spacing doesn't matter very much. These three examples should all look the same in your browser:</p>
+<p>In some cases, specific spacing is required for things to work. But in a lot of cases, it's just personal preference. For example, these three snippets should all work and look the same in your browser:</p>
 <pre><code>&lt;h1&gt;
 blah blah text content&lt;/h1&gt;
-
-&lt;h1&gt;
+</code></pre>
+<pre><code>&lt;h1&gt;
   blah blah text content
 
 &lt;/h1&gt;
-
-              &lt;h1&gt;
+</code></pre>
+<pre><code>              &lt;h1&gt;
       blah blah text content
           &lt;/h1&gt;
 </code></pre>
 <p>Programmers like to enforce strict indentation rules (always indent when you move into a child element, etc.) so their code is more legible. Your text editor can even automatically do that for you whenever you save your file*.</p>
-<p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer. So ignore the haters &amp; format however makes you happy. ☀️</p>
+<p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer.</p>
 <p>*<em>Search "format on save [your-text-editor's-name]" and you'll likely find steps to turn that on.</em></p>
-<p>**<em>Well… or however makes your boss happy.</em></p>
+<h3 id="footnotes">Footnotes</h3>
     
       <h1 id="002">HTML Attributes</h1>
       <p></p>

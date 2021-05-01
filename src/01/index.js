@@ -9,6 +9,15 @@ const INTRO_STYLES = {
   dependencies: [SECTION_00.HTML_ATTRIBUTES],
 };
 
+const COLOR_BASICS = {
+  permaId: "color-basics",
+  title: "Color: The Basics",
+  description: "",
+  markdown: path.resolve(__dirname, "color.md"),
+  dependencies: [],
+};
+
 module.exports = {
   INTRO_STYLES,
+  COLOR_BASICS,
 };
