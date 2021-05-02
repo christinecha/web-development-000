@@ -61,7 +61,9 @@ In our family tree example here, `grandma` is the "parent" element of `mom` and 
 
 ## HTML Elements
 
-Okay, now that we've learned about the general syntax, I'll come clean - `blerp`, `noodle`, `aunt`, and `grandma` aren't actual HTML elements. (Technically you could call them anything you want and there wouldn't be any visible errors, but then, more technically, that's no longer HTML... that's for another day.[^1])
+Okay, now that we've learned about the general syntax, I'll come clean - `blerp`, `noodle`, `aunt`, and `grandma` aren't actual HTML elements.
+
+_(Technically you could call them anything you want and there wouldn't be any visible errors, but then, more technically, that's no longer HTML... more info here if you're curious: https://dev.w3.org/html5/html-author/#self-closing-tag)_
 
 There's a huge selection of HTML element types that all browsers have agreed to accept. Here are just a few examples:
 
@@ -101,7 +103,7 @@ Incorrect:
 <input></input>
 ```
 
-These elements are called "void elements", and this specific syntax is called a self-closing tag.[^2]
+These elements are called "void elements", and this specific syntax is called a self-closing tag. More info here: https://www.w3.org/Style/customdtd.en.html
 
 ## Your first real HTML website
 
@@ -173,8 +175,3 @@ Programmers like to enforce strict indentation rules (always indent when you mov
 That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a _better_ programmer.
 
 \*_Search "format on save [your-text-editor's-name]" and you'll likely find steps to turn that on._
-
-### Footnotes
-
-[^1]: https://dev.w3.org/html5/html-author/#self-closing-tag
-[^2]: https://www.w3.org/Style/customdtd.en.html
