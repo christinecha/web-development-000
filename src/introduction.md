@@ -42,7 +42,7 @@ About 9 months later, without any formal classes or certifications (and no colle
 
 The main questions I usually get are 1) how to learn and 2) how to do it so quickly.
 
-This project is my attempt at answering these. But first, we should recognize a lot of significant circumstantial privilege that even allowed me the opportunity:
+This project is my attempt at answering these. But first, we should recognize a lot of privilege that even allowed me the opportunity:
 
 1. **Plenty of time.** I had recently quit full-time work and was freelancing to make ends meet. My hours were flexible, and I had no dependents. Being young, healthy, and very motivated, I probably averaged 5+ hours a day, 7 days a week, of active learning during those 9 months. Especially in the last few months, I often started coding in the morning and was still typing on the train ride home at 3am.
 2. **Enough financial resources.** To maintain this intensity, I was only taking the minimum amount of freelance work. During the last three months, I received a $6k grant from the Recurse Center to support my growth. Between these income streams and my nearly-maxed credit card (plus no dependents, no large medical bills, etc.), I was able to afford not having full-time work.
