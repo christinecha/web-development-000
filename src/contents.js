@@ -8,6 +8,7 @@ module.exports = [
     permaId: "introduction",
     title: "About",
     markdown: path.resolve(__dirname, "introduction.md"),
+    dependencies: [],
   },
   {
     id: 0,
@@ -15,6 +16,7 @@ module.exports = [
     title: "Introduction to Web Development",
     description:
       "This guide is intended to help you get started in your web development journey.",
+    dependencies: [],
     contents: [
       {
         id: 0,

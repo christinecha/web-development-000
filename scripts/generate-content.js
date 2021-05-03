@@ -68,9 +68,10 @@ const generatePages = ({ parentId = "", contents = [] }) => {
   }
 
   contents.forEach((c, index) => {
+    const noDeps = c.dependencies && !c.dependencies.length;
     const dependencies = c.dependencies || [];
     const previous = contents[index - 1];
-    if (previous) {
+    if (previous && !noDeps) {
       dependencies.push(previous);
     }
 
