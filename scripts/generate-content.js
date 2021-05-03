@@ -9,9 +9,12 @@ const templateHTML = readFileSync(path.resolve(__dirname, "../template.html"), {
 });
 
 const injectTemplate = ({ content, outline, filepath }) => {
+  const filename = path.basename(filepath, ".html");
+
   let injected = templateHTML
-    .replace("{{content}}", content)
-    .replace("{{outline}}", outline);
+    .replace("{{content}}", content || "")
+    .replace("{{outline}}", outline || "")
+    .replace("{{page}}", filename || "");
 
   writeFileSync(filepath, injected);
   console.log("File generated:", filepath);
@@ -120,4 +123,9 @@ injectTemplate({
   content: allHtml,
   outline,
   filepath: path.resolve(__dirname, `../public/index.html`),
+});
+
+injectTemplate({
+  outline,
+  filepath: path.resolve(__dirname, `../public/outline.html`),
 });

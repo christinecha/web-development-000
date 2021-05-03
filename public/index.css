@@ -35,6 +35,10 @@ body {
   visibility: visible;
 }
 
+br {
+  line-height: 0;
+}
+
 *:focus {
   outline: blue;
 }
@@ -133,12 +137,28 @@ label[data-length="3"] {
   margin-top: -15px;
 }
 
+#toc-link {
+  display: none;
+}
+
 @media (max-width: 768px) {
   main {
     padding: 20px;
   }
 
   #outline {
+    display: none;
+  }
+
+  #toc-link {
+    display: block;
+  }
+
+  [data-page="outline"] #outline {
+    display: block;
+  }
+
+  [data-page="outline"] #toc-link {
     display: none;
   }
 
