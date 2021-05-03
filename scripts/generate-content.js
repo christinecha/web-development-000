@@ -26,11 +26,14 @@ const generateOutline = ({ parentId = "", contents = [] }) => {
 
   html += "<ul>";
   contents.forEach((c, index) => {
-    const id = parentId + (c.id || index);
+    const id = parentId + (c.id !== undefined ? c.id : index);
 
     html += `
       <li>
-        <a href="./${c.permaId}.html">${id}: ${c.title}</a>
+        <label data-length=${id.length}>${id}</label>
+        <a href="./${c.permaId}.html">
+          ${c.title}
+        </a>
       </li>
     `;
 
@@ -75,8 +78,12 @@ const generatePages = ({ parentId = "", contents = [] }) => {
     const markdownHtml = converter.makeHtml(markdown);
 
     let html = `
-      <h1 id="${id}">${c.title}</h1>
-      <p>${c.description}</p>
+      <h1 id="${id}">
+        <label data-length=${id.length}>${id}</label>
+        <br />
+        ${c.title}
+      </h1>
+      <p>${c.description || ""}</p>
       ${dependencies.length ? getDependencyHtml(dependencies) : ""}
       ${markdownHtml}
     `;

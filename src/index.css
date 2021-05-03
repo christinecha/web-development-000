@@ -1,11 +1,49 @@
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/WorkSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./assets/fonts/WorkSans-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/WorkSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("./assets/fonts/WorkSans-SemiBoldItalic.ttf") format("truetype");
+}
+
 body {
   display: flex;
-  font-family: "Work Sans";
+  font-family: "Work Sans", sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  visibility: visible;
+}
+
+*:focus {
+  outline: blue;
 }
 
 main {
+  width: 100%;
   padding: 30px;
   display: flex;
+  box-sizing: border-box;
 }
 
 img {
@@ -21,7 +59,7 @@ code {
 pre > code {
   display: block;
   padding: 10px 13px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 blockquote {
@@ -34,6 +72,7 @@ blockquote {
   flex: 1;
   margin-left: 300px;
   margin-bottom: 50px;
+  width: 100%;
   max-width: 600px;
 }
 
@@ -52,8 +91,58 @@ blockquote {
   margin-bottom: 20px;
 }
 
+#outline li {
+  display: flex;
+  align-items: center;
+  color: gray;
+  margin-bottom: 3px;
+}
+
+#outline li::before {
+  content: "→";
+  position: static;
+  align-self: flex-start;
+  font-size: 50%;
+  line-height: 2;
+  margin-right: 3px;
+}
+
+#outline li a {
+  color: gray;
+}
+
+label {
+  font-family: monospace;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  margin: 0 2px;
+  padding: 1px 3px;
+  background: #ff85ab;
+  color: white;
+  display: none;
+}
+
+label[data-length="3"] {
+  display: inline-block;
+}
+
 #prerequisites {
   list-style: none;
   padding-inline-start: 20px;
   margin-top: -15px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
+
+  #outline {
+    display: none;
+  }
+
+  #content {
+    margin-left: 0;
+  }
 }

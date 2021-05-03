@@ -1,7 +1,14 @@
+const path = require("path");
 const SECTION_00 = require("./00");
 const SECTION_01 = require("./01");
 
 module.exports = [
+  {
+    id: "a",
+    permaId: "introduction",
+    title: "About",
+    markdown: path.resolve(__dirname, "introduction.md"),
+  },
   {
     id: 0,
     permaId: "web-dev-0",

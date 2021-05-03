@@ -21,7 +21,7 @@ But wait! Haven't I seen more than 147 colors on the internet? (Also, isn't it r
 
 Any color you see on your computer screen is produced by red, green, and blue lights shining out from it. This mix of color lights then blend together to make your brain think it's actually a single color!
 
-Here's the Wikipedia page how RGB works and where it came from: https://en.wikipedia.org/wiki/RGB_color_model.
+Here's [a Wikipedia page how RGB works](https://en.wikipedia.org/wiki/RGB_color_model) and where it came from.
 
 In CSS, the amount of each color light you want is measured from 0 to 255, 0 being none of that light and 255 being the most possible amount. So to specify the specific color you want to make, you have to define these amounts.
 

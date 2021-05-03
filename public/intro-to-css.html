@@ -1,56 +1,95 @@
 <html>
   <head>
     <title>Foundational Web Development</title>
+    <style>
+      body {
+        visibility: hidden;
+      }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
     <link href="./index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <main>
       <section id="outline"><ul>
       <li>
-        <a href="./web-dev-0.html">0: Introduction to Web Development</a>
-      </li>
-    <ul>
-      <li>
-        <a href="./intro-to-html.html">00: Introduction to HTML</a>
-      </li>
-    <ul>
-      <li>
-        <a href="./first-website.html">000: Your First Website</a>
+        <label data-length=1>a</label>
+        <a href="./introduction.html">
+          About
+        </a>
       </li>
     
       <li>
-        <a href="./html-elements-intro.html">001: HTML Elements</a>
+        <label data-length=1>0</label>
+        <a href="./web-dev-0.html">
+          Introduction to Web Development
+        </a>
+      </li>
+    <ul>
+      <li>
+        <label data-length=2>00</label>
+        <a href="./intro-to-html.html">
+          Introduction to HTML
+        </a>
+      </li>
+    <ul>
+      <li>
+        <label data-length=3>000</label>
+        <a href="./first-website.html">
+          Your First Website
+        </a>
       </li>
     
       <li>
-        <a href="./html-attributes-intro.html">002: HTML Attributes</a>
+        <label data-length=3>001</label>
+        <a href="./html-elements-intro.html">
+          HTML Elements
+        </a>
+      </li>
+    
+      <li>
+        <label data-length=3>002</label>
+        <a href="./html-attributes-intro.html">
+          HTML Attributes
+        </a>
       </li>
     </ul>
       <li>
-        <a href="./intro-to-css.html">01: Introduction to CSS</a>
+        <label data-length=2>01</label>
+        <a href="./intro-to-css.html">
+          Introduction to CSS
+        </a>
       </li>
     <ul>
       <li>
-        <a href="./intro-to-styles.html">010: Introducing styles</a>
+        <label data-length=3>010</label>
+        <a href="./intro-to-styles.html">
+          Introducing styles
+        </a>
       </li>
     
       <li>
-        <a href="./color-basics.html">011: Color: The Basics</a>
+        <label data-length=3>011</label>
+        <a href="./color-basics.html">
+          Color: The Basics
+        </a>
       </li>
     </ul></ul></ul></section>
       <div id="content">
-      <h1 id="01">Introduction to CSS</h1>
+      <h1 id="11">
+        <label data-length=2>11</label>
+        <br />
+        Introduction to CSS
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./intro-to-html.html">Introduction to HTML</a></li></ul>
       
     
-      <h1 id="010">Introducing styles</h1>
+      <h1 id="110">
+        <label data-length=3>110</label>
+        <br />
+        Introducing styles
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./html-attributes-intro.html">HTML Attributes</a></li></ul>
       <h2 id="whatisstyling">What is styling?</h2>
@@ -123,7 +162,11 @@ background-color: blue;
 <li>Dark Mode: Can you put white text on a black background?</li>
 </ul>
     
-      <h1 id="011">Color: The Basics</h1>
+      <h1 id="111">
+        <label data-length=3>111</label>
+        <br />
+        Color: The Basics
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./intro-to-styles.html">Introducing styles</a></li></ul>
       <h2 id="whydoweneedtotalkaboutcolor">Why do we need to talk about color?</h2>
@@ -143,7 +186,7 @@ background-color: blue;
 <p>But wait! Haven't I seen more than 147 colors on the internet? (Also, isn't it ridiculous to type "papayawhip" every time?)</p>
 <h2 id="rgbredgreenbluecolor">RGB (Red, Green, Blue) Color</h2>
 <p>Any color you see on your computer screen is produced by red, green, and blue lights shining out from it. This mix of color lights then blend together to make your brain think it's actually a single color!</p>
-<p>Here's the Wikipedia page how RGB works and where it came from: https://en.wikipedia.org/wiki/RGB<em>color</em>model.</p>
+<p>Here's <a href="https://en.wikipedia.org/wiki/RGB_color_model">a Wikipedia page how RGB works</a> and where it came from.</p>
 <p>In CSS, the amount of each color light you want is measured from 0 to 255, 0 being none of that light and 255 being the most possible amount. So to specify the specific color you want to make, you have to define these amounts.</p>
 <p>For example:</p>
 <ul>

@@ -1,51 +1,133 @@
 <html>
   <head>
     <title>Foundational Web Development</title>
+    <style>
+      body {
+        visibility: hidden;
+      }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
     <link href="./index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <main>
       <section id="outline"><ul>
       <li>
-        <a href="./web-dev-0.html">0: Introduction to Web Development</a>
-      </li>
-    <ul>
-      <li>
-        <a href="./intro-to-html.html">00: Introduction to HTML</a>
-      </li>
-    <ul>
-      <li>
-        <a href="./first-website.html">000: Your First Website</a>
+        <label data-length=1>a</label>
+        <a href="./introduction.html">
+          About
+        </a>
       </li>
     
       <li>
-        <a href="./html-elements-intro.html">001: HTML Elements</a>
+        <label data-length=1>0</label>
+        <a href="./web-dev-0.html">
+          Introduction to Web Development
+        </a>
+      </li>
+    <ul>
+      <li>
+        <label data-length=2>00</label>
+        <a href="./intro-to-html.html">
+          Introduction to HTML
+        </a>
+      </li>
+    <ul>
+      <li>
+        <label data-length=3>000</label>
+        <a href="./first-website.html">
+          Your First Website
+        </a>
       </li>
     
       <li>
-        <a href="./html-attributes-intro.html">002: HTML Attributes</a>
+        <label data-length=3>001</label>
+        <a href="./html-elements-intro.html">
+          HTML Elements
+        </a>
+      </li>
+    
+      <li>
+        <label data-length=3>002</label>
+        <a href="./html-attributes-intro.html">
+          HTML Attributes
+        </a>
       </li>
     </ul>
       <li>
-        <a href="./intro-to-css.html">01: Introduction to CSS</a>
+        <label data-length=2>01</label>
+        <a href="./intro-to-css.html">
+          Introduction to CSS
+        </a>
       </li>
     <ul>
       <li>
-        <a href="./intro-to-styles.html">010: Introducing styles</a>
+        <label data-length=3>010</label>
+        <a href="./intro-to-styles.html">
+          Introducing styles
+        </a>
       </li>
     
       <li>
-        <a href="./color-basics.html">011: Color: The Basics</a>
+        <label data-length=3>011</label>
+        <a href="./color-basics.html">
+          Color: The Basics
+        </a>
       </li>
     </ul></ul></ul></section>
       <div id="content">
-      <h1 id="000">Your First Website</h1>
+      <h1 id="a">
+        <label data-length=1>a</label>
+        <br />
+        About
+      </h1>
+      <p></p>
+      
+      <h1 id="webdevfromzero">Web Dev from Zero</h1>
+<h2 id="quicklinks">Quick Links</h2>
+<ul>
+<li><a href="https://discord.gg/phpkY4NaY7">Join the Discord community</a></li>
+<li><a href="https://twitter.com/madebycha">Follow me on Twitter</a></li>
+<li><a href="https://twitch.tv/madebycha">Catch a Twitch Stream</a></li>
+</ul>
+<h2 id="aboutthisproject">About this project</h2>
+<p>When I was a complete beginner learning web development, I felt that a lot of resources also assumed some basic knowledge I just didn't have (and didn't even know how to search for). There were so many references to things I didn't understand, which left me feeling stuck and frustrated to the point of quitting many times.</p>
+<p>Looking back, it's clearer to me why this was happening. Tutorials often completely gloss over fundamental information, whereas more abstract courses can feel detached from real-world application. Many blog posts don't differentiate fact and opinion. There's just an overwhelming amount of information available in general that it's hard to know where to start.</p>
+<p>This project is an attempt at bridging that gap. It's a guide for regular people - who might use technology day-to-day but have no idea how it works - to understand and apply the foundations of web development. Here are the main principles:</p>
+<ul>
+<li>Try to use everyday language to describe concepts &amp; terms</li>
+<li>Only use technical terms once they've been sufficiently explained</li>
+<li>Always try to differentiate facts vs. opinions and requirements vs. preferences.</li>
+<li>Dig deep into details; don't omit things for convenience</li>
+<li>Provide immediately applicable examples and project ideas</li>
+</ul>
+<p>If you have any questions or feedback about the content, or would just like to follow along with the progress, <a href="https://discord.gg/phpkY4NaY7">join my Discord server</a>. There's a channel called <code>#web-dev-000</code> specifically for this project.</p>
+<p>I'd especially appreciate feedback about:</p>
+<ul>
+<li>sections that are confusing (or particularly clear)</li>
+<li>information that seems to be missing or inaccurate</li>
+<li>parts that are boring (or particularly interesting)</li>
+</ul>
+<p>Don't hesitate to reach out! 😊</p>
+<h2 id="abouttheauthor">About the author</h2>
+<p>Hi, I'm Christine! Friends also call me Cha. Today, I serve as an Engineering Manager at <a href="https://www.clubhouse.io">Clubhouse</a> after some years of being a full-time software engineer (specializing on the frontend).</p>
+<p>I never intended on becoming a programmer. In 2015, I figured I'd be a more effective web designer if I actually understood how the things I was designing were built. So I started poking around online and teaching myself some basics.</p>
+<p>About 9 months later, without any formal classes or certifications (and no college degree), I secured my first full-time role as a software engineer at Squarespace.</p>
+<h2 id="aboutmyjourney">About my journey</h2>
+<p>The main questions I usually get are 1) how to learn and 2) how to do it so quickly.</p>
+<p>This project is my attempt at answering these. But first, we should recognize a lot of significant circumstantial privilege that even allowed me the opportunity:</p>
+<ol>
+<li><strong>Plenty of time.</strong> I had recently quit full-time work and was freelancing to make ends meet. My hours were flexible, and I had no dependents. Being young, healthy, and very motivated, I probably averaged 5+ hours a day, 7 days a week, of active learning during those 9 months. Especially in the last few months, I often started coding in the morning and was still typing on the train ride home at 3am.</li>
+<li><strong>Enough financial resources.</strong> To maintain this intensity, I was only taking the minimum amount of freelance work. During the last three months, I received a $6k grant from the Recurse Center to support my growth. Between these income streams and my nearly-maxed credit card (plus no dependents, no large medical bills, etc.), I was able to afford not having full-time work.</li>
+<li><strong>A strong support network.</strong> I've always had immense encouragement from my family and friends. Mental health is one of the greatest yet most under-appreciated privileges, and it's especially critical in uncertain times. I was also lucky enough to join the Recurse Center for 3 months, which provided me with an excellent community of peers.</li>
+</ol>
+<p>As much as specific learning methods and individual efforts can help, reality often has more to do with existing circumstances than anything else. Each journey is different; be compassionate with yourself.</p>
+    
+      <h1 id="100">
+        <label data-length=3>100</label>
+        <br />
+        Your First Website
+      </h1>
       <p></p>
       
       <h2 id="whatisawebsite">What is a website?</h2>
@@ -101,7 +183,11 @@
 <p>Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh your browser - you should see it update to your recent changes.</p>
 <p>Congratulations, that's your first website! ✨</p>
     
-      <h1 id="001">HTML Elements</h1>
+      <h1 id="101">
+        <label data-length=3>101</label>
+        <br />
+        HTML Elements
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./first-website.html">Your First Website</a></li></ul>
       <h2 id="whatishtmlandwhyarewestartingwithit">What is HTML, and why are we starting with it?</h2>
@@ -230,7 +316,11 @@ blah blah text content&lt;/h1&gt;
 <p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer.</p>
 <p>*<em>Search "format on save [your-text-editor's-name]" and you'll likely find steps to turn that on.</em></p>
     
-      <h1 id="002">HTML Attributes</h1>
+      <h1 id="102">
+        <label data-length=3>102</label>
+        <br />
+        HTML Attributes
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./html-elements-intro.html">HTML Elements</a></li></ul>
       <h2 id="whatarehtmlattributes">What are HTML Attributes?</h2>
@@ -297,12 +387,20 @@ blah blah text content&lt;/h1&gt;
 <li>Set up a classic prank by creating an innocent-looking link that <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">goes here</a></li>
 </ul>
     
-      <h1 id="00">Introduction to HTML</h1>
+      <h1 id="10">
+        <label data-length=2>10</label>
+        <br />
+        Introduction to HTML
+      </h1>
       <p></p>
       
       
     
-      <h1 id="000">Your First Website</h1>
+      <h1 id="100">
+        <label data-length=3>100</label>
+        <br />
+        Your First Website
+      </h1>
       <p></p>
       
       <h2 id="whatisawebsite">What is a website?</h2>
@@ -358,7 +456,11 @@ blah blah text content&lt;/h1&gt;
 <p>Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh your browser - you should see it update to your recent changes.</p>
 <p>Congratulations, that's your first website! ✨</p>
     
-      <h1 id="001">HTML Elements</h1>
+      <h1 id="101">
+        <label data-length=3>101</label>
+        <br />
+        HTML Elements
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./first-website.html">Your First Website</a></li></ul>
       <h2 id="whatishtmlandwhyarewestartingwithit">What is HTML, and why are we starting with it?</h2>
@@ -487,7 +589,11 @@ blah blah text content&lt;/h1&gt;
 <p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer.</p>
 <p>*<em>Search "format on save [your-text-editor's-name]" and you'll likely find steps to turn that on.</em></p>
     
-      <h1 id="002">HTML Attributes</h1>
+      <h1 id="102">
+        <label data-length=3>102</label>
+        <br />
+        HTML Attributes
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./html-elements-intro.html">HTML Elements</a></li></ul>
       <h2 id="whatarehtmlattributes">What are HTML Attributes?</h2>
@@ -554,7 +660,11 @@ blah blah text content&lt;/h1&gt;
 <li>Set up a classic prank by creating an innocent-looking link that <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">goes here</a></li>
 </ul>
     
-      <h1 id="010">Introducing styles</h1>
+      <h1 id="110">
+        <label data-length=3>110</label>
+        <br />
+        Introducing styles
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./html-attributes-intro.html">HTML Attributes</a></li></ul>
       <h2 id="whatisstyling">What is styling?</h2>
@@ -627,7 +737,11 @@ background-color: blue;
 <li>Dark Mode: Can you put white text on a black background?</li>
 </ul>
     
-      <h1 id="011">Color: The Basics</h1>
+      <h1 id="111">
+        <label data-length=3>111</label>
+        <br />
+        Color: The Basics
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./intro-to-styles.html">Introducing styles</a></li></ul>
       <h2 id="whydoweneedtotalkaboutcolor">Why do we need to talk about color?</h2>
@@ -647,7 +761,7 @@ background-color: blue;
 <p>But wait! Haven't I seen more than 147 colors on the internet? (Also, isn't it ridiculous to type "papayawhip" every time?)</p>
 <h2 id="rgbredgreenbluecolor">RGB (Red, Green, Blue) Color</h2>
 <p>Any color you see on your computer screen is produced by red, green, and blue lights shining out from it. This mix of color lights then blend together to make your brain think it's actually a single color!</p>
-<p>Here's the Wikipedia page how RGB works and where it came from: https://en.wikipedia.org/wiki/RGB<em>color</em>model.</p>
+<p>Here's <a href="https://en.wikipedia.org/wiki/RGB_color_model">a Wikipedia page how RGB works</a> and where it came from.</p>
 <p>In CSS, the amount of each color light you want is measured from 0 to 255, 0 being none of that light and 255 being the most possible amount. So to specify the specific color you want to make, you have to define these amounts.</p>
 <p>For example:</p>
 <ul>
@@ -709,12 +823,20 @@ Blue amount:  f4 = 244
 <h3 id="footnotes">Footnotes</h3>
 <p>[^1]: You might discover, by accident or otherwise, that a 3-character hex code (ex. <code>#fff</code>) also works. This format is sometimes used as a shorthand when all three (R, G, and B) hexadecimal numbers are doubles of the same character. Ex. <code>#f0a</code> actually denotes <code>#ff00aa</code>, <code>#b9c</code> is <code>#bb99cc</code>, etc.</p>
     
-      <h1 id="01">Introduction to CSS</h1>
+      <h1 id="11">
+        <label data-length=2>11</label>
+        <br />
+        Introduction to CSS
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./intro-to-html.html">Introduction to HTML</a></li></ul>
       
     
-      <h1 id="010">Introducing styles</h1>
+      <h1 id="110">
+        <label data-length=3>110</label>
+        <br />
+        Introducing styles
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./html-attributes-intro.html">HTML Attributes</a></li></ul>
       <h2 id="whatisstyling">What is styling?</h2>
@@ -787,7 +909,11 @@ background-color: blue;
 <li>Dark Mode: Can you put white text on a black background?</li>
 </ul>
     
-      <h1 id="011">Color: The Basics</h1>
+      <h1 id="111">
+        <label data-length=3>111</label>
+        <br />
+        Color: The Basics
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./intro-to-styles.html">Introducing styles</a></li></ul>
       <h2 id="whydoweneedtotalkaboutcolor">Why do we need to talk about color?</h2>
@@ -807,7 +933,7 @@ background-color: blue;
 <p>But wait! Haven't I seen more than 147 colors on the internet? (Also, isn't it ridiculous to type "papayawhip" every time?)</p>
 <h2 id="rgbredgreenbluecolor">RGB (Red, Green, Blue) Color</h2>
 <p>Any color you see on your computer screen is produced by red, green, and blue lights shining out from it. This mix of color lights then blend together to make your brain think it's actually a single color!</p>
-<p>Here's the Wikipedia page how RGB works and where it came from: https://en.wikipedia.org/wiki/RGB<em>color</em>model.</p>
+<p>Here's <a href="https://en.wikipedia.org/wiki/RGB_color_model">a Wikipedia page how RGB works</a> and where it came from.</p>
 <p>In CSS, the amount of each color light you want is measured from 0 to 255, 0 being none of that light and 255 being the most possible amount. So to specify the specific color you want to make, you have to define these amounts.</p>
 <p>For example:</p>
 <ul>
@@ -869,12 +995,20 @@ Blue amount:  f4 = 244
 <h3 id="footnotes">Footnotes</h3>
 <p>[^1]: You might discover, by accident or otherwise, that a 3-character hex code (ex. <code>#fff</code>) also works. This format is sometimes used as a shorthand when all three (R, G, and B) hexadecimal numbers are doubles of the same character. Ex. <code>#f0a</code> actually denotes <code>#ff00aa</code>, <code>#b9c</code> is <code>#bb99cc</code>, etc.</p>
     
-      <h1 id="0">Introduction to Web Development</h1>
+      <h1 id="1">
+        <label data-length=1>1</label>
+        <br />
+        Introduction to Web Development
+      </h1>
       <p>This guide is intended to help you get started in your web development journey.</p>
-      
+      <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./introduction.html">About</a></li></ul>
       
     
-      <h1 id="000">Your First Website</h1>
+      <h1 id="100">
+        <label data-length=3>100</label>
+        <br />
+        Your First Website
+      </h1>
       <p></p>
       
       <h2 id="whatisawebsite">What is a website?</h2>
@@ -930,7 +1064,11 @@ Blue amount:  f4 = 244
 <p>Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh your browser - you should see it update to your recent changes.</p>
 <p>Congratulations, that's your first website! ✨</p>
     
-      <h1 id="001">HTML Elements</h1>
+      <h1 id="101">
+        <label data-length=3>101</label>
+        <br />
+        HTML Elements
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./first-website.html">Your First Website</a></li></ul>
       <h2 id="whatishtmlandwhyarewestartingwithit">What is HTML, and why are we starting with it?</h2>
@@ -1059,7 +1197,11 @@ blah blah text content&lt;/h1&gt;
 <p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer.</p>
 <p>*<em>Search "format on save [your-text-editor's-name]" and you'll likely find steps to turn that on.</em></p>
     
-      <h1 id="002">HTML Attributes</h1>
+      <h1 id="102">
+        <label data-length=3>102</label>
+        <br />
+        HTML Attributes
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./html-elements-intro.html">HTML Elements</a></li></ul>
       <h2 id="whatarehtmlattributes">What are HTML Attributes?</h2>
@@ -1126,12 +1268,20 @@ blah blah text content&lt;/h1&gt;
 <li>Set up a classic prank by creating an innocent-looking link that <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">goes here</a></li>
 </ul>
     
-      <h1 id="00">Introduction to HTML</h1>
+      <h1 id="10">
+        <label data-length=2>10</label>
+        <br />
+        Introduction to HTML
+      </h1>
       <p></p>
       
       
     
-      <h1 id="000">Your First Website</h1>
+      <h1 id="100">
+        <label data-length=3>100</label>
+        <br />
+        Your First Website
+      </h1>
       <p></p>
       
       <h2 id="whatisawebsite">What is a website?</h2>
@@ -1187,7 +1337,11 @@ blah blah text content&lt;/h1&gt;
 <p>Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh your browser - you should see it update to your recent changes.</p>
 <p>Congratulations, that's your first website! ✨</p>
     
-      <h1 id="001">HTML Elements</h1>
+      <h1 id="101">
+        <label data-length=3>101</label>
+        <br />
+        HTML Elements
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./first-website.html">Your First Website</a></li></ul>
       <h2 id="whatishtmlandwhyarewestartingwithit">What is HTML, and why are we starting with it?</h2>
@@ -1316,7 +1470,11 @@ blah blah text content&lt;/h1&gt;
 <p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer.</p>
 <p>*<em>Search "format on save [your-text-editor's-name]" and you'll likely find steps to turn that on.</em></p>
     
-      <h1 id="002">HTML Attributes</h1>
+      <h1 id="102">
+        <label data-length=3>102</label>
+        <br />
+        HTML Attributes
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./html-elements-intro.html">HTML Elements</a></li></ul>
       <h2 id="whatarehtmlattributes">What are HTML Attributes?</h2>
@@ -1383,7 +1541,11 @@ blah blah text content&lt;/h1&gt;
 <li>Set up a classic prank by creating an innocent-looking link that <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">goes here</a></li>
 </ul>
     
-      <h1 id="010">Introducing styles</h1>
+      <h1 id="110">
+        <label data-length=3>110</label>
+        <br />
+        Introducing styles
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./html-attributes-intro.html">HTML Attributes</a></li></ul>
       <h2 id="whatisstyling">What is styling?</h2>
@@ -1456,7 +1618,11 @@ background-color: blue;
 <li>Dark Mode: Can you put white text on a black background?</li>
 </ul>
     
-      <h1 id="011">Color: The Basics</h1>
+      <h1 id="111">
+        <label data-length=3>111</label>
+        <br />
+        Color: The Basics
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./intro-to-styles.html">Introducing styles</a></li></ul>
       <h2 id="whydoweneedtotalkaboutcolor">Why do we need to talk about color?</h2>
@@ -1476,7 +1642,7 @@ background-color: blue;
 <p>But wait! Haven't I seen more than 147 colors on the internet? (Also, isn't it ridiculous to type "papayawhip" every time?)</p>
 <h2 id="rgbredgreenbluecolor">RGB (Red, Green, Blue) Color</h2>
 <p>Any color you see on your computer screen is produced by red, green, and blue lights shining out from it. This mix of color lights then blend together to make your brain think it's actually a single color!</p>
-<p>Here's the Wikipedia page how RGB works and where it came from: https://en.wikipedia.org/wiki/RGB<em>color</em>model.</p>
+<p>Here's <a href="https://en.wikipedia.org/wiki/RGB_color_model">a Wikipedia page how RGB works</a> and where it came from.</p>
 <p>In CSS, the amount of each color light you want is measured from 0 to 255, 0 being none of that light and 255 being the most possible amount. So to specify the specific color you want to make, you have to define these amounts.</p>
 <p>For example:</p>
 <ul>
@@ -1538,12 +1704,20 @@ Blue amount:  f4 = 244
 <h3 id="footnotes">Footnotes</h3>
 <p>[^1]: You might discover, by accident or otherwise, that a 3-character hex code (ex. <code>#fff</code>) also works. This format is sometimes used as a shorthand when all three (R, G, and B) hexadecimal numbers are doubles of the same character. Ex. <code>#f0a</code> actually denotes <code>#ff00aa</code>, <code>#b9c</code> is <code>#bb99cc</code>, etc.</p>
     
-      <h1 id="01">Introduction to CSS</h1>
+      <h1 id="11">
+        <label data-length=2>11</label>
+        <br />
+        Introduction to CSS
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./intro-to-html.html">Introduction to HTML</a></li></ul>
       
     
-      <h1 id="010">Introducing styles</h1>
+      <h1 id="110">
+        <label data-length=3>110</label>
+        <br />
+        Introducing styles
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./html-attributes-intro.html">HTML Attributes</a></li></ul>
       <h2 id="whatisstyling">What is styling?</h2>
@@ -1616,7 +1790,11 @@ background-color: blue;
 <li>Dark Mode: Can you put white text on a black background?</li>
 </ul>
     
-      <h1 id="011">Color: The Basics</h1>
+      <h1 id="111">
+        <label data-length=3>111</label>
+        <br />
+        Color: The Basics
+      </h1>
       <p></p>
       <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./intro-to-styles.html">Introducing styles</a></li></ul>
       <h2 id="whydoweneedtotalkaboutcolor">Why do we need to talk about color?</h2>
@@ -1636,7 +1814,7 @@ background-color: blue;
 <p>But wait! Haven't I seen more than 147 colors on the internet? (Also, isn't it ridiculous to type "papayawhip" every time?)</p>
 <h2 id="rgbredgreenbluecolor">RGB (Red, Green, Blue) Color</h2>
 <p>Any color you see on your computer screen is produced by red, green, and blue lights shining out from it. This mix of color lights then blend together to make your brain think it's actually a single color!</p>
-<p>Here's the Wikipedia page how RGB works and where it came from: https://en.wikipedia.org/wiki/RGB<em>color</em>model.</p>
+<p>Here's <a href="https://en.wikipedia.org/wiki/RGB_color_model">a Wikipedia page how RGB works</a> and where it came from.</p>
 <p>In CSS, the amount of each color light you want is measured from 0 to 255, 0 being none of that light and 255 being the most possible amount. So to specify the specific color you want to make, you have to define these amounts.</p>
 <p>For example:</p>
 <ul>
