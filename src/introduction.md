@@ -20,7 +20,7 @@ This project is an attempt at bridging that gap. It's a guide for regular people
 - Dig deep into details; don't omit things for convenience
 - Provide immediately applicable examples and project ideas
 
-If you have any questions or feedback about the content, or would just like to follow along with the progress, [join my Discord server](https://discord.gg/phpkY4NaY7). There's a channel called `#web-dev-000` specifically for this project.
+If you have any questions or feedback about the content, or would just like to follow along with the progress, [join my Discord server](https://discord.gg/phpkY4NaY7). There's a channel called `#web-dev-zero` specifically for this project.
 
 I'd especially appreciate feedback about:
 

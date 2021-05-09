@@ -1,10 +1,10 @@
 const path = require("path");
 
 const FIRST_WEBSITE = {
-  permaId: "first-website",
-  title: "Your First Website",
+  permaId: "what-is-a-website",
+  title: "What is a Website?",
   description: "",
-  markdown: path.resolve(__dirname, "your-first-website.md"),
+  markdown: path.resolve(__dirname, "what-is-a-website.md"),
   dependencies: [],
 };
 
@@ -13,7 +13,6 @@ const HTML_ELEMENTS = {
   title: "HTML Elements",
   description: "",
   markdown: path.resolve(__dirname, "html-elements.md"),
-  dependencies: [],
 };
 
 const HTML_ATTRIBUTES = {
@@ -21,7 +20,6 @@ const HTML_ATTRIBUTES = {
   title: "HTML Attributes",
   description: "",
   markdown: path.resolve(__dirname, "html-attributes.md"),
-  dependencies: [],
 };
 
 module.exports = {

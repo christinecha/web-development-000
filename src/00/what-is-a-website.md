@@ -1,35 +1,41 @@
 ## What is a website?
 
-A website is the stuff that renders in your web browser. When you open up Chrome, or Firefox, or Netscape Navigator, what you see inside the frame is a website.
+A website is literally a location - a "site" - on the internet. You can view that location through a web browser (Chrome, Firefox, or Netscape Navigator), and what you see when it loads up is a representation of that website.
 
-> ILLUSTRATION: point to the inner frame of a web browser
+![Pointing to a website, which is the content rendered by a browser.](./assets/00/website-anatomy.png)
 
 ## How does my computer know what stuff to show?
 
-When you go to a web address, it's kind of like making a phone call. You direct your request towards a unique web address (ex. www.duckduckgo.com), just like your call requests a specific phone number. The internet companies involved then do a bunch of work to make sure you see the right website, just like the phone companies do to get your call to the right person.
+When you use a web address, it's kind of like making a phone call. You direct your request towards a unique web address (like "www.duckduckgo.com"), just like your call requests a specific phone number. The internet companies involved then do a bunch of work to make sure you see the right website.
 
-You could go further to say that seeing the website is like hearing a voicemail. Someone somewhere uploaded an audio file, and that same file gets played to you every time you call. Except in the case of a website, instead of just an audio file, it's usually a combination of a whole bunch of different files.
+You could go further to say that seeing the website is like hearing a voicemail. Someone somewhere uploaded an audio file, and that same file gets played to you every time you call. Except, in the case of a website,it's usually a combination of a whole bunch of different files instead of just one audio file.
 
-> ILLUSTRATION: process of requesting & receiving website? maybe in parallel with the phone call process?
+<!-- > ILLUSTRATION: process of requesting & receiving website? maybe in parallel with the phone call process? -->
 
-Try downloading this file - [cat.txt](./assets/00/cat.txt) - and opening in your browser! You can do this by just manually entering the file's address into your browser, i.e. `file:///Users/cha/Desktop/cat.txt` instead of where you'd normally write `http://www.google.com`.
+## Different types of web addresses
+
+Click to download this file: <a href="data:text/plain;charset=UTF-8,Meow! I am a cat! 🐱" download="cat.txt">cat.txt</a>. It should just be a plain text file with some words inside.
+
+Now, try opening in your browser! You can do this by just manually entering the file's address into your browser, i.e. `file:///Users/cha/Desktop/cat.txt` instead of where you'd normally write `http://www.google.com`.
 
 ![Using a local filepath in your browser](./assets/00/local-url.png)
 
 If you're not sure what this address would be, don't worry! You can either:
 
 - find the file in your computer's file viewer (ex. Windows Explorer or Mac Finder), right click, and "Open With" the browser of your choice.
-- or open your browser first, and select the file from there. Ex. in Chrome, you'd need to go to File > Open File.
+- or open your browser first, and select the file from there. (For example in Chrome, you'd need to go to File > Open File.)
+
+You can see that these actions are just shortcuts to updating that web address correctly. Now you should see something like this:
 
 ![Viewing a local file in your browser](./assets/00/local-url-open.png)
 
-Oh hey, look at you! In essence, this is all a website is - files opened in a browser. In this case, it's just a plain text file.
+Amazing! In essence, this is all a website is: files at a specific location (in this case, just on your computer somewhere) opened in a browser.
 
 ## What is code?
 
 Your file right now is just a plaintext\* file. You can tell by the `.txt` extension at the end.
 
-\*_`PlainText` is actually the technical term here for the file type, not just a descriptive phrase!_
+\*_`plaintext` is actually the technical term here for the file type, not just a descriptive phrase!_
 
 Other file types (`.html`, `.js`, etc.) contain **code**.
 
@@ -47,11 +53,11 @@ At some point, some human was like, what if we group these signals into unique p
 
 That way, instead of having to write "010000010100001001000011" every time, you could just write "ABC" and automate the translation - way easier. And then we kept repeating this process.
 
-> ILLUSTRATION: like the game of telephone, we're passing a message through multiple layers of translators
+<!-- > ILLUSTRATION: like the game of telephone, we're passing a message through multiple layers of translators -->
 
 So a programming language, then, is just one of these "translation layers". In technical terms, the closer you get to the 0's and 1's side, the "lower level" the language is. A higher level language is more layers away, so it usually feels easier for humans to read and write.
 
-> ILLUSTRATION: https://mrgcoding.com/wp-content/uploads/2020/06/language-spectrum.png maybe some robots/machines at one end & people at the other?
+<!-- > ILLUSTRATION: https://mrgcoding.com/wp-content/uploads/2020/06/language-spectrum.png maybe some robots/machines at one end & people at the other? -->
 
 So when you learn JavaScript, one of the higher level languages, you can write something as simple and human-legible as `var x = 9` (setting a variable X to the value 9). It feels almost like magic that the computer can "understand" you, but it's just layers and layers of work from engineers past that you can now build on top of.
 
@@ -59,7 +65,9 @@ So when you learn JavaScript, one of the higher level languages, you can write s
 
 As mentioned previously, you can technically use any program as long as it can output plain text, like TextEdit or Notepad.
 
-However, it might be useful for you to install a text editing application that is meant specifically for programmers, usually called a "text editor" or "I.D.E." ("Integrated Development Environment"). Most of these programs are free so you can always just download one and replace it later to your preferences.
+However, it might be useful for you to install a text editing application that is meant specifically for programmers, usually called a "text editor" or "I.D.E." ("Integrated Development Environment", with the acronym usually pronounced as individual letters). These applications have built-in tools specifically for coding, and can be extremely helpful.
+
+Most of these programs are free so you can always just download one and replace it later to your preferences.
 
 Here are some free options:
 
@@ -71,6 +79,6 @@ Download one of these (or another text editor of your choosing) and you'll be re
 
 Try opening up your `txt` file in this text editor. There a lot of different ways to do this (drag the file onto the program icon, use "Open with" again, open it from the text editor via File > Open, etc.) - play around with them and see what's most convenient for you.
 
-Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh your browser - you should see it update to your recent changes.
+Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh the browser tab where it's open - you should see it immediately update to your recent changes.
 
-Congratulations, that's your first website! ✨
+Congratulations, you're editing your first website! ✨

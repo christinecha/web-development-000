@@ -30,13 +30,13 @@ const generateOutline = ({ parentId = "", contents = [] }) => {
   html += "<ul>";
   contents.forEach((c, index) => {
     const id = parentId + (c.id !== undefined ? c.id : index);
+    const disabled = Boolean(c.contents && c.contents.length);
 
     html += `
-      <li>
-        <label data-length=${id.length}>${id}</label>
-        <a href="./${c.permaId}.html">
+      <li disabled="${disabled}">
+        ${disabled ? "" : `<a href="./${c.permaId}.html">`}
           ${c.title}
-        </a>
+        ${disabled ? "" : "</a>"}
       </li>
     `;
 
@@ -83,8 +83,6 @@ const generatePages = ({ parentId = "", contents = [] }) => {
 
     let html = `
       <h1 id="${id}">
-        <label data-length=${id.length}>${id}</label>
-        <br />
         ${c.title}
       </h1>
       <p>${c.description || ""}</p>
