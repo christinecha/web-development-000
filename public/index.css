@@ -89,6 +89,10 @@ blockquote {
   box-sizing: border-box;
 }
 
+#outline h1 {
+  font-size: 16px;
+}
+
 #outline ul {
   list-style: none;
   padding-inline-start: 20px;

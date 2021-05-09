@@ -1,4 +1,4 @@
-# Web Dev from Zero
+# Web Dev Zero
 
 ## Quick Links
 
