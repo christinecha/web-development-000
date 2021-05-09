@@ -1,5 +1,3 @@
-## What is a website?
-
 A website is literally a location - a "site" - on the internet. You can view that location through a web browser (Chrome, Firefox, or Netscape Navigator), and what you see when it loads up is a representation of that website.
 
 ![Pointing to a website, which is the content rendered by a browser.](./assets/00/website-anatomy.png)
