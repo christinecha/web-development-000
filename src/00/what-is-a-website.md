@@ -10,24 +10,30 @@ You could go further to say that seeing the website is like hearing a voicemail.
 
 <!-- > ILLUSTRATION: process of requesting & receiving website? maybe in parallel with the phone call process? -->
 
-## Different types of web addresses
+## Using your own files
 
 Click to download this file: <a href="data:text/plain;charset=UTF-8,Meow! I am a cat! 🐱" download="cat.txt">cat.txt</a>. It should just be a plain text file with some words inside.
 
-Now, try opening in your browser! You can do this by just manually entering the file's address into your browser, i.e. `file:///Users/cha/Desktop/cat.txt` instead of where you'd normally write `http://www.google.com`.
-
-![Using a local filepath in your browser](./assets/00/local-url.png)
-
-If you're not sure what this address would be, don't worry! You can either:
+Now, try opening it in your browser! You can either:
 
 - find the file in your computer's file viewer (ex. Windows Explorer or Mac Finder), right click, and "Open With" the browser of your choice.
 - or open your browser first, and select the file from there. (For example in Chrome, you'd need to go to File > Open File.)
 
-You can see that these actions are just shortcuts to updating that web address correctly. Now you should see something like this:
+<!-- ![Using a local filepath in your browser](./assets/00/local-url.png) -->
+
+Now you should see something like this:
 
 ![Viewing a local file in your browser](./assets/00/local-url-open.png)
 
 Amazing! In essence, this is all a website is: files at a specific location (in this case, just on your computer somewhere) opened in a browser.
+
+## Quick Dive: Filepaths
+
+The action above of "opening a file" in your browser is just a shortcut. What it's actually doing is manually entering your file's exact location (the thing that looks similar to `/Users/cha/Desktop/cat.txt`) into the address bar (where you'd normally write something like `www.ebay.com`).
+
+That bit of text describing the file's location is called the `filepath` - since it's quite literally the "path" you need to take to find the file.
+
+In this case, my file is in a folder called "Desktop" inside a folder called "cha" inside a folder called "Users."
 
 ## What is code?
 

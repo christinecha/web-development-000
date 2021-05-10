@@ -60,18 +60,21 @@
 <p>When you use a web address, it's kind of like making a phone call. You direct your request towards a unique web address (like "www.duckduckgo.com"), just like your call requests a specific phone number. The internet companies involved then do a bunch of work to make sure you see the right website.</p>
 <p>You could go further to say that seeing the website is like hearing a voicemail. Someone somewhere uploaded an audio file, and that same file gets played to you every time you call. Except, in the case of a website,it's usually a combination of a whole bunch of different files instead of just one audio file.</p>
 <!-- > ILLUSTRATION: process of requesting & receiving website? maybe in parallel with the phone call process? -->
-<h2 id="differenttypesofwebaddresses">Different types of web addresses</h2>
+<h2 id="usingyourownfiles">Using your own files</h2>
 <p>Click to download this file: <a href="data:text/plain;charset=UTF-8,Meow! I am a cat! 🐱" download="cat.txt">cat.txt</a>. It should just be a plain text file with some words inside.</p>
-<p>Now, try opening in your browser! You can do this by just manually entering the file's address into your browser, i.e. <code>file:///Users/cha/Desktop/cat.txt</code> instead of where you'd normally write <code>http://www.google.com</code>.</p>
-<p><img src="./assets/00/local-url.png" alt="Using a local filepath in your browser" /></p>
-<p>If you're not sure what this address would be, don't worry! You can either:</p>
+<p>Now, try opening it in your browser! You can either:</p>
 <ul>
 <li>find the file in your computer's file viewer (ex. Windows Explorer or Mac Finder), right click, and "Open With" the browser of your choice.</li>
 <li>or open your browser first, and select the file from there. (For example in Chrome, you'd need to go to File &gt; Open File.)</li>
 </ul>
-<p>You can see that these actions are just shortcuts to updating that web address correctly. Now you should see something like this:</p>
+<!-- ![Using a local filepath in your browser](./assets/00/local-url.png) -->
+<p>Now you should see something like this:</p>
 <p><img src="./assets/00/local-url-open.png" alt="Viewing a local file in your browser" /></p>
 <p>Amazing! In essence, this is all a website is: files at a specific location (in this case, just on your computer somewhere) opened in a browser.</p>
+<h2 id="quickdivefilepaths">Quick Dive: Filepaths</h2>
+<p>The action above of "opening a file" in your browser is just a shortcut. What it's actually doing is manually entering your file's exact location (the thing that looks similar to <code>/Users/cha/Desktop/cat.txt</code>) into the address bar (where you'd normally write something like <code>www.ebay.com</code>).</p>
+<p>That bit of text describing the file's location is called the <code>filepath</code> - since it's quite literally the "path" you need to take to find the file.</p>
+<p>In this case, my file is in a folder called "Desktop" inside a folder called "cha" inside a folder called "Users."</p>
 <h2 id="whatiscode">What is code?</h2>
 <p>Your file right now is just a plaintext* file. You can tell by the <code>.txt</code> extension at the end.</p>
 <p>*<em><code>plaintext</code> is actually the technical term here for the file type, not just a descriptive phrase!</em></p>
