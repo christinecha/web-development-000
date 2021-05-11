@@ -5,6 +5,7 @@ const SCRIPT_TAGS = {
   description: "",
   filepath: path.resolve(__dirname, "script-tags.md"),
   dependencies: [],
+  wip: true,
 };
 
 const VARIABLES_FUNCTIONS = {
@@ -12,6 +13,7 @@ const VARIABLES_FUNCTIONS = {
   description: "",
   filepath: path.resolve(__dirname, "variables-and-functions.md"),
   dependencies: [],
+  wip: true,
 };
 
 module.exports = {

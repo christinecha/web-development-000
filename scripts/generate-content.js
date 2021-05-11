@@ -3,10 +3,15 @@ const path = require("path");
 const { readFileSync, writeFileSync } = require("fs");
 const allContents = require("../src/contents.js");
 
+const isDev = process.env.NODE_ENV === "development";
+
 const converter = new showdown.Converter();
-const templateHTML = readFileSync(path.resolve(__dirname, "../template.html"), {
-  encoding: "utf-8",
-});
+const templateHTML = readFileSync(
+  path.resolve(__dirname, "../src/template.html"),
+  {
+    encoding: "utf-8",
+  }
+);
 
 const injectTemplate = ({ content, outline, filepath }) => {
   const filename = path.basename(filepath, ".html");
@@ -29,6 +34,8 @@ const generateOutline = ({ parentId = "", contents = [] }) => {
 
   html += "<ul>";
   contents.forEach((c, index) => {
+    if (!isDev && c.wip) return;
+
     const id = parentId + (c.id !== undefined ? c.id : index);
     const disabled = Boolean(c.contents && c.contents.length);
 
@@ -68,6 +75,8 @@ const generatePages = ({ parentId = "", contents = [] }) => {
   }
 
   contents.forEach((c, index) => {
+    if (!isDev && c.wip) return;
+
     const noDeps = c.dependencies && !c.dependencies.length;
     const dependencies = c.dependencies || [];
     const previous = contents[index - 1];

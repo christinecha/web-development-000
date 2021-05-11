@@ -1,14 +1,22 @@
 ## What is HTML, and why are we starting with it?
 
-Imagine that your website is a dancer. One day, we want them to perform beautiful choreography! In magnificent costume! Well, HTML is the dancer's bones. It's hard to design a skirt or direct steps if you don't know about legs.
+HTML stands for "Hypertext Markup Language." If you want to make sense of this acronym, it's a programming language that "marks up", or describes the structure of, "hypertext" - content on the web. But for everyday use, we just call it HTML (pronounced letter-by-letter).
 
-> ILLUSTRATION: I mean, I think you get the point here >.<
+Imagine that your website is a dancer. One day, we want them to perform beautiful choreography! In magnificent costume! It's hard to design a skirt or direct steps if you don't know about legs, right? Well, HTML is like the dancer's body.
+
+<!-- > ILLUSTRATION: I mean, I think you get the point here >.< -->
 
 ## Creating an HTML file
 
 So far, we've only used a plain text file (`.txt`). Now, let's make our first HTML file.
 
-You can either create a new file or just rename the existing file from `cat.txt` to `cat.html` to get started. Either way, the important bit is the `.html` at the end to indicate what programming language it's in. Open it up in your text editor. Let's write some HTML!
+You can either create a new file or just rename the existing file from `cat.txt` to `cat.html` to get started. You can do this in countless ways, but here are some options to be extra clear:
+
+- `File > Save As...` to make a copy, and manually change the `.txt` ending to `.html`
+- `File > New` to create a new untitled file, then `File > Save` or `cmd/ctrl+S` to give it a name (ending in `.html`)
+- Ctrl+click the file in your text editor's side bar, or your computer's file viewer and select "Rename"
+
+Whichever way you choose, the important bit is to end up with a file named something with `.html` at the end to indicate it's going to be filled with HTML code. Open it up in your text editor, and let's write!
 
 ## How to write HTML
 
@@ -19,21 +27,21 @@ In HTML, things are broken down into elements. (You might also hear them called 
 <element> some text </element>
 ```
 
-> ILLUSTRATION: Some illustration of the HTML structure as written above? With little arrows pointing to the pieces maybe?
+<!-- > ILLUSTRATION: Some illustration of the HTML structure as written above? With little arrows pointing to the pieces maybe? -->
 
-Each element is indicated by two "tags" (1 & 3), and you can put text between them (2). Eachtag is surrounded by brackets `<blerp>` but only the second one has the slash `</blerp>` so you know where it ends.
+Each element is indicated by two "tags" (1 & 3), and you can put text between them (2). Each tag is surrounded by brackets `<beep>` but only the second one has the slash `</beep>` so you know where it ends.
 
 The element type is specified inside of the angle brackets.
 
 ```html
-<blerp>Text</blerp><noodle>More Text</noodle>
+<beep>Text</beep><boop>More Text</boop>
 ```
 
-In this example, you'd refer to these as "blerp" and "noodle" elements.
+In this example, you might refer to these as "beep" and "boop" elements. One `beep` element with "Text" inside it, and one `boop` element with "More Text" inside it.
 
 Try typing these elements in your `.html` file. Make your own! Move them around! Type funny quotes inside them! Save your changes, and view the file in your browser again.
 
-Notice that you won't see the element tags, like `<blerp>`, in your browser - you only see the text you put inside them. This is exactly how all HTML elements work; they simply provide the underlying structure for your content.
+Notice that you won't see the element tags, like `<beep>`, in your browser - you only see the text (`Text` and `More Text`) you put inside them. This is exactly how all HTML elements work; they simply provide the underlying structure for your content.
 
 ## Nesting
 
@@ -44,7 +52,7 @@ You can also "nest" elements inside one another, with or without text, to produc
   Grandma text #1
   <mom>
     <daughter>Shelly</daughter>
-    <daughter>Welly</daughter>
+    <daughter>Kelly</daughter>
   </mom>
   Grandma text #2
   <aunt>
@@ -57,13 +65,13 @@ You can also "nest" elements inside one another, with or without text, to produc
 
 In our family tree example here, `grandma` is the "parent" element of `mom` and `aunt`, which respectively are "parents" of `daughter` and `cousin`. The text inside the elements can also be referred to as their "children". We would even use the term "siblings" to describe the two `daughter` elements!
 
-(Note: The terms "parent", "child", and "sibling" are actual technical terms that developers use all the time. If you use other, albeit similar, language like "mother" and "daughter" elements, folks might not understand you! 😅)
+_(Note: The terms "parent", "child", and "sibling" are actual technical terms that developers use all the time. If you use other, albeit similar, language like "mother" and "daughter" elements, folks might not understand you!)_
 
 ## HTML Elements
 
-Okay, now that we've learned about the general syntax, I'll come clean - `blerp`, `noodle`, `aunt`, and `grandma` aren't actual HTML elements.
+Okay, now that we've learned about the general syntax, I'll come clean - `beep`, `boop`, `aunt`, and `grandma` aren't _real_ HTML elements.
 
-_(Technically you could call them anything you want and there wouldn't be any visible errors, but then, more technically, that's no longer HTML... more info here if you're curious: https://dev.w3.org/html5/html-author/#self-closing-tag)_
+_(Technically you could call them anything you want and there wouldn't be any visible errors, but then, more technically, that's no longer HTML... [more info here](https://dev.w3.org/html5/html-author/#self-closing-tag) if you're curious.)_
 
 There's a huge selection of HTML element types that all browsers have agreed to accept. Here are just a few examples:
 
@@ -103,7 +111,7 @@ Incorrect:
 <input></input>
 ```
 
-These elements are called "void elements", and this specific syntax is called a self-closing tag. More info here: https://www.w3.org/Style/customdtd.en.html
+These elements are called "void elements", and this specific syntax is called a self-closing tag. [More info here.](https://www.w3.org/Style/customdtd.en.html)
 
 ## Your first real HTML website
 

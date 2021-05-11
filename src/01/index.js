@@ -7,6 +7,7 @@ const INTRO_STYLES = {
   description: "",
   markdown: path.resolve(__dirname, "intro-to-styles.md"),
   dependencies: [SECTION_00.HTML_ATTRIBUTES],
+  wip: true,
 };
 
 const COLOR_BASICS = {
@@ -15,6 +16,7 @@ const COLOR_BASICS = {
   description: "",
   markdown: path.resolve(__dirname, "color.md"),
   dependencies: [],
+  wip: true,
 };
 
 module.exports = {

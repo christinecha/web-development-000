@@ -59,7 +59,7 @@ That way, instead of having to write "010000010100001001000011" every time, you 
 
 <!-- > ILLUSTRATION: like the game of telephone, we're passing a message through multiple layers of translators -->
 
-So a programming language, then, is just one of these "translation layers". In technical terms, the closer you get to the 0's and 1's side, the "lower level" the language is. A higher level language is more layers away, so it usually feels easier for humans to read and write.
+So a "programming language", then, is just one of these translation layers. In technical terms, the closer you get to the 0's and 1's side, the "lower level" the language is. A higher level language is more layers away, so it usually feels easier for humans to read and write.
 
 <!-- > ILLUSTRATION: https://mrgcoding.com/wp-content/uploads/2020/06/language-spectrum.png maybe some robots/machines at one end & people at the other? -->
 

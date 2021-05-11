@@ -25,17 +25,18 @@ module.exports = [
         description: "",
         contents: [
           SECTION_00.FIRST_WEBSITE,
-          // SECTION_00.HTML_ELEMENTS,
-          // SECTION_00.HTML_ATTRIBUTES,
+          SECTION_00.HTML_ELEMENTS,
+          SECTION_00.HTML_ATTRIBUTES,
         ],
       },
-      // {
-      //   id: 1,
-      //   permaId: "intro-to-css",
-      //   title: "Introduction to CSS",
-      //   description: "",
-      //   contents: [SECTION_01.INTRO_STYLES, SECTION_01.COLOR_BASICS],
-      // },
+      {
+        id: 1,
+        permaId: "intro-to-css",
+        title: "Introduction to CSS",
+        wip: true,
+        description: "",
+        contents: [SECTION_01.INTRO_STYLES, SECTION_01.COLOR_BASICS],
+      },
       // {
       //   id: 2,
       //   title: "Introduction to Dev Tools",

@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "./scripts/build.sh",
+    "dev": "NODE_ENV=development node ./scripts/dev.js",
     "deploy": "./scripts/deploy.sh"
   },
   "dependencies": {

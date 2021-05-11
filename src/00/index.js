@@ -13,6 +13,7 @@ const HTML_ELEMENTS = {
   title: "HTML Elements",
   description: "",
   markdown: path.resolve(__dirname, "html-elements.md"),
+  wip: true,
 };
 
 const HTML_ATTRIBUTES = {
@@ -20,6 +21,7 @@ const HTML_ATTRIBUTES = {
   title: "HTML Attributes",
   description: "",
   markdown: path.resolve(__dirname, "html-attributes.md"),
+  wip: true,
 };
 
 module.exports = {
