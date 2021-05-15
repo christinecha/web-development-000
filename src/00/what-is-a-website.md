@@ -81,6 +81,8 @@ Here are some free options:
 
 Download one of these (or another text editor of your choosing) and you'll be ready to write!
 
+Here's [a bit more guidance about how to use it effectively](text-editor-basics.html).
+
 _(Some developers can be a bit evangelical on this subject - I suggest you kindly ignore them and choose whatever you like best, for whatever reason. Just for reference, I started with Sublime, moved to Atom next, and currently use VS Code.)_
 
 Try opening up your `txt` file in this text editor. There a lot of different ways to do this (drag the file onto the program icon, use "Open with" again, open it from the text editor via File > Open, etc.) - play around with them and see what's most convenient for you.

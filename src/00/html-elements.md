@@ -2,7 +2,7 @@
 
 HTML stands for "Hypertext Markup Language." If you want to make sense of this acronym, it's a programming language that "marks up", or describes the structure of, "hypertext" - content on the web. But for everyday use, we just call it HTML (pronounced letter-by-letter).
 
-Imagine that your website is a dancer. One day, we want them to perform beautiful choreography! In magnificent costume! It's hard to design a skirt or direct steps if you don't know about legs, right? Well, HTML is like the dancer's body.
+Imagine that your website is a dancer. One day, we want them to perform beautiful choreography! In magnificent costume! But before we design a skirt or direct steps, we have to make some legs first. And that type of structure can be created with HTML.
 
 <!-- > ILLUSTRATION: I mean, I think you get the point here >.< -->
 
@@ -16,7 +16,7 @@ You can either create a new file or just rename the existing file from `cat.txt`
 - `File > New` to create a new untitled file, then `File > Save` or `cmd/ctrl+S` to give it a name (ending in `.html`)
 - Ctrl+click the file in your text editor's side bar, or your computer's file viewer and select "Rename"
 
-Whichever way you choose, the important bit is to end up with a file named something with `.html` at the end to indicate it's going to be filled with HTML code. Open it up in your text editor, and let's write!
+Whichever way you choose, the important bit is to end up with a file named something with `.html` at the end to indicate it's going to be filled with HTML code. Open it up in your [text editor](what-is-a-website.html#howdoicreatethesecodefiles), and let's write!
 
 ## How to write HTML
 
@@ -67,7 +67,7 @@ In our family tree example here, `grandma` is the "parent" element of `mom` and 
 
 _(Note: The terms "parent", "child", and "sibling" are actual technical terms that developers use all the time. If you use other, albeit similar, language like "mother" and "daughter" elements, folks might not understand you!)_
 
-## HTML Elements
+## Actual HTML Elements
 
 Okay, now that we've learned about the general syntax, I'll come clean - `beep`, `boop`, `aunt`, and `grandma` aren't _real_ HTML elements.
 
@@ -85,11 +85,11 @@ Using the most appropriate element for a specific part of your website is common
 
 This is a _very important_ skill to learn if you want your websites to be found by search engines, accessible to non-sighted and/or keyboard users, and more.
 
-That being said, your website could technically be built only using `<blerp>` elements and still look the same on the outside...
+That being said, your website could technically be built only using `<boop>` and `<beep>` elements and still look the same on the outside...
 
-> ILLUSTRATION: Some callback to the dancer's bones. Like maybe you have arm bones in your legs but it looks the same on the outside, you know?
+<!-- > ILLUSTRATION: Some callback to the dancer's bones. Like maybe you have arm bones in your legs but it looks the same on the outside, you know? -->
 
-Here's a list of every single element tag in HTML: https://developer.mozilla.org/en-US/docs/Web/HTML/Element. Warning - there is probably a lot of vocabulary on that site that will look foreign and complicated! Don't worry. Some of these are very obscure, even to experienced developers. 99% of the time, you'll only be using a handful of the most common ones.
+Here's a [list of every single element tag in HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). Warning - there is probably a lot of vocabulary on that site that will look foreign and complicated! Don't worry. Some of these are very obscure, even to experienced developers. 99% of the time, you'll only be using a handful of the most common ones.
 
 ## Self-closing tags
 
@@ -128,7 +128,7 @@ Try replacing the code in your `.html` file now with real elements. Here's a qui
 - `<ul>` is for an "unordered list", like a bulleted one
 - `<li>` is a "list item" and should go specifically inside a `ul`
 
-Try combining all of the concepts so far into your file. You could write something like this:
+Try combining all of the concepts so far into your file. Come up with your own structure and content! Here's an example just for reference:
 
 ```html
 <h1>Funny Cats</h1>
@@ -178,8 +178,6 @@ blah blah text content</h1>
           </h1>
 ```
 
-Programmers like to enforce strict indentation rules (always indent when you move into a child element, etc.) so their code is more legible. Your text editor can even automatically do that for you whenever you save your file\*.
+Programmers like to enforce strict indentation rules (always indent when you move into a child element, etc.) so their code is more legible. Your text editor can even [automatically do that for you whenever you save your file](text-editor-basics.html#savingyourfiles). for convenience.
 
 That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a _better_ programmer.
-
-\*_Search "format on save [your-text-editor's-name]" and you'll likely find steps to turn that on._

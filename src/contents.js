@@ -1,6 +1,7 @@
 const path = require("path");
 const SECTION_00 = require("./00");
 const SECTION_01 = require("./01");
+const SECTION_02 = require("./02");
 
 module.exports = [
   {
@@ -13,7 +14,7 @@ module.exports = [
   {
     id: 0,
     permaId: "web-dev-0",
-    title: "Introduction to Web Development",
+    title: "Intro to Web Development",
     description:
       "This guide is intended to help you get started in your web development journey.",
     dependencies: [],
@@ -21,7 +22,7 @@ module.exports = [
       {
         id: 0,
         permaId: "intro-to-html",
-        title: "Introduction to HTML",
+        title: "Intro to HTML",
         description: "",
         contents: [
           SECTION_00.FIRST_WEBSITE,
@@ -32,10 +33,17 @@ module.exports = [
       {
         id: 1,
         permaId: "intro-to-css",
-        title: "Introduction to CSS",
+        title: "Intro to CSS",
         wip: true,
         description: "",
         contents: [SECTION_01.INTRO_STYLES, SECTION_01.COLOR_BASICS],
+      },
+      {
+        id: 2,
+        permaId: "dev-tool-basics",
+        title: "Intro to Development Tools",
+        description: "",
+        contents: [SECTION_02.TEXT_EDITOR_BASICS],
       },
       // {
       //   id: 2,
