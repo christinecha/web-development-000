@@ -51,7 +51,7 @@ _\*Programs like Microsoft Word save a bunch of other data with your text - form
 
 ## How can a machine read my human instructions?
 
-Think of it like a massive chain of translations. A machine on its own has no understanding of your textual instructions. The ony thing that affects a hunk of metal is whether electricity is flowing (often presented by 1) or not (0). That's where all the memes about hackers using binary (01010111010110100010100101) come from; at the end of the day, that sequence is all the machines understand.
+Think of it like a massive chain of translations. A machine on its own has no understanding of your textual instructions. The only thing that affects a hunk of metal is whether electricity is flowing (often presented by 1) or not (0). That's where all the memes about hackers using binary (01010111010110100010100101) come from; at the end of the day, that sequence is all the machines understand.
 
 At some point, some human was like, what if we group these signals into unique patterns? 01000001 = A, 01000010 = B, so on and so forth. (These are the real patterns, by the way!)
 
