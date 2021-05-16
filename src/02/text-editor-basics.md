@@ -36,6 +36,8 @@ In addition to using the `save` shortcut, a very useful tool when coding is auto
 
 ![Enable "Format on Save" in your text editor settings.](./assets/02/format-on-save.png)
 
+"Formatting" here refers to things like adjusting the indentation and spacing to make things look neater.
+
 I like to enable "format on save" instead of "format on type" because it can feel a bit jarring when things are moving around as you type. This is entirely an optional tool, though.
 
-If you have any trouble finding this setting for your text editor, search "format on save [your-text-editor's-name]" (ex. "format on save Atom") and you'll easily find steps to turn that on.
+If you have any trouble finding this setting for your text editor, search online for "format on save [your-text-editor's-name]" (ex. "format on save Atom") and you'll easily find steps to turn that on.

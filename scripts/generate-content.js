@@ -34,13 +34,11 @@ const generateOutline = ({ parentId = "", contents = [] }) => {
 
   html += "<ul>";
   contents.forEach((c, index) => {
-    if (!isDev && c.wip) return;
-
     const id = parentId + (c.id !== undefined ? c.id : index);
-    const disabled = Boolean(c.contents && c.contents.length);
+    const disabled = Boolean(c.contents && c.contents.length) || c.wip;
 
     html += `
-      <li disabled="${disabled}">
+      <li disabled="${disabled}" data-wip="${Boolean(c.wip)}">
         ${disabled ? "" : `<a href="./${c.permaId}.html">`}
           ${c.title}
         ${disabled ? "" : "</a>"}
@@ -77,12 +75,7 @@ const generatePages = ({ parentId = "", contents = [] }) => {
   contents.forEach((c, index) => {
     if (!isDev && c.wip) return;
 
-    const noDeps = c.dependencies && !c.dependencies.length;
     const dependencies = c.dependencies || [];
-    const previous = contents[index - 1];
-    if (previous && !noDeps) {
-      dependencies.push(previous);
-    }
 
     const id = parentId + (c.id || index);
     const markdown = c.markdown

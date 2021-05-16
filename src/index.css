@@ -129,6 +129,17 @@ blockquote {
   color: black;
 }
 
+#outline li[data-wip="true"] {
+  color: #ccc;
+}
+
+#outline li[data-wip="true"]::after {
+  content: "*";
+  text-transform: uppercase;
+  position: static;
+  align-self: flex-start;
+}
+
 label {
   font-family: monospace;
   text-transform: uppercase;

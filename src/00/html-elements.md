@@ -128,33 +128,17 @@ Try replacing the code in your `.html` file now with real elements. Here's a qui
 - `<ul>` is for an "unordered list", like a bulleted one
 - `<li>` is a "list item" and should go specifically inside a `ul`
 
-Try combining all of the concepts so far into your file. Come up with your own structure and content! Here's an example just for reference:
+Try combining all of the concepts so far into your file. Come up with your own structure and content! For reference, here's what your editor might look like at this point:
 
-```html
-<h1>Funny Cats</h1>
-<h2>Very funny. Ha ha!</h2>
-<p>
-  This is a <a>website</a> about cats that sit in boxes.
-  <br />
-  <strong>Meow</strong>
-</p>
-<hr />
-<button>View The Cats</button>
-<ul>
-  <li>
-    <div>
-      <h3>cat 1</h3>
-    </div>
-    <p>meow</p>
-  </li>
-  <li>cat 2</li>
-  <li>cat 3</li>
-</ul>
-```
+![A screenshot of my text editor, with a bunch of html elements written into a file.](./assets/00/html-example.png)
 
 Now that we're using real HTML elements, you should see something different in your browser now. Your `h1` text should look very large and your `p` quite small in comparison. The `button` should look like, well, a button! And so on.
 
-Look at you go! This is starting to look like the real thing.
+When I save that file and view it in my browser, it looks like this now:
+
+![The browser output of the example html.](./assets/00/html-example-output.png)
+
+I mean, that's a pretty cool website, right?
 
 ## NB: About spacing & indentation
 

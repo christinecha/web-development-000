@@ -43,7 +43,7 @@ module.exports = [
         permaId: "dev-tool-basics",
         title: "Intro to Development Tools",
         description: "",
-        contents: [SECTION_02.TEXT_EDITOR_BASICS],
+        contents: [SECTION_02.TEXT_EDITOR_BASICS, SECTION_02.INSPECT_ELEMENTS],
       },
       // {
       //   id: 2,
