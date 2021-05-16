@@ -11,7 +11,7 @@ const TEXT_EDITOR_BASICS = {
 };
 
 const INSPECT_ELEMENTS = {
-  permaId: "inpect-elements",
+  permaId: "inspect-elements",
   title: "Inspecting Elements",
   description: "",
   markdown: path.resolve(__dirname, "inspect-elements.md"),

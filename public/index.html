@@ -38,10 +38,10 @@
         </a>
       </li>
     
-      <li disabled="true" data-wip="true">
-        
+      <li disabled="undefined" data-wip="false">
+        <a href="./html-elements-intro.html">
           HTML Elements
-        
+        </a>
       </li>
     
       <li disabled="true" data-wip="true">
@@ -195,6 +195,120 @@
 <p>Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh the browser tab where it's open - you should see it immediately update to your recent changes.</p>
 <p>Congratulations, you're editing your first website! ✨</p>
     
+      <h1 id="101">
+        HTML Elements
+      </h1>
+      <p></p>
+      <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./what-is-a-website.html">What is a Website?</a></li></ul>
+      <h2 id="whatishtmlandwhyarewestartingwithit">What is HTML, and why are we starting with it?</h2>
+<p>HTML stands for "Hypertext Markup Language." If you want to make sense of this acronym, it's a programming language that "marks up", or describes the structure of, "hypertext" - content on the web. But for everyday use, we just call it HTML (pronounced letter-by-letter).</p>
+<p>Imagine that your website is a dancer. One day, we want them to perform beautiful choreography! In magnificent costume! But before we design a skirt or direct steps, we have to make some legs first. And that type of structure can be created with HTML.</p>
+<!-- > ILLUSTRATION: I mean, I think you get the point here >.< -->
+<h2 id="creatinganhtmlfile">Creating an HTML file</h2>
+<p>So far, we've only used a plain text file (<code>.txt</code>). Now, let's make our first HTML file.</p>
+<p>You can either create a new file or just rename the existing file from <code>cat.txt</code> to <code>cat.html</code> to get started. You can do this in countless ways, but here are some options to be extra clear:</p>
+<ul>
+<li><code>File &gt; Save As...</code> to make a copy, and manually change the <code>.txt</code> ending to <code>.html</code></li>
+<li><code>File &gt; New</code> to create a new untitled file, then <code>File &gt; Save</code> or <code>cmd/ctrl+S</code> to give it a name (ending in <code>.html</code>)</li>
+<li>Ctrl+click the file in your text editor's side bar, or your computer's file viewer and select "Rename"</li>
+</ul>
+<p>Whichever way you choose, the important bit is to end up with a file named something with <code>.html</code> at the end to indicate it's going to be filled with HTML code. Open it up in your <a href="what-is-a-website.html#howdoicreatethesecodefiles">text editor</a>, and let's write!</p>
+<h2 id="howtowritehtml">How to write HTML</h2>
+<p>In HTML, things are broken down into elements. (You might also hear them called "blocks" or "tags".) Each HTML element looks like this:</p>
+<pre><code>[1]       [2]       [3]
+&lt;element&gt; some text &lt;/element&gt;
+</code></pre>
+<!-- > ILLUSTRATION: Some illustration of the HTML structure as written above? With little arrows pointing to the pieces maybe? -->
+<p>Each element is indicated by two "tags" (1 &amp; 3), and you can put text between them (2). Each tag is surrounded by brackets <code>&lt;beep&gt;</code> but only the second one has the slash <code>&lt;/beep&gt;</code> so you know where it ends.</p>
+<p>The element type is specified inside of the angle brackets.</p>
+<pre><code class="html language-html">&lt;beep&gt;Text&lt;/beep&gt;&lt;boop&gt;More Text&lt;/boop&gt;
+</code></pre>
+<p>In this example, you might refer to these as "beep" and "boop" elements. One <code>beep</code> element with "Text" inside it, and one <code>boop</code> element with "More Text" inside it.</p>
+<p>Try typing these elements in your <code>.html</code> file. Make your own! Move them around! Type funny quotes inside them! Save your changes, and view the file in your browser again.</p>
+<p>Notice that you won't see the element tags, like <code>&lt;beep&gt;</code>, in your browser - you only see the text (<code>Text</code> and <code>More Text</code>) you put inside them. This is exactly how all HTML elements work; they simply provide the underlying structure for your content.</p>
+<h2 id="nesting">Nesting</h2>
+<p>You can also "nest" elements inside one another, with or without text, to produce more complex structures. "Nesting" is a very common concept across programming, not just in HTML. These relationships are often described as "parent" and "child" - in this case, the elements inside are "children", wrapped by their "parent" element.</p>
+<pre><code class="html language-html">&lt;grandma&gt;
+  Grandma text #1
+  &lt;mom&gt;
+    &lt;daughter&gt;Shelly&lt;/daughter&gt;
+    &lt;daughter&gt;Kelly&lt;/daughter&gt;
+  &lt;/mom&gt;
+  Grandma text #2
+  &lt;aunt&gt;
+    &lt;cousin&gt;
+      &lt;babycousin&gt;Baby text&lt;/babycousin&gt;
+    &lt;/cousin&gt;
+  &lt;/aunt&gt;
+&lt;/grandma&gt;
+</code></pre>
+<p>In our family tree example here, <code>grandma</code> is the "parent" element of <code>mom</code> and <code>aunt</code>, which respectively are "parents" of <code>daughter</code> and <code>cousin</code>. The text inside the elements can also be referred to as their "children". We would even use the term "siblings" to describe the two <code>daughter</code> elements!</p>
+<p><em>(Note: The terms "parent", "child", and "sibling" are actual technical terms that developers use all the time. If you use other, albeit similar, language like "mother" and "daughter" elements, folks might not understand you!)</em></p>
+<h2 id="actualhtmlelements">Actual HTML Elements</h2>
+<p>Okay, now that we've learned about the general syntax, I'll come clean - <code>beep</code>, <code>boop</code>, <code>aunt</code>, and <code>grandma</code> aren't <em>real</em> HTML elements.</p>
+<p><em>(Technically you could call them anything you want and there wouldn't be any visible errors, but then, more technically, that's no longer HTML… <a href="https://dev.w3.org/html5/html-author/#self-closing-tag">more info here</a> if you're curious.)</em></p>
+<p>There's a huge selection of HTML element types that all browsers have agreed to accept. Here are just a few examples:</p>
+<ul>
+<li><code>&lt;h1&gt;</code> is Heading 1, for important, very large text.</li>
+<li><code>&lt;p&gt;</code> is Paragraph, for your less important and usually smaller size but lengthier text.</li>
+<li><code>&lt;div&gt;</code> apparently comes from "Document Divisions." This is commonly used for organization and visual layout purposes</li>
+</ul>
+<p>These element types are useful because browsers use this information to understand your website's structure and content. For instance, if you put some text inside of an <code>&lt;h1&gt;</code> tag, like <code>&lt;h1&gt;Purple Pandas&lt;/h1&gt;</code>, the browser will decide this "Purple Pandas" bit must be <em>really</em> important to your website.</p>
+<p>Using the most appropriate element for a specific part of your website is commonly called using "semantic HTML".</p>
+<p>This is a <em>very important</em> skill to learn if you want your websites to be found by search engines, accessible to non-sighted and/or keyboard users, and more.</p>
+<p>That being said, your website could technically be built only using <code>&lt;boop&gt;</code> and <code>&lt;beep&gt;</code> elements and still look the same on the outside…</p>
+<!-- > ILLUSTRATION: Some callback to the dancer's bones. Like maybe you have arm bones in your legs but it looks the same on the outside, you know? -->
+<p>Here's a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">list of every single element tag in HTML</a>. Warning - there is probably a lot of vocabulary on that site that will look foreign and complicated! Don't worry. Some of these are very obscure, even to experienced developers. 99% of the time, you'll only be using a handful of the most common ones.</p>
+<h2 id="selfclosingtags">Self-closing tags</h2>
+<p>There are some HTML elements that can't contain children (no text, no elements, no nothin' inside!). In these special cases, you use a slightly different format - almost as if you've merged the opening and closing tags into one.</p>
+<p>Correct:</p>
+<pre><code>&lt;br /&gt;
+&lt;hr /&gt;
+&lt;input /&gt;
+</code></pre>
+<p>Incorrect:</p>
+<pre><code>&lt;br&gt;&lt;/br&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;input&gt;&lt;/input&gt;
+</code></pre>
+<p>These elements are called "void elements", and this specific syntax is called a self-closing tag. <a href="https://www.w3.org/Style/customdtd.en.html">More info here.</a></p>
+<h2 id="yourfirstrealhtmlwebsite">Your first real HTML website</h2>
+<p>Try replacing the code in your <code>.html</code> file now with real elements. Here's a quick cheatsheet of some of the most common elements:</p>
+<ul>
+<li><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, … all the way to <code>&lt;h6&gt;</code> are for heading text (1 is the most important, 6 is the least)</li>
+<li><code>&lt;p&gt;</code> is paragraph text</li>
+<li><code>&lt;strong&gt;</code> adds emphasis</li>
+<li><code>&lt;br&gt;</code> is a line break (must be self-closing)</li>
+<li><code>&lt;hr&gt;</code> is a horizontal rule (must be self-closing)</li>
+<li><code>&lt;div&gt;</code> is usually for nesting other elements inside</li>
+<li><code>&lt;button&gt;</code> is, well, a button</li>
+<li><code>&lt;a&gt;</code> is for links (stands for "anchor")</li>
+<li><code>&lt;ul&gt;</code> is for an "unordered list", like a bulleted one</li>
+<li><code>&lt;li&gt;</code> is a "list item" and should go specifically inside a <code>ul</code></li>
+</ul>
+<p>Try combining all of the concepts so far into your file. Come up with your own structure and content! For reference, here's what your editor might look like at this point:</p>
+<p><img src="./assets/00/html-example.png" alt="A screenshot of my text editor, with a bunch of html elements written into a file." /></p>
+<p>Now that we're using real HTML elements, you should see something different in your browser now. Your <code>h1</code> text should look very large and your <code>p</code> quite small in comparison. The <code>button</code> should look like, well, a button! And so on.</p>
+<p>When I save that file and view it in my browser, it looks like this now:</p>
+<p><img src="./assets/00/html-example-output.png" alt="The browser output of the example html." /></p>
+<p>I mean, that's a pretty cool website, right?</p>
+<h2 id="nbaboutspacingindentation">NB: About spacing &amp; indentation</h2>
+<p>In some cases, specific spacing is required for things to work. But in a lot of cases, it's just personal preference. For example, these three snippets should all work and look the same in your browser:</p>
+<pre><code>&lt;h1&gt;
+blah blah text content&lt;/h1&gt;
+</code></pre>
+<pre><code>&lt;h1&gt;
+  blah blah text content
+
+&lt;/h1&gt;
+</code></pre>
+<pre><code>              &lt;h1&gt;
+      blah blah text content
+          &lt;/h1&gt;
+</code></pre>
+<p>Programmers like to enforce strict indentation rules (always indent when you move into a child element, etc.) so their code is more legible. Your text editor can even <a href="text-editor-basics.html#savingyourfiles">automatically do that for you whenever you save your file</a>. for convenience.</p>
+<p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer.</p>
+    
       <h1 id="10">
         Intro to HTML
       </h1>
@@ -259,6 +373,120 @@
 <p>Try opening up your <code>txt</code> file in this text editor. There a lot of different ways to do this (drag the file onto the program icon, use "Open with" again, open it from the text editor via File &gt; Open, etc.) - play around with them and see what's most convenient for you.</p>
 <p>Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh the browser tab where it's open - you should see it immediately update to your recent changes.</p>
 <p>Congratulations, you're editing your first website! ✨</p>
+    
+      <h1 id="101">
+        HTML Elements
+      </h1>
+      <p></p>
+      <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./what-is-a-website.html">What is a Website?</a></li></ul>
+      <h2 id="whatishtmlandwhyarewestartingwithit">What is HTML, and why are we starting with it?</h2>
+<p>HTML stands for "Hypertext Markup Language." If you want to make sense of this acronym, it's a programming language that "marks up", or describes the structure of, "hypertext" - content on the web. But for everyday use, we just call it HTML (pronounced letter-by-letter).</p>
+<p>Imagine that your website is a dancer. One day, we want them to perform beautiful choreography! In magnificent costume! But before we design a skirt or direct steps, we have to make some legs first. And that type of structure can be created with HTML.</p>
+<!-- > ILLUSTRATION: I mean, I think you get the point here >.< -->
+<h2 id="creatinganhtmlfile">Creating an HTML file</h2>
+<p>So far, we've only used a plain text file (<code>.txt</code>). Now, let's make our first HTML file.</p>
+<p>You can either create a new file or just rename the existing file from <code>cat.txt</code> to <code>cat.html</code> to get started. You can do this in countless ways, but here are some options to be extra clear:</p>
+<ul>
+<li><code>File &gt; Save As...</code> to make a copy, and manually change the <code>.txt</code> ending to <code>.html</code></li>
+<li><code>File &gt; New</code> to create a new untitled file, then <code>File &gt; Save</code> or <code>cmd/ctrl+S</code> to give it a name (ending in <code>.html</code>)</li>
+<li>Ctrl+click the file in your text editor's side bar, or your computer's file viewer and select "Rename"</li>
+</ul>
+<p>Whichever way you choose, the important bit is to end up with a file named something with <code>.html</code> at the end to indicate it's going to be filled with HTML code. Open it up in your <a href="what-is-a-website.html#howdoicreatethesecodefiles">text editor</a>, and let's write!</p>
+<h2 id="howtowritehtml">How to write HTML</h2>
+<p>In HTML, things are broken down into elements. (You might also hear them called "blocks" or "tags".) Each HTML element looks like this:</p>
+<pre><code>[1]       [2]       [3]
+&lt;element&gt; some text &lt;/element&gt;
+</code></pre>
+<!-- > ILLUSTRATION: Some illustration of the HTML structure as written above? With little arrows pointing to the pieces maybe? -->
+<p>Each element is indicated by two "tags" (1 &amp; 3), and you can put text between them (2). Each tag is surrounded by brackets <code>&lt;beep&gt;</code> but only the second one has the slash <code>&lt;/beep&gt;</code> so you know where it ends.</p>
+<p>The element type is specified inside of the angle brackets.</p>
+<pre><code class="html language-html">&lt;beep&gt;Text&lt;/beep&gt;&lt;boop&gt;More Text&lt;/boop&gt;
+</code></pre>
+<p>In this example, you might refer to these as "beep" and "boop" elements. One <code>beep</code> element with "Text" inside it, and one <code>boop</code> element with "More Text" inside it.</p>
+<p>Try typing these elements in your <code>.html</code> file. Make your own! Move them around! Type funny quotes inside them! Save your changes, and view the file in your browser again.</p>
+<p>Notice that you won't see the element tags, like <code>&lt;beep&gt;</code>, in your browser - you only see the text (<code>Text</code> and <code>More Text</code>) you put inside them. This is exactly how all HTML elements work; they simply provide the underlying structure for your content.</p>
+<h2 id="nesting">Nesting</h2>
+<p>You can also "nest" elements inside one another, with or without text, to produce more complex structures. "Nesting" is a very common concept across programming, not just in HTML. These relationships are often described as "parent" and "child" - in this case, the elements inside are "children", wrapped by their "parent" element.</p>
+<pre><code class="html language-html">&lt;grandma&gt;
+  Grandma text #1
+  &lt;mom&gt;
+    &lt;daughter&gt;Shelly&lt;/daughter&gt;
+    &lt;daughter&gt;Kelly&lt;/daughter&gt;
+  &lt;/mom&gt;
+  Grandma text #2
+  &lt;aunt&gt;
+    &lt;cousin&gt;
+      &lt;babycousin&gt;Baby text&lt;/babycousin&gt;
+    &lt;/cousin&gt;
+  &lt;/aunt&gt;
+&lt;/grandma&gt;
+</code></pre>
+<p>In our family tree example here, <code>grandma</code> is the "parent" element of <code>mom</code> and <code>aunt</code>, which respectively are "parents" of <code>daughter</code> and <code>cousin</code>. The text inside the elements can also be referred to as their "children". We would even use the term "siblings" to describe the two <code>daughter</code> elements!</p>
+<p><em>(Note: The terms "parent", "child", and "sibling" are actual technical terms that developers use all the time. If you use other, albeit similar, language like "mother" and "daughter" elements, folks might not understand you!)</em></p>
+<h2 id="actualhtmlelements">Actual HTML Elements</h2>
+<p>Okay, now that we've learned about the general syntax, I'll come clean - <code>beep</code>, <code>boop</code>, <code>aunt</code>, and <code>grandma</code> aren't <em>real</em> HTML elements.</p>
+<p><em>(Technically you could call them anything you want and there wouldn't be any visible errors, but then, more technically, that's no longer HTML… <a href="https://dev.w3.org/html5/html-author/#self-closing-tag">more info here</a> if you're curious.)</em></p>
+<p>There's a huge selection of HTML element types that all browsers have agreed to accept. Here are just a few examples:</p>
+<ul>
+<li><code>&lt;h1&gt;</code> is Heading 1, for important, very large text.</li>
+<li><code>&lt;p&gt;</code> is Paragraph, for your less important and usually smaller size but lengthier text.</li>
+<li><code>&lt;div&gt;</code> apparently comes from "Document Divisions." This is commonly used for organization and visual layout purposes</li>
+</ul>
+<p>These element types are useful because browsers use this information to understand your website's structure and content. For instance, if you put some text inside of an <code>&lt;h1&gt;</code> tag, like <code>&lt;h1&gt;Purple Pandas&lt;/h1&gt;</code>, the browser will decide this "Purple Pandas" bit must be <em>really</em> important to your website.</p>
+<p>Using the most appropriate element for a specific part of your website is commonly called using "semantic HTML".</p>
+<p>This is a <em>very important</em> skill to learn if you want your websites to be found by search engines, accessible to non-sighted and/or keyboard users, and more.</p>
+<p>That being said, your website could technically be built only using <code>&lt;boop&gt;</code> and <code>&lt;beep&gt;</code> elements and still look the same on the outside…</p>
+<!-- > ILLUSTRATION: Some callback to the dancer's bones. Like maybe you have arm bones in your legs but it looks the same on the outside, you know? -->
+<p>Here's a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">list of every single element tag in HTML</a>. Warning - there is probably a lot of vocabulary on that site that will look foreign and complicated! Don't worry. Some of these are very obscure, even to experienced developers. 99% of the time, you'll only be using a handful of the most common ones.</p>
+<h2 id="selfclosingtags">Self-closing tags</h2>
+<p>There are some HTML elements that can't contain children (no text, no elements, no nothin' inside!). In these special cases, you use a slightly different format - almost as if you've merged the opening and closing tags into one.</p>
+<p>Correct:</p>
+<pre><code>&lt;br /&gt;
+&lt;hr /&gt;
+&lt;input /&gt;
+</code></pre>
+<p>Incorrect:</p>
+<pre><code>&lt;br&gt;&lt;/br&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;input&gt;&lt;/input&gt;
+</code></pre>
+<p>These elements are called "void elements", and this specific syntax is called a self-closing tag. <a href="https://www.w3.org/Style/customdtd.en.html">More info here.</a></p>
+<h2 id="yourfirstrealhtmlwebsite">Your first real HTML website</h2>
+<p>Try replacing the code in your <code>.html</code> file now with real elements. Here's a quick cheatsheet of some of the most common elements:</p>
+<ul>
+<li><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, … all the way to <code>&lt;h6&gt;</code> are for heading text (1 is the most important, 6 is the least)</li>
+<li><code>&lt;p&gt;</code> is paragraph text</li>
+<li><code>&lt;strong&gt;</code> adds emphasis</li>
+<li><code>&lt;br&gt;</code> is a line break (must be self-closing)</li>
+<li><code>&lt;hr&gt;</code> is a horizontal rule (must be self-closing)</li>
+<li><code>&lt;div&gt;</code> is usually for nesting other elements inside</li>
+<li><code>&lt;button&gt;</code> is, well, a button</li>
+<li><code>&lt;a&gt;</code> is for links (stands for "anchor")</li>
+<li><code>&lt;ul&gt;</code> is for an "unordered list", like a bulleted one</li>
+<li><code>&lt;li&gt;</code> is a "list item" and should go specifically inside a <code>ul</code></li>
+</ul>
+<p>Try combining all of the concepts so far into your file. Come up with your own structure and content! For reference, here's what your editor might look like at this point:</p>
+<p><img src="./assets/00/html-example.png" alt="A screenshot of my text editor, with a bunch of html elements written into a file." /></p>
+<p>Now that we're using real HTML elements, you should see something different in your browser now. Your <code>h1</code> text should look very large and your <code>p</code> quite small in comparison. The <code>button</code> should look like, well, a button! And so on.</p>
+<p>When I save that file and view it in my browser, it looks like this now:</p>
+<p><img src="./assets/00/html-example-output.png" alt="The browser output of the example html." /></p>
+<p>I mean, that's a pretty cool website, right?</p>
+<h2 id="nbaboutspacingindentation">NB: About spacing &amp; indentation</h2>
+<p>In some cases, specific spacing is required for things to work. But in a lot of cases, it's just personal preference. For example, these three snippets should all work and look the same in your browser:</p>
+<pre><code>&lt;h1&gt;
+blah blah text content&lt;/h1&gt;
+</code></pre>
+<pre><code>&lt;h1&gt;
+  blah blah text content
+
+&lt;/h1&gt;
+</code></pre>
+<pre><code>              &lt;h1&gt;
+      blah blah text content
+          &lt;/h1&gt;
+</code></pre>
+<p>Programmers like to enforce strict indentation rules (always indent when you move into a child element, etc.) so their code is more legible. Your text editor can even <a href="text-editor-basics.html#savingyourfiles">automatically do that for you whenever you save your file</a>. for convenience.</p>
+<p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer.</p>
     
       <h1 id="120">
         Text Editor Basics
@@ -388,6 +616,120 @@
 <p>Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh the browser tab where it's open - you should see it immediately update to your recent changes.</p>
 <p>Congratulations, you're editing your first website! ✨</p>
     
+      <h1 id="101">
+        HTML Elements
+      </h1>
+      <p></p>
+      <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./what-is-a-website.html">What is a Website?</a></li></ul>
+      <h2 id="whatishtmlandwhyarewestartingwithit">What is HTML, and why are we starting with it?</h2>
+<p>HTML stands for "Hypertext Markup Language." If you want to make sense of this acronym, it's a programming language that "marks up", or describes the structure of, "hypertext" - content on the web. But for everyday use, we just call it HTML (pronounced letter-by-letter).</p>
+<p>Imagine that your website is a dancer. One day, we want them to perform beautiful choreography! In magnificent costume! But before we design a skirt or direct steps, we have to make some legs first. And that type of structure can be created with HTML.</p>
+<!-- > ILLUSTRATION: I mean, I think you get the point here >.< -->
+<h2 id="creatinganhtmlfile">Creating an HTML file</h2>
+<p>So far, we've only used a plain text file (<code>.txt</code>). Now, let's make our first HTML file.</p>
+<p>You can either create a new file or just rename the existing file from <code>cat.txt</code> to <code>cat.html</code> to get started. You can do this in countless ways, but here are some options to be extra clear:</p>
+<ul>
+<li><code>File &gt; Save As...</code> to make a copy, and manually change the <code>.txt</code> ending to <code>.html</code></li>
+<li><code>File &gt; New</code> to create a new untitled file, then <code>File &gt; Save</code> or <code>cmd/ctrl+S</code> to give it a name (ending in <code>.html</code>)</li>
+<li>Ctrl+click the file in your text editor's side bar, or your computer's file viewer and select "Rename"</li>
+</ul>
+<p>Whichever way you choose, the important bit is to end up with a file named something with <code>.html</code> at the end to indicate it's going to be filled with HTML code. Open it up in your <a href="what-is-a-website.html#howdoicreatethesecodefiles">text editor</a>, and let's write!</p>
+<h2 id="howtowritehtml">How to write HTML</h2>
+<p>In HTML, things are broken down into elements. (You might also hear them called "blocks" or "tags".) Each HTML element looks like this:</p>
+<pre><code>[1]       [2]       [3]
+&lt;element&gt; some text &lt;/element&gt;
+</code></pre>
+<!-- > ILLUSTRATION: Some illustration of the HTML structure as written above? With little arrows pointing to the pieces maybe? -->
+<p>Each element is indicated by two "tags" (1 &amp; 3), and you can put text between them (2). Each tag is surrounded by brackets <code>&lt;beep&gt;</code> but only the second one has the slash <code>&lt;/beep&gt;</code> so you know where it ends.</p>
+<p>The element type is specified inside of the angle brackets.</p>
+<pre><code class="html language-html">&lt;beep&gt;Text&lt;/beep&gt;&lt;boop&gt;More Text&lt;/boop&gt;
+</code></pre>
+<p>In this example, you might refer to these as "beep" and "boop" elements. One <code>beep</code> element with "Text" inside it, and one <code>boop</code> element with "More Text" inside it.</p>
+<p>Try typing these elements in your <code>.html</code> file. Make your own! Move them around! Type funny quotes inside them! Save your changes, and view the file in your browser again.</p>
+<p>Notice that you won't see the element tags, like <code>&lt;beep&gt;</code>, in your browser - you only see the text (<code>Text</code> and <code>More Text</code>) you put inside them. This is exactly how all HTML elements work; they simply provide the underlying structure for your content.</p>
+<h2 id="nesting">Nesting</h2>
+<p>You can also "nest" elements inside one another, with or without text, to produce more complex structures. "Nesting" is a very common concept across programming, not just in HTML. These relationships are often described as "parent" and "child" - in this case, the elements inside are "children", wrapped by their "parent" element.</p>
+<pre><code class="html language-html">&lt;grandma&gt;
+  Grandma text #1
+  &lt;mom&gt;
+    &lt;daughter&gt;Shelly&lt;/daughter&gt;
+    &lt;daughter&gt;Kelly&lt;/daughter&gt;
+  &lt;/mom&gt;
+  Grandma text #2
+  &lt;aunt&gt;
+    &lt;cousin&gt;
+      &lt;babycousin&gt;Baby text&lt;/babycousin&gt;
+    &lt;/cousin&gt;
+  &lt;/aunt&gt;
+&lt;/grandma&gt;
+</code></pre>
+<p>In our family tree example here, <code>grandma</code> is the "parent" element of <code>mom</code> and <code>aunt</code>, which respectively are "parents" of <code>daughter</code> and <code>cousin</code>. The text inside the elements can also be referred to as their "children". We would even use the term "siblings" to describe the two <code>daughter</code> elements!</p>
+<p><em>(Note: The terms "parent", "child", and "sibling" are actual technical terms that developers use all the time. If you use other, albeit similar, language like "mother" and "daughter" elements, folks might not understand you!)</em></p>
+<h2 id="actualhtmlelements">Actual HTML Elements</h2>
+<p>Okay, now that we've learned about the general syntax, I'll come clean - <code>beep</code>, <code>boop</code>, <code>aunt</code>, and <code>grandma</code> aren't <em>real</em> HTML elements.</p>
+<p><em>(Technically you could call them anything you want and there wouldn't be any visible errors, but then, more technically, that's no longer HTML… <a href="https://dev.w3.org/html5/html-author/#self-closing-tag">more info here</a> if you're curious.)</em></p>
+<p>There's a huge selection of HTML element types that all browsers have agreed to accept. Here are just a few examples:</p>
+<ul>
+<li><code>&lt;h1&gt;</code> is Heading 1, for important, very large text.</li>
+<li><code>&lt;p&gt;</code> is Paragraph, for your less important and usually smaller size but lengthier text.</li>
+<li><code>&lt;div&gt;</code> apparently comes from "Document Divisions." This is commonly used for organization and visual layout purposes</li>
+</ul>
+<p>These element types are useful because browsers use this information to understand your website's structure and content. For instance, if you put some text inside of an <code>&lt;h1&gt;</code> tag, like <code>&lt;h1&gt;Purple Pandas&lt;/h1&gt;</code>, the browser will decide this "Purple Pandas" bit must be <em>really</em> important to your website.</p>
+<p>Using the most appropriate element for a specific part of your website is commonly called using "semantic HTML".</p>
+<p>This is a <em>very important</em> skill to learn if you want your websites to be found by search engines, accessible to non-sighted and/or keyboard users, and more.</p>
+<p>That being said, your website could technically be built only using <code>&lt;boop&gt;</code> and <code>&lt;beep&gt;</code> elements and still look the same on the outside…</p>
+<!-- > ILLUSTRATION: Some callback to the dancer's bones. Like maybe you have arm bones in your legs but it looks the same on the outside, you know? -->
+<p>Here's a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">list of every single element tag in HTML</a>. Warning - there is probably a lot of vocabulary on that site that will look foreign and complicated! Don't worry. Some of these are very obscure, even to experienced developers. 99% of the time, you'll only be using a handful of the most common ones.</p>
+<h2 id="selfclosingtags">Self-closing tags</h2>
+<p>There are some HTML elements that can't contain children (no text, no elements, no nothin' inside!). In these special cases, you use a slightly different format - almost as if you've merged the opening and closing tags into one.</p>
+<p>Correct:</p>
+<pre><code>&lt;br /&gt;
+&lt;hr /&gt;
+&lt;input /&gt;
+</code></pre>
+<p>Incorrect:</p>
+<pre><code>&lt;br&gt;&lt;/br&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;input&gt;&lt;/input&gt;
+</code></pre>
+<p>These elements are called "void elements", and this specific syntax is called a self-closing tag. <a href="https://www.w3.org/Style/customdtd.en.html">More info here.</a></p>
+<h2 id="yourfirstrealhtmlwebsite">Your first real HTML website</h2>
+<p>Try replacing the code in your <code>.html</code> file now with real elements. Here's a quick cheatsheet of some of the most common elements:</p>
+<ul>
+<li><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, … all the way to <code>&lt;h6&gt;</code> are for heading text (1 is the most important, 6 is the least)</li>
+<li><code>&lt;p&gt;</code> is paragraph text</li>
+<li><code>&lt;strong&gt;</code> adds emphasis</li>
+<li><code>&lt;br&gt;</code> is a line break (must be self-closing)</li>
+<li><code>&lt;hr&gt;</code> is a horizontal rule (must be self-closing)</li>
+<li><code>&lt;div&gt;</code> is usually for nesting other elements inside</li>
+<li><code>&lt;button&gt;</code> is, well, a button</li>
+<li><code>&lt;a&gt;</code> is for links (stands for "anchor")</li>
+<li><code>&lt;ul&gt;</code> is for an "unordered list", like a bulleted one</li>
+<li><code>&lt;li&gt;</code> is a "list item" and should go specifically inside a <code>ul</code></li>
+</ul>
+<p>Try combining all of the concepts so far into your file. Come up with your own structure and content! For reference, here's what your editor might look like at this point:</p>
+<p><img src="./assets/00/html-example.png" alt="A screenshot of my text editor, with a bunch of html elements written into a file." /></p>
+<p>Now that we're using real HTML elements, you should see something different in your browser now. Your <code>h1</code> text should look very large and your <code>p</code> quite small in comparison. The <code>button</code> should look like, well, a button! And so on.</p>
+<p>When I save that file and view it in my browser, it looks like this now:</p>
+<p><img src="./assets/00/html-example-output.png" alt="The browser output of the example html." /></p>
+<p>I mean, that's a pretty cool website, right?</p>
+<h2 id="nbaboutspacingindentation">NB: About spacing &amp; indentation</h2>
+<p>In some cases, specific spacing is required for things to work. But in a lot of cases, it's just personal preference. For example, these three snippets should all work and look the same in your browser:</p>
+<pre><code>&lt;h1&gt;
+blah blah text content&lt;/h1&gt;
+</code></pre>
+<pre><code>&lt;h1&gt;
+  blah blah text content
+
+&lt;/h1&gt;
+</code></pre>
+<pre><code>              &lt;h1&gt;
+      blah blah text content
+          &lt;/h1&gt;
+</code></pre>
+<p>Programmers like to enforce strict indentation rules (always indent when you move into a child element, etc.) so their code is more legible. Your text editor can even <a href="text-editor-basics.html#savingyourfiles">automatically do that for you whenever you save your file</a>. for convenience.</p>
+<p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer.</p>
+    
       <h1 id="10">
         Intro to HTML
       </h1>
@@ -452,6 +794,120 @@
 <p>Try opening up your <code>txt</code> file in this text editor. There a lot of different ways to do this (drag the file onto the program icon, use "Open with" again, open it from the text editor via File &gt; Open, etc.) - play around with them and see what's most convenient for you.</p>
 <p>Once you have it open, you should be able to edit the text. Write whatever you want in there, hit Save, and refresh the browser tab where it's open - you should see it immediately update to your recent changes.</p>
 <p>Congratulations, you're editing your first website! ✨</p>
+    
+      <h1 id="101">
+        HTML Elements
+      </h1>
+      <p></p>
+      <h4>Prerequisites:</h4><ul id="prerequisites"><li><a href="./what-is-a-website.html">What is a Website?</a></li></ul>
+      <h2 id="whatishtmlandwhyarewestartingwithit">What is HTML, and why are we starting with it?</h2>
+<p>HTML stands for "Hypertext Markup Language." If you want to make sense of this acronym, it's a programming language that "marks up", or describes the structure of, "hypertext" - content on the web. But for everyday use, we just call it HTML (pronounced letter-by-letter).</p>
+<p>Imagine that your website is a dancer. One day, we want them to perform beautiful choreography! In magnificent costume! But before we design a skirt or direct steps, we have to make some legs first. And that type of structure can be created with HTML.</p>
+<!-- > ILLUSTRATION: I mean, I think you get the point here >.< -->
+<h2 id="creatinganhtmlfile">Creating an HTML file</h2>
+<p>So far, we've only used a plain text file (<code>.txt</code>). Now, let's make our first HTML file.</p>
+<p>You can either create a new file or just rename the existing file from <code>cat.txt</code> to <code>cat.html</code> to get started. You can do this in countless ways, but here are some options to be extra clear:</p>
+<ul>
+<li><code>File &gt; Save As...</code> to make a copy, and manually change the <code>.txt</code> ending to <code>.html</code></li>
+<li><code>File &gt; New</code> to create a new untitled file, then <code>File &gt; Save</code> or <code>cmd/ctrl+S</code> to give it a name (ending in <code>.html</code>)</li>
+<li>Ctrl+click the file in your text editor's side bar, or your computer's file viewer and select "Rename"</li>
+</ul>
+<p>Whichever way you choose, the important bit is to end up with a file named something with <code>.html</code> at the end to indicate it's going to be filled with HTML code. Open it up in your <a href="what-is-a-website.html#howdoicreatethesecodefiles">text editor</a>, and let's write!</p>
+<h2 id="howtowritehtml">How to write HTML</h2>
+<p>In HTML, things are broken down into elements. (You might also hear them called "blocks" or "tags".) Each HTML element looks like this:</p>
+<pre><code>[1]       [2]       [3]
+&lt;element&gt; some text &lt;/element&gt;
+</code></pre>
+<!-- > ILLUSTRATION: Some illustration of the HTML structure as written above? With little arrows pointing to the pieces maybe? -->
+<p>Each element is indicated by two "tags" (1 &amp; 3), and you can put text between them (2). Each tag is surrounded by brackets <code>&lt;beep&gt;</code> but only the second one has the slash <code>&lt;/beep&gt;</code> so you know where it ends.</p>
+<p>The element type is specified inside of the angle brackets.</p>
+<pre><code class="html language-html">&lt;beep&gt;Text&lt;/beep&gt;&lt;boop&gt;More Text&lt;/boop&gt;
+</code></pre>
+<p>In this example, you might refer to these as "beep" and "boop" elements. One <code>beep</code> element with "Text" inside it, and one <code>boop</code> element with "More Text" inside it.</p>
+<p>Try typing these elements in your <code>.html</code> file. Make your own! Move them around! Type funny quotes inside them! Save your changes, and view the file in your browser again.</p>
+<p>Notice that you won't see the element tags, like <code>&lt;beep&gt;</code>, in your browser - you only see the text (<code>Text</code> and <code>More Text</code>) you put inside them. This is exactly how all HTML elements work; they simply provide the underlying structure for your content.</p>
+<h2 id="nesting">Nesting</h2>
+<p>You can also "nest" elements inside one another, with or without text, to produce more complex structures. "Nesting" is a very common concept across programming, not just in HTML. These relationships are often described as "parent" and "child" - in this case, the elements inside are "children", wrapped by their "parent" element.</p>
+<pre><code class="html language-html">&lt;grandma&gt;
+  Grandma text #1
+  &lt;mom&gt;
+    &lt;daughter&gt;Shelly&lt;/daughter&gt;
+    &lt;daughter&gt;Kelly&lt;/daughter&gt;
+  &lt;/mom&gt;
+  Grandma text #2
+  &lt;aunt&gt;
+    &lt;cousin&gt;
+      &lt;babycousin&gt;Baby text&lt;/babycousin&gt;
+    &lt;/cousin&gt;
+  &lt;/aunt&gt;
+&lt;/grandma&gt;
+</code></pre>
+<p>In our family tree example here, <code>grandma</code> is the "parent" element of <code>mom</code> and <code>aunt</code>, which respectively are "parents" of <code>daughter</code> and <code>cousin</code>. The text inside the elements can also be referred to as their "children". We would even use the term "siblings" to describe the two <code>daughter</code> elements!</p>
+<p><em>(Note: The terms "parent", "child", and "sibling" are actual technical terms that developers use all the time. If you use other, albeit similar, language like "mother" and "daughter" elements, folks might not understand you!)</em></p>
+<h2 id="actualhtmlelements">Actual HTML Elements</h2>
+<p>Okay, now that we've learned about the general syntax, I'll come clean - <code>beep</code>, <code>boop</code>, <code>aunt</code>, and <code>grandma</code> aren't <em>real</em> HTML elements.</p>
+<p><em>(Technically you could call them anything you want and there wouldn't be any visible errors, but then, more technically, that's no longer HTML… <a href="https://dev.w3.org/html5/html-author/#self-closing-tag">more info here</a> if you're curious.)</em></p>
+<p>There's a huge selection of HTML element types that all browsers have agreed to accept. Here are just a few examples:</p>
+<ul>
+<li><code>&lt;h1&gt;</code> is Heading 1, for important, very large text.</li>
+<li><code>&lt;p&gt;</code> is Paragraph, for your less important and usually smaller size but lengthier text.</li>
+<li><code>&lt;div&gt;</code> apparently comes from "Document Divisions." This is commonly used for organization and visual layout purposes</li>
+</ul>
+<p>These element types are useful because browsers use this information to understand your website's structure and content. For instance, if you put some text inside of an <code>&lt;h1&gt;</code> tag, like <code>&lt;h1&gt;Purple Pandas&lt;/h1&gt;</code>, the browser will decide this "Purple Pandas" bit must be <em>really</em> important to your website.</p>
+<p>Using the most appropriate element for a specific part of your website is commonly called using "semantic HTML".</p>
+<p>This is a <em>very important</em> skill to learn if you want your websites to be found by search engines, accessible to non-sighted and/or keyboard users, and more.</p>
+<p>That being said, your website could technically be built only using <code>&lt;boop&gt;</code> and <code>&lt;beep&gt;</code> elements and still look the same on the outside…</p>
+<!-- > ILLUSTRATION: Some callback to the dancer's bones. Like maybe you have arm bones in your legs but it looks the same on the outside, you know? -->
+<p>Here's a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">list of every single element tag in HTML</a>. Warning - there is probably a lot of vocabulary on that site that will look foreign and complicated! Don't worry. Some of these are very obscure, even to experienced developers. 99% of the time, you'll only be using a handful of the most common ones.</p>
+<h2 id="selfclosingtags">Self-closing tags</h2>
+<p>There are some HTML elements that can't contain children (no text, no elements, no nothin' inside!). In these special cases, you use a slightly different format - almost as if you've merged the opening and closing tags into one.</p>
+<p>Correct:</p>
+<pre><code>&lt;br /&gt;
+&lt;hr /&gt;
+&lt;input /&gt;
+</code></pre>
+<p>Incorrect:</p>
+<pre><code>&lt;br&gt;&lt;/br&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;input&gt;&lt;/input&gt;
+</code></pre>
+<p>These elements are called "void elements", and this specific syntax is called a self-closing tag. <a href="https://www.w3.org/Style/customdtd.en.html">More info here.</a></p>
+<h2 id="yourfirstrealhtmlwebsite">Your first real HTML website</h2>
+<p>Try replacing the code in your <code>.html</code> file now with real elements. Here's a quick cheatsheet of some of the most common elements:</p>
+<ul>
+<li><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, … all the way to <code>&lt;h6&gt;</code> are for heading text (1 is the most important, 6 is the least)</li>
+<li><code>&lt;p&gt;</code> is paragraph text</li>
+<li><code>&lt;strong&gt;</code> adds emphasis</li>
+<li><code>&lt;br&gt;</code> is a line break (must be self-closing)</li>
+<li><code>&lt;hr&gt;</code> is a horizontal rule (must be self-closing)</li>
+<li><code>&lt;div&gt;</code> is usually for nesting other elements inside</li>
+<li><code>&lt;button&gt;</code> is, well, a button</li>
+<li><code>&lt;a&gt;</code> is for links (stands for "anchor")</li>
+<li><code>&lt;ul&gt;</code> is for an "unordered list", like a bulleted one</li>
+<li><code>&lt;li&gt;</code> is a "list item" and should go specifically inside a <code>ul</code></li>
+</ul>
+<p>Try combining all of the concepts so far into your file. Come up with your own structure and content! For reference, here's what your editor might look like at this point:</p>
+<p><img src="./assets/00/html-example.png" alt="A screenshot of my text editor, with a bunch of html elements written into a file." /></p>
+<p>Now that we're using real HTML elements, you should see something different in your browser now. Your <code>h1</code> text should look very large and your <code>p</code> quite small in comparison. The <code>button</code> should look like, well, a button! And so on.</p>
+<p>When I save that file and view it in my browser, it looks like this now:</p>
+<p><img src="./assets/00/html-example-output.png" alt="The browser output of the example html." /></p>
+<p>I mean, that's a pretty cool website, right?</p>
+<h2 id="nbaboutspacingindentation">NB: About spacing &amp; indentation</h2>
+<p>In some cases, specific spacing is required for things to work. But in a lot of cases, it's just personal preference. For example, these three snippets should all work and look the same in your browser:</p>
+<pre><code>&lt;h1&gt;
+blah blah text content&lt;/h1&gt;
+</code></pre>
+<pre><code>&lt;h1&gt;
+  blah blah text content
+
+&lt;/h1&gt;
+</code></pre>
+<pre><code>              &lt;h1&gt;
+      blah blah text content
+          &lt;/h1&gt;
+</code></pre>
+<p>Programmers like to enforce strict indentation rules (always indent when you move into a child element, etc.) so their code is more legible. Your text editor can even <a href="text-editor-basics.html#savingyourfiles">automatically do that for you whenever you save your file</a>. for convenience.</p>
+<p>That being said, remember that this is a stylistic choice, not a requirement! There's nothing about indentation, spacing, or formatting that makes someone fundamentally a <em>better</em> programmer.</p>
     
       <h1 id="120">
         Text Editor Basics

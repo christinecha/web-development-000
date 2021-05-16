@@ -14,7 +14,6 @@ const HTML_ELEMENTS = {
   description: "",
   markdown: path.resolve(__dirname, "html-elements.md"),
   dependencies: [FIRST_WEBSITE],
-  wip: true,
 };
 
 const HTML_ATTRIBUTES = {
