@@ -39,6 +39,11 @@ br {
   line-height: 0;
 }
 
+hr {
+  border-color: #ff85ab;
+  border-style: dashed;
+}
+
 *:focus {
   outline: blue;
 }
@@ -67,7 +72,7 @@ img {
 }
 
 code {
-  background: #eaeaea;
+  background: rgba(0, 0, 0, 0.1);
   padding: 2px 5px;
 }
 
@@ -78,9 +83,17 @@ pre > code {
 }
 
 blockquote {
-  opacity: 0.5;
-  border-left: 2px solid #eaeaea;
-  padding-left: 10px;
+  background: rgba(255, 133, 171, 0.1);
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
 }
 
 #content {

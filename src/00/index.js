@@ -22,7 +22,6 @@ const HTML_ATTRIBUTES = {
   description: "",
   markdown: path.resolve(__dirname, "html-attributes.md"),
   dependencies: [HTML_ELEMENTS],
-  wip: true,
 };
 
 module.exports = {
