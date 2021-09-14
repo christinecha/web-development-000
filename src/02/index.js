@@ -15,7 +15,7 @@ const INSPECT_ELEMENTS = {
   title: "Inspecting Elements",
   description: "",
   markdown: path.resolve(__dirname, "inspect-elements.md"),
-  wip: true,
+  // wip: true,
   dependencies: [SECTION_00.HTML_ATTRIBUTES, SECTION_01.COLOR_BASICS],
 };
 
